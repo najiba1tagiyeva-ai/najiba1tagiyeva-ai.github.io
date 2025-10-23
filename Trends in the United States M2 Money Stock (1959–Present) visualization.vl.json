@@ -1,0 +1,13 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Trends in the United States M2 Money Stock (1959–Present)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Trends%20in%20the%20United%20States%20M2%20Money%20Stock%20(1959%E2%80%93Present).csv"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "date", "type": "temporal"},
+    "y": {"field": "M2 (Billion USD)", "type": "quantitative"}
+  },
+  "config": {}
+}
