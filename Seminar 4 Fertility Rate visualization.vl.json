@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/kor;prk;ind;tur/indicator/SP.DYN.TFRT.IN?format=json&per_page=1000",
+    "format": {"property": "[1]"}
+  },
+  "width": 500,
+  "height": 350,
+  "mark": "line",
+  "title": {
+    "text": "Declining fertility",
+    "subtitle": "Total Fertility Rate Source: World Bank"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "value", "type": "quantitative", "title": ""},
+    "color": {
+      "field": "country.value",
+      "type": "nominal",
+      "scale": {"range": ["red", "blue", "green", "purple"]},
+      "legend": {"title": "", "orient": "top-right", "labelExpr": "datum.label"}
+    }
+  },
+  "config": {}
+}
