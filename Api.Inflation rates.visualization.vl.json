@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "white",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/tur;arg;bra/indicator/NY.GDP.DEFL.KD.ZG?format=json&per_page=500",
+    "format": {"property": "1"}
+  },
+  "width": 650,
+  "height": 400,
+  "mark": {
+    "type": "line",
+    "strokeWidth": 3,
+    "point": {"filled": true, "size": 50}
+  },
+  "title": {
+    "text": "Inflation Trends in Turkey, Argentina, and Brazil (1960–2023)",
+    "subtitle": "Source: World Bank (GDP Deflator, % change)",
+    "anchor": "middle",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "color": "#333"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {
+        "grid": false,
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "labelColor": "#333"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Inflation Rate (%)",
+      "axis": {
+        "grid": true,
+        "gridDash": [3, 3],
+        "labelFontSize": 11,
+        "titleFontSize": 12,
+        "labelColor": "#333"
+      }
+    },
+    "color": {
+      "field": "countryiso3code",
+      "type": "nominal",
+      "scale": {
+        "domain": ["TUR", "ARG", "BRA"],
+        "range": ["#1f77b4", "#d62728", "#2ca02c"]
+      },
+      "legend": {
+        "title": "Country",
+        "orient": "top-left",
+        "labelFontSize": 11,
+        "titleFontSize": 12
+      }
+    },
+    "tooltip": [
+      {"field": "countryiso3code", "title": "Country"},
+      {"field": "date", "title": "Year"},
+      {"field": "value", "title": "Inflation (%)", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFont": "Arial", "titleFont": "Arial"},
+    "legend": {"labelFont": "Arial", "titleFont": "Arial"}
+  }
+}
