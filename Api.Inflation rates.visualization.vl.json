@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/tur;arg;bra/indicator/NY.GDP.DEFL.KD.ZG?format=json&per_page=500",
+    "format": {"property": "1"}
+  },
+  "width": 500,
+  "height": 350,
+  "mark": "line",
+  "title": {
+    "text": "Inflation Rates: Turkey, Argentina, and Brazil",
+    "subtitle": "Source: World Bank"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "value", "type": "quantitative", "title": "Inflation (%)"},
+    "color": {
+      "field": "countryiso3code",
+      "type": "nominal",
+      "scale": {"range": ["red", "blue", "green"]},
+      "legend": {"title": "Country", "orient": "top-right"}
+    }
+  },
+  "config": {}
+}
