@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Consumer Price Index (2010 = 100), 2004–2024",
+    "subtitle": ["Source: International Monetary Fund, via World Bank (2025)"],
+    "fontSize": 18
+  },
+  "width": 650,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1.consumer-price-index_2004-2024.csv"
+  },
+  "mark": {"type": "line", "point": true, "strokeWidth": 2},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {"labelAngle": 0, "labelOverlap": true, "labelFontSize": 12}
+    },
+    "y": {
+      "field": "Consumer price index (2010 = 100)",
+      "type": "quantitative",
+      "title": "CPI (2010 = 100)",
+      "scale": {"domain": [80, 150]}
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country",
+      "legend": {"orient": "right", "labelFontSize": 13}
+    }
+  },
+  "config": {}
+}
