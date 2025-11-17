@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Inflation Rates: May-25 vs Jun-25",
+    "subtitle": "Source: OECD",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 550,
+  "height": 330,
+  "padding": {"left": 10, "right": 10, "top": 10, "bottom": 10},
+  "background": "white",
+  "data": {
+    "values": [
+      {"Country": "Canada", "Month": "May-25", "Inflation": 1.73374613},
+      {"Country": "Canada", "Month": "Jun-25", "Inflation": 1.858736059},
+      {"Country": "France", "Month": "May-25", "Inflation": 0.657730414},
+      {"Country": "France", "Month": "Jun-25", "Inflation": 0.965058236},
+      {"Country": "Germany", "Month": "May-25", "Inflation": 2.095557418},
+      {"Country": "Germany", "Month": "Jun-25", "Inflation": 2.010050251},
+      {"Country": "Italy", "Month": "May-25", "Inflation": 1.575456053},
+      {"Country": "Italy", "Month": "Jun-25", "Inflation": 1.657000829},
+      {"Country": "Japan", "Month": "May-25", "Inflation": 3.5},
+      {"Country": "Japan", "Month": "Jun-25", "Inflation": 3.3},
+      {"Country": "United Kingdom", "Month": "May-25", "Inflation": 4},
+      {"Country": "United Kingdom", "Month": "Jun-25", "Inflation": 4.1},
+      {"Country": "United States", "Month": "May-25", "Inflation": 2.354896535},
+      {"Country": "United States", "Month": "Jun-25", "Inflation": 2.669213018}
+    ]
+  },
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": {"labelAngle": -20, "labelFontSize": 12, "title": null}
+    },
+    "y": {
+      "field": "Inflation",
+      "type": "quantitative",
+      "title": "Inflation Rate (%)",
+      "axis": {"labelFontSize": 12, "titleFontSize": 13}
+    },
+    "color": {
+      "field": "Month",
+      "type": "nominal",
+      "scale": {
+        "domain": ["May-25", "Jun-25"],
+        "range": ["#6BAED6", "#2171B5"]
+      },
+      "title": "Month"
+    },
+    "tooltip": [
+      {"field": "Country"},
+      {"field": "Month"},
+      {"field": "Inflation", "title": "Inflation (%)", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": true, "gridColor": "#e6e6e6", "gridOpacity": 0.4}
+  }
+}
