@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "House Price-to-Income Ratio by Region (2024)",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#333"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk3.UKhousing_ratio.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [{"calculate": "toNumber(datum['2024'])", "as": "Ratio"}],
+  "mark": "bar",
+  "width": 520,
+  "height": 330,
+  "encoding": {
+    "y": {
+      "field": "Region Name",
+      "type": "nominal",
+      "sort": {"field": "Ratio", "order": "descending"},
+      "title": "Region"
+    },
+    "x": {
+      "field": "Ratio",
+      "type": "quantitative",
+      "title": "House Price-to-Income Ratio"
+    },
+    "color": {
+      "field": "Ratio",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "title": null
+    },
+    "tooltip": [
+      {"field": "Region Name", "type": "nominal", "title": "Region"},
+      {"field": "Ratio", "type": "quantitative", "title": "Ratio"}
+    ]
+  },
+  "config": {}
+}
