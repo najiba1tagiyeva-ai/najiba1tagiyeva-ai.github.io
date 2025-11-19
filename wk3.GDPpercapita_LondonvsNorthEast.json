@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Regional GDP per head: London vs North East England",
+    "subtitle": ["£, current prices", "Source: ONS Regional GDP (ITL regions)"],
+    "anchor": "middle",
+    "fontSize": 18,
+    "subtitleFontSize": 13
+  },
+  "width": 520,
+  "height": 330,
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk3.GDPpercapita_LondonvsNorthEast.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": {"filled": true, "size": 35},
+    "strokeWidth": 3,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "axis": {
+        "format": "d",
+        "title": "Year",
+        "titleFontSize": 13,
+        "labelFontSize": 11
+      }
+    },
+    "y": {
+      "field": "GDP per capita",
+      "type": "quantitative",
+      "axis": {
+        "title": "GDP per capita (£)",
+        "format": ",.0f",
+        "titleFontSize": 13,
+        "labelFontSize": 11
+      }
+    },
+    "color": {
+      "field": "Region name",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {
+        "domain": ["London", "North East"],
+        "range": ["#E63946", "#457B9D"]
+      },
+      "legend": {
+        "orient": "right",
+        "direction": "vertical",
+        "symbolType": "stroke",
+        "symbolStrokeWidth": 4,
+        "titleFontSize": 13,
+        "labelFontSize": 12,
+        "padding": 8,
+        "offset": 10
+      }
+    },
+    "tooltip": [
+      {"field": "Year", "type": "quantitative"},
+      {"field": "Region name", "type": "nominal"},
+      {
+        "field": "GDP per capita",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "GDP per capita (£)"
+      }
+    ]
+  },
+  "config": {"axis": {"grid": false}}
+}
