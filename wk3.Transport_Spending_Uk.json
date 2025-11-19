@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Transport expenditure per capita in the UK (2023/24)",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "anchor": "middle"
+  },
+  "width": 520,
+  "height": 330,
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk3.Transport_Expenditure_Uk.csv"
+  },
+  "mark": {"type": "bar", "cornerRadiusEnd": 4},
+  "encoding": {
+    "y": {
+      "field": "Region",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Region",
+      "axis": {"labelFontSize": 11, "titleFontSize": 13}
+    },
+    "x": {
+      "field": "Spending",
+      "type": "quantitative",
+      "title": "£ per capita",
+      "axis": {
+        "format": ",.0f",
+        "labelFontSize": 11,
+        "titleFontSize": 13,
+        "grid": false
+      }
+    },
+    "color": {
+      "condition": {"test": "datum.Region === 'London'", "value": "#E63946"},
+      "value": "#457B9D"
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal"},
+      {
+        "field": "Spending",
+        "type": "quantitative",
+        "title": "£ per person",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "config": {"axis": {"grid": false}}
+}
