@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Annual Earnings by Region (2024)",
+    "subtitle": "Source: Office for National Statistics (ONS), ASHE 2024",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#333",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#555"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk3.Earnings_Uk.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(replace(replace(datum['2024'], ',', ''), '\"', ''))",
+      "as": "Earnings"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "#2A7D76",
+    "stroke": "#1E4E4A",
+    "strokeWidth": 1.2,
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+  },
+  "width": 520,
+  "height": 330,
+  "encoding": {
+    "x": {
+      "field": "Region Name",
+      "type": "nominal",
+      "sort": {"field": "Earnings", "order": "descending"},
+      "title": "Region",
+      "axis": {"labelAngle": -40}
+    },
+    "y": {
+      "field": "Earnings",
+      "type": "quantitative",
+      "title": "Average Annual Earnings (£)"
+    },
+    "tooltip": [
+      {"field": "Region Name", "type": "nominal", "title": "Region"},
+      {"field": "Earnings", "type": "quantitative", "title": "£ Earnings"}
+    ]
+  },
+  "config": {}
+}
