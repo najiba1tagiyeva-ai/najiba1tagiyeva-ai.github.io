@@ -76,15 +76,30 @@ Despite the highest earnings, Londoners need eleven years' income for homes vers
 </section>
 
     <section>
-        <div class="chart-description">
-            <h2>CC4. Replication. Re-create, then improve, someone else’s chart.</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+    <div class="chart-description">
+        <h2>CC4. Replication. Re-create, then improve, someone else’s chart.</h2>
+        <p>
+    For this task, I selected a chart used by YouGov in their political analysis.Below, I first display the original chart. Then I replicate it using Vega-Lite, and finally I present an improved version.
+        </p>
+    </div>
+
+    <h3>The original chart</h3>
+    <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
+         alt="Original YouGov Voting Chart"
+         style="width: 850px; margin-bottom: 30px; border: 1px solid #ccc;">
+
+    <h3>Chart 1. Replication using Vega-Lite</h3>
+    <figure id="CC4_replication"></figure>
+
+    <h3>Chart 2. Improved version</h3>
+    <figure id="CC4_improved"></figure>
+
+    <p style="max-width: 750px; margin-top: 20px;">
+        <strong>What I improved (23 words):</strong>
+    I refined colours, added clearer labels, balanced spacing, and increased readability by grouping categories more clearly than in the original YouGov chart.
+    </p>
+</section>
+
 
     <section>
         <div class="chart-description">
@@ -134,7 +149,7 @@ Despite the highest earnings, Londoners need eleven years' income for homes vers
         let figure_4_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk2.Unemployement_Turkiye.json";
         let figure_5_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk3.UKhousing_ratio.%20json.json";
         let figure_6_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk3.Earnings_Uk.json"
-        let figure_7_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Seminar%204%20Fertility%20Rate%20visualization.vl.json"
+        let figure_7_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
         let figure_8_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Api.Inflation%20rates.visualization.vl.json"// 
 // We're storing the URL of the graph we want to display in a variable
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
