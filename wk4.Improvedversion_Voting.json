@@ -1,0 +1,160 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Class is no longer a reliable indicator of how a person will vote",
+    "subtitle": "Voting intention of British adults by socio-economic grade - showing minimal difference between classes",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "subtitleFontSize": 12,
+    "subtitleColor": "#666",
+    "anchor": "start"
+  },
+  "data": {
+    "values": [
+      {
+        "class": "ABC1",
+        "classLabel": "ABC1 voters (middle class)",
+        "party": "Conservative",
+        "partyShort": "Con",
+        "value": 46
+      },
+      {
+        "class": "ABC1",
+        "classLabel": "ABC1 voters (middle class)",
+        "party": "Labour",
+        "partyShort": "Lab",
+        "value": 24
+      },
+      {
+        "class": "ABC1",
+        "classLabel": "ABC1 voters (middle class)",
+        "party": "Liberal Democrats",
+        "partyShort": "LD",
+        "value": 14
+      },
+      {
+        "class": "ABC1",
+        "classLabel": "ABC1 voters (middle class)",
+        "party": "UKIP",
+        "partyShort": "UKIP",
+        "value": 6
+      },
+      {
+        "class": "C2DE",
+        "classLabel": "C2DE voters (working class)",
+        "party": "Conservative",
+        "partyShort": "Con",
+        "value": 43
+      },
+      {
+        "class": "C2DE",
+        "classLabel": "C2DE voters (working class)",
+        "party": "Labour",
+        "partyShort": "Lab",
+        "value": 26
+      },
+      {
+        "class": "C2DE",
+        "classLabel": "C2DE voters (working class)",
+        "party": "Liberal Democrats",
+        "partyShort": "LD",
+        "value": 7
+      },
+      {
+        "class": "C2DE",
+        "classLabel": "C2DE voters (working class)",
+        "party": "UKIP",
+        "partyShort": "UKIP",
+        "value": 13
+      }
+    ]
+  },
+  "facet": {
+    "column": {
+      "field": "classLabel",
+      "type": "nominal",
+      "header": {
+        "labelFontSize": 14,
+        "labelAlign": "center",
+        "labelColor": "#444",
+        "labelFontWeight": "bold",
+        "title": null
+      }
+    }
+  },
+  "spec": {
+    "width": 280,
+    "height": 320,
+    "layer": [
+      {
+        "mark": {"type": "bar", "tooltip": true},
+        "encoding": {
+          "x": {
+            "field": "partyShort",
+            "type": "nominal",
+            "sort": {"field": "value", "order": "descending"},
+            "axis": {
+              "title": null,
+              "labelFontSize": 13,
+              "labelAngle": 0,
+              "labelColor": "#333"
+            },
+            "scale": {"paddingInner": 0.1}
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Voting intention (%)",
+              "titleFontSize": 12,
+              "titleColor": "#666",
+              "labelFontSize": 11,
+              "grid": true,
+              "gridColor": "#e0e0e0",
+              "gridOpacity": 0.5
+            },
+            "scale": {"domain": [0, 50]}
+          },
+          "color": {
+            "field": "party",
+            "type": "nominal",
+            "scale": {
+              "domain": ["Conservative", "Labour", "Liberal Democrats", "UKIP"],
+              "range": ["#2E7DC4", "#DC241F", "#FAA61A", "#70147A"]
+            },
+            "legend": {
+              "title": "Party",
+              "orient": "bottom",
+              "labelFontSize": 11,
+              "titleFontSize": 12
+            }
+          },
+          "tooltip": [
+            {"field": "party", "type": "nominal", "title": "Party"},
+            {"field": "value", "type": "quantitative", "title": "Support (%)"},
+            {"field": "classLabel", "type": "nominal", "title": "Voter Class"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "dy": -8,
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "color": "#333"
+        },
+        "encoding": {
+          "x": {
+            "field": "partyShort",
+            "type": "nominal",
+            "sort": {"field": "value", "order": "descending"}
+          },
+          "y": {"field": "value", "type": "quantitative"},
+          "text": {"field": "value", "type": "quantitative"}
+        }
+      }
+    ]
+  },
+  "config": {"view": {"stroke": "#ddd"}, "axis": {"domainColor": "#999"}}
+}
