@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Class is no longer a reliable indicator of how a person will vote",
+    "subtitle": "Voting intention of British adults by socio-economic grade",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#666",
+    "anchor": "start"
+  },
+  "data": {
+    "values": [
+      {"class": "ABC1 voters\n(middle class)", "party": "Con", "value": 46},
+      {"class": "ABC1 voters\n(middle class)", "party": "Lab", "value": 24},
+      {"class": "ABC1 voters\n(middle class)", "party": "LD", "value": 14},
+      {"class": "ABC1 voters\n(middle class)", "party": "UKIP", "value": 6},
+      {"class": "C2DE voters\n(working class)", "party": "Con", "value": 43},
+      {"class": "C2DE voters\n(working class)", "party": "Lab", "value": 26},
+      {"class": "C2DE voters\n(working class)", "party": "LD", "value": 7},
+      {"class": "C2DE voters\n(working class)", "party": "UKIP", "value": 13}
+    ]
+  },
+  "facet": {
+    "column": {
+      "field": "class",
+      "type": "nominal",
+      "header": {
+        "labelFontSize": 16,
+        "labelAlign": "center",
+        "labelColor": "#888",
+        "title": null,
+        "labelExpr": "split(datum.label, '\\n')"
+      }
+    }
+  },
+  "spec": {
+    "width": 180,
+    "height": 180,
+    "layer": [
+      {
+        "mark": {"type": "bar"},
+        "encoding": {
+          "x": {
+            "field": "party",
+            "type": "nominal",
+            "sort": {"field": "value", "order": "descending"},
+            "axis": {"title": null, "labelFontSize": 13, "labelAngle": 0},
+            "scale": {"paddingInner": 0}
+          },
+          "y": {
+            "field": "value",
+            "type": "quantitative",
+            "axis": null,
+            "scale": {"domain": [0, 60]}
+          },
+          "color": {
+            "field": "party",
+            "type": "nominal",
+            "scale": {
+              "domain": ["Con", "Lab", "LD", "UKIP"],
+              "range": ["#398EC6", "#DC241F", "#FDBB30", "#AB3AAB"]
+            },
+            "legend": null
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "dy": 15,
+          "fontSize": 16,
+          "fontWeight": "bold",
+          "color": "white"
+        },
+        "encoding": {
+          "x": {
+            "field": "party",
+            "type": "nominal",
+            "sort": {"field": "value", "order": "descending"}
+          },
+          "y": {"field": "value", "type": "quantitative"},
+          "text": {"field": "value", "type": "quantitative"}
+        }
+      }
+    ]
+  },
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
+}
