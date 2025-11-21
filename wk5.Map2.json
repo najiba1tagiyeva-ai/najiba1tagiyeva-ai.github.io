@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Population Change: 2022 vs 2023",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/population_tidy.csv"
+  },
+  "transform": [
+    {"filter": "datum.variable == 'change_percent'"},
+    {"filter": "datum.country != 'World'"},
+    {
+      "calculate": "replace(replace(datum.value, '%', ''), '+', '')",
+      "as": "clean"
+    },
+    {"calculate": "toNumber(datum.clean)", "as": "growth"}
+  ],
+  "mark": {"type": "circle", "size": 100, "opacity": 0.7},
+  "encoding": {
+    "x": {
+      "field": "growth",
+      "type": "quantitative",
+      "title": "Population Growth Rate (%)",
+      "axis": {"grid": true}
+    },
+    "y": {
+      "field": "country",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": null
+    },
+    "color": {
+      "field": "growth",
+      "type": "quantitative",
+      "scale": {"scheme": "redyellowgreen", "domain": [-8, 0, 5]},
+      "legend": {"title": "Growth Rate (%)"}
+    },
+    "tooltip": [
+      {"field": "country", "type": "nominal"},
+      {
+        "field": "growth",
+        "type": "quantitative",
+        "format": "+.2f",
+        "title": "Growth %"
+      }
+    ]
+  },
+  "config": {}
+}

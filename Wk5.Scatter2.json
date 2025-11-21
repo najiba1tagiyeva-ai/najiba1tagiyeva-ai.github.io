@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Countries by Population Growth Rate",
+    "subtitle": "Data: Wikipedia UN Population Statistics (2022-2023)",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#888"
+  },
+  "width": 300,
+  "height": 300,
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "projection": {"type": "naturalEarth1"},
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e8e8e8",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "projection": {"type": "naturalEarth1"},
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/population_tidy.csv"
+            },
+            "key": "country",
+            "fields": ["variable", "value"]
+          }
+        },
+        {"filter": "datum.variable == 'change_percent'"},
+        {
+          "calculate": "replace(replace(datum.value, '%', ''), '+', '')",
+          "as": "clean"
+        },
+        {"calculate": "toNumber(datum.clean)", "as": "growth"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "growth",
+          "type": "quantitative",
+          "scale": {"scheme": "redyellowgreen", "domain": [-8, 0, 5]},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "Country"},
+          {
+            "field": "growth",
+            "type": "quantitative",
+            "title": "Growth %",
+            "format": "+.2f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
