@@ -159,6 +159,51 @@ https://api.worldbank.org/v2/country/AGO;BDI;BEN;BFA;BWA;CAF;CIV;CMR;COD;COG;COM
         </p>
 
     </div>
+    <h3>Chart 2</h3>
+    <div class="chart-row">
+        <figure id="Location11"></figure> 
+        <figure id="Location12"></figure> 
+    </div>
+    <div class="chart-description">
+        <p>
+        This visualization is built using scraped data from Wikipedia's UN Population Statistics. The data was collected using Python (pandas and requests), cleaned, and transformed into tidy (long) format.
+        </p>
+        <p>
+            <strong>Data Source:</strong><br>
+            <a href="https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)" target="_blank">
+                Wikipedia - List of countries by population (United Nations)
+            </a>
+        </p>
+        <p>
+            <strong>Scraping Method:</strong><br>
+            • Python libraries: pandas, requests<br>
+            • HTML table parsing with pd.read_html()<br>
+            • Data cleaning and normalization
+        </p>
+        <p>
+            <strong>Data Format:</strong><br>
+            Tidy (long) format with columns: country, variable, value
+        </p>
+        <p>
+            <strong>Google Colab Notebook:</strong><br>
+            <a href="YOUR_COLAB_LINK_HERE" target="_blank">View the data scraping notebook</a>
+        </p>
+        <details>
+            <summary style="cursor:pointer; font-weight:bold;">
+                Show CSV Data URL
+            </summary><pre style="
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
+                padding: 8px;
+                background: #f7f7f7;
+                border-radius: 6px;">
+https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/population_tidy.csv
+            </pre>
+        </details>
+        <p>
+        The charts display population growth rates (2022-2023) using both choropleth map and scatter plot visualizations.
+        </p>
+    </div>
 
 </section>
 
