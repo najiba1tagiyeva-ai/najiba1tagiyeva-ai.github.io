@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 300,
+  "height": 300,
+  "title": {
+    "text": "Internet Usage Across Africa (2023)",
+    "subtitle": "Percentage of population using the internet, sourced from World Bank Open Data API",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "color": "#333",
+    "subtitleColor": "#666"
+  },
+  "projection": {"type": "mercator"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Africa.geo.topojson",
+    "format": {"type": "topojson", "feature": "wk5.Africa.geo"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.adm0_a3",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Internetusage.csv"
+        },
+        "key": "Country Code",
+        "fields": ["Value"]
+      },
+      "as": ["internet_usage"]
+    },
+    {"filter": "datum.internet_usage != null"}
+  ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "internet_usage",
+      "type": "quantitative",
+      "title": "Internet Usage (%)",
+      "scale": {"scheme": "oranges"}
+    },
+    "tooltip": [
+      {"field": "properties.admin", "title": "Country"},
+      {"field": "internet_usage", "title": "Internet (%)", "format": ".2f"}
+    ]
+  },
+  "config": {}
+}

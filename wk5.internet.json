@@ -1,0 +1,63 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 300,
+  "height": 300,
+  "title": {
+    "text": "Top 5 African Countries by Internet Usage (2023)",
+    "subtitle": "Data Source: World Bank Open Data (2023)",
+    "fontSize": 18,
+    "subtitleFontSize": 12
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Internetusage.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "lookup": "Country Code",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "Country Code",
+        "fields": ["Value"]
+      },
+      "as": "mobile_subs"
+    },
+    {"filter": "datum.Value != null && datum.mobile_subs != null"},
+    {"calculate": "datum.Value", "as": "internet_usage"},
+    {"window": [{"op": "rank", "as": "rank"}]},
+    {"filter": "datum.rank <= 5"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Country Name",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Country"
+    },
+    "x": {
+      "field": "internet_usage",
+      "type": "quantitative",
+      "title": "Internet Usage (%)"
+    },
+    "color": {
+      "field": "internet_usage",
+      "type": "quantitative",
+      "scale": {"scheme": "oranges"},
+      "title": "Internet Usage (%)"
+    },
+    "tooltip": [
+      {"field": "Country Name", "title": "Country"},
+      {"field": "internet_usage", "title": "Internet (%)", "format": ".1f"},
+      {
+        "field": "mobile_subs",
+        "title": "Mobile Subs (per 100)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {}
+}
