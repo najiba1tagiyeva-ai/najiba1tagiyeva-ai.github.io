@@ -1,0 +1,715 @@
+country,variable,value
+World,population_2022,8021407192
+India,population_2022,1425423212
+China[a],population_2022,1425179569
+United States,population_2022,341534046
+Indonesia,population_2022,278830529
+Pakistan,population_2022,243700667
+Nigeria,population_2022,223150896
+Brazil,population_2022,210306415
+Bangladesh,population_2022,169384897
+Russia,population_2022,145579899
+Mexico,population_2022,128613117
+Ethiopia,population_2022,125384287
+Japan,population_2022,124997578
+Philippines,population_2022,113964338
+Egypt,population_2022,112618250
+DR Congo,population_2022,102396968
+Vietnam,population_2022,99680655
+Iran,population_2022,89524246
+Turkey,population_2022,87058473
+Germany,population_2022,84086227
+Thailand,population_2022,71735329
+United Kingdom,population_2022,68179315
+Tanzania[b],population_2022,64711821
+France[c],population_2022,66277409
+South Africa,population_2022,62378410
+Italy,population_2022,59619115
+Kenya,population_2022,54252461
+Myanmar,population_2022,53756787
+Colombia,population_2022,51737944
+South Korea,population_2022,51782512
+Sudan,population_2022,49383346
+Uganda,population_2022,47312719
+Spain[d],population_2022,47828382
+Algeria,population_2022,45477389
+Argentina,population_2022,45407904
+Iraq,population_2022,44070551
+Afghanistan,population_2022,40578842
+Yemen,population_2022,38222876
+Canada,population_2022,38821259
+Poland,population_2022,38385739
+Ukraine[e],population_2022,41048766
+Morocco,population_2022,37329064
+Angola,population_2022,35635029
+Uzbekistan,population_2022,34938955
+Malaysia,population_2022,34695493
+Peru,population_2022,33475438
+Ghana,population_2022,33149152
+Mozambique,population_2022,32656246
+Saudi Arabia,population_2022,32175352
+Madagascar,population_2022,30437261
+Ivory Coast,population_2022,30395002
+Nepal,population_2022,29715436
+Cameroon,population_2022,27632771
+Venezuela,population_2022,28213017
+Australia[f],population_2022,26200984
+North Korea,population_2022,26329845
+Niger,population_2022,25311973
+Mali,population_2022,23072640
+Syria,population_2022,22462173
+Taiwan[g],population_2022,23420111
+Burkina Faso,population_2022,22509038
+Sri Lanka,population_2022,22834965
+Malawi,population_2022,20568728
+Zambia,population_2022,20152938
+Kazakhstan,population_2022,20034609
+Chile,population_2022,19553036
+Chad,population_2022,18455316
+Romania,population_2022,19166772
+Somalia[h],population_2022,17801897
+Guatemala,population_2022,17847877
+Senegal,population_2022,17651103
+Netherlands[i],population_2022,17904421
+Ecuador,population_2022,17823897
+Cambodia,population_2022,17201724
+Zimbabwe,population_2022,16069056
+Guinea,population_2022,14055137
+Benin,population_2022,13759501
+Rwanda,population_2022,13651030
+Burundi,population_2022,13321097
+Bolivia,population_2022,12077154
+Tunisia,population_2022,12119334
+Belgium,population_2022,11641820
+Haiti,population_2022,11503606
+South Sudan,population_2022,11021177
+Jordan,population_2022,11256263
+Dominican Republic,population_2022,11230734
+Cuba,population_2022,11059820
+Czechia,population_2022,10673213
+Honduras,population_2022,10463872
+United Arab Emirates,population_2022,10242086
+Sweden,population_2022,10487338
+Portugal[j],population_2022,10417073
+Tajikistan,population_2022,10182222
+Papua New Guinea,population_2022,10203169
+Azerbaijan,population_2022,10295304
+Greece,population_2022,10412480
+Hungary,population_2022,9964306
+Togo,population_2022,9089738
+Israel,population_2022,9103151
+Austria,population_2022,9064677
+Belarus,population_2022,9173237
+Switzerland,population_2022,8792182
+Sierra Leone,population_2022,8276807
+Laos,population_2022,7559007
+Hong Kong (China)[k],population_2022,7465915
+Turkmenistan,population_2022,7230193
+Libya,population_2022,7223805
+Kyrgyzstan,population_2022,6955788
+Paraguay,population_2022,6760464
+Nicaragua,population_2022,6730654
+Bulgaria,population_2022,6825864
+Serbia[l],population_2022,6791213
+El Salvador,population_2022,6280319
+Congo,population_2022,6035104
+Denmark,population_2022,5902904
+Singapore,population_2022,5649885
+Lebanon,population_2022,5744489
+Finland[m],population_2022,5569299
+Norway[n],population_2022,5457801
+Slovakia,population_2022,5473197
+Liberia,population_2022,5373294
+Palestine[o],population_2022,5305270
+Ireland,population_2022,5110016
+New Zealand,population_2022,5131734
+Central African Republic,population_2022,5098039
+Costa Rica,population_2022,5081765
+Oman,population_2022,4730226
+Mauritania,population_2022,4875637
+Kuwait,population_2022,4589511
+Panama,population_2022,4400773
+Croatia,population_2022,3907027
+Georgia[p],population_2022,3794784
+Eritrea,population_2022,3409447
+Mongolia,population_2022,3386015
+Uruguay,population_2022,3390913
+Puerto Rico (United States),population_2022,3240968
+Bosnia and Herzegovina,population_2022,3204802
+Moldova[q],population_2022,3039985
+Qatar,population_2022,2892455
+Namibia,population_2022,2889662
+Armenia,population_2022,2880874
+Lithuania,population_2022,2816919
+Jamaica,population_2022,2839144
+Albania,population_2022,2827608
+Gambia,population_2022,2636470
+Gabon,population_2022,2430747
+Botswana,population_2022,2439892
+Lesotho,population_2022,2286110
+Guinea-Bissau,population_2022,2105529
+Slovenia,population_2022,2115228
+Latvia,population_2022,1881063
+Equatorial Guinea,population_2022,1803545
+North Macedonia,population_2022,1840233
+Kosovo[r],population_2022,1717946
+Bahrain,population_2022,1533459
+Trinidad and Tobago,population_2022,1495921
+Timor-Leste,population_2022,1369295
+Estonia,population_2022,1350091
+Cyprus[s],population_2022,1331370
+Mauritius,population_2022,1276130
+Eswatini,population_2022,1218917
+Djibouti,population_2022,1137096
+Fiji,population_2022,919422
+Réunion (France),population_2022,871540
+Comoros,population_2022,834188
+Guyana,population_2022,821637
+Solomon Islands,population_2022,781066
+Bhutan,population_2022,780914
+Macao (China)[t],population_2022,704356
+Luxembourg,population_2022,653313
+Montenegro,population_2022,614648
+Suriname,population_2022,623164
+Western Sahara (disputed),population_2022,568739
+Malta,population_2022,528192
+Maldives,population_2022,524106
+Cape Verde,population_2022,519741
+Brunei,population_2022,455370
+Belize,population_2022,402733
+Bahamas,population_2022,397538
+Iceland,population_2022,380356
+Guadeloupe (France),population_2022,384697
+Martinique (France),population_2022,349459
+Vanuatu,population_2022,313046
+Mayotte (France),population_2022,305269
+French Guiana (France),population_2022,298306
+New Caledonia (France),population_2022,287123
+Barbados,population_2022,288318
+French Polynesia (France),population_2022,280378
+São Tomé and Príncipe,population_2022,226305
+Samoa,population_2022,215261
+Curaçao (Netherlands),population_2022,185345
+Saint Lucia,population_2022,178781
+Guam (United States),population_2022,165180
+Kiribati,population_2022,130469
+Seychelles,population_2022,125522
+Grenada,population_2022,116913
+Micronesia,population_2022,112114
+Tonga,population_2022,105042
+Aruba (Netherlands),population_2022,107782
+Jersey (United Kingdom),population_2022,103490
+Saint Vincent and the Grenadines,population_2022,102046
+Antigua and Barbuda,population_2022,92840
+U.S. Virgin Islands (United States),population_2022,86507
+Isle of Man (United Kingdom),population_2022,84132
+Andorra,population_2022,79705
+Cayman Islands (United Kingdom),population_2022,71591
+Dominica,population_2022,66826
+Bermuda (United Kingdom),population_2022,64749
+Guernsey (United Kingdom),population_2022,63725
+Greenland (Denmark),population_2022,54990
+Faroe Islands (Denmark),population_2022,54011
+American Samoa (United States),population_2022,48342
+Saint Kitts and Nevis,population_2022,46709
+Turks and Caicos Islands (United Kingdom),population_2022,45847
+Northern Mariana Islands (United States),population_2022,46078
+Sint Maarten (Netherlands),population_2022,42139
+Liechtenstein,population_2022,39317
+British Virgin Islands (United Kingdom),population_2022,38319
+Monaco,population_2022,38931
+Gibraltar (United Kingdom),population_2022,37609
+Marshall Islands,population_2022,40077
+San Marino,population_2022,34090
+Caribbean Netherlands (Netherlands)[u],population_2022,28627
+Saint Martin (France),population_2022,28870
+Palau,population_2022,17759
+Anguilla (United Kingdom),population_2022,14180
+Cook Islands (New Zealand),population_2022,14723
+Nauru,population_2022,11801
+Wallis and Futuna (France),population_2022,11478
+Saint Barthélemy (France),population_2022,10920
+Tuvalu,population_2022,9992
+Saint Pierre and Miquelon (France),population_2022,5732
+Saint Helena (United Kingdom)[v],population_2022,5343
+Montserrat (United Kingdom),population_2022,4453
+Falkland Islands (United Kingdom),population_2022,3490
+Tokelau (New Zealand),population_2022,2290
+Niue (New Zealand),population_2022,1821
+Vatican City[w],population_2022,505
+World,population_2023,8091734930
+India,population_2023,1438069596
+China[a],population_2023,1422584933
+United States,population_2023,343477335
+Indonesia,population_2023,281190067
+Pakistan,population_2023,247504495
+Nigeria,population_2023,227882945
+Brazil,population_2023,211140729
+Bangladesh,population_2023,171466990
+Russia,population_2023,145440500
+Mexico,population_2023,129739759
+Ethiopia,population_2023,128691692
+Japan,population_2023,124370947
+Philippines,population_2023,114891199
+Egypt,population_2023,114535772
+DR Congo,population_2023,105789731
+Vietnam,population_2023,100352192
+Iran,population_2023,90608707
+Turkey,population_2023,87270501
+Germany,population_2023,84548231
+Thailand,population_2023,71702435
+United Kingdom,population_2023,68682962
+Tanzania[b],population_2023,66617606
+France[c],population_2023,66438822
+South Africa,population_2023,63212384
+Italy,population_2023,59499453
+Kenya,population_2023,55339003
+Myanmar,population_2023,54133798
+Colombia,population_2023,52321152
+South Korea,population_2023,51748739
+Sudan,population_2023,50042791
+Uganda,population_2023,48656601
+Spain[d],population_2023,47911579
+Algeria,population_2023,46164219
+Argentina,population_2023,45538401
+Iraq,population_2023,45074049
+Afghanistan,population_2023,41454761
+Yemen,population_2023,39390799
+Canada,population_2023,39299105
+Poland,population_2023,38762844
+Ukraine[e],population_2023,37732836
+Morocco,population_2023,37712505
+Angola,population_2023,36749906
+Uzbekistan,population_2023,35652307
+Malaysia,population_2023,35126298
+Peru,population_2023,33845617
+Ghana,population_2023,33787914
+Mozambique,population_2023,33635160
+Saudi Arabia,population_2023,32264292
+Madagascar,population_2023,31195932
+Ivory Coast,population_2023,31165654
+Nepal,population_2023,29964614
+Cameroon,population_2023,28372687
+Venezuela,population_2023,28300854
+Australia[f],population_2023,26451124
+North Korea,population_2023,26418204
+Niger,population_2023,26159867
+Mali,population_2023,23769127
+Syria,population_2023,23594623
+Taiwan[g],population_2023,23317145
+Burkina Faso,population_2023,23025776
+Sri Lanka,population_2023,22971617
+Malawi,population_2023,21104482
+Zambia,population_2023,20723965
+Kazakhstan,population_2023,20330104
+Chile,population_2023,19658835
+Chad,population_2023,19319064
+Romania,population_2023,19118479
+Somalia[h],population_2023,18358615
+Guatemala,population_2023,18124838
+Senegal,population_2023,18077573
+Netherlands[i],population_2023,18092524
+Ecuador,population_2023,17980083
+Cambodia,population_2023,17423880
+Zimbabwe,population_2023,16340822
+Guinea,population_2023,14405465
+Benin,population_2023,14111034
+Rwanda,population_2023,13954471
+Burundi,population_2023,13689450
+Bolivia,population_2023,12244159
+Tunisia,population_2023,12200431
+Belgium,population_2023,11712893
+Haiti,population_2023,11637398
+South Sudan,population_2023,11483374
+Jordan,population_2023,11439213
+Dominican Republic,population_2023,11331265
+Cuba,population_2023,11019931
+Czechia,population_2023,10809716
+Honduras,population_2023,10644851
+United Arab Emirates,population_2023,10642081
+Sweden,population_2023,10551494
+Portugal[j],population_2023,10430738
+Tajikistan,population_2023,10389799
+Papua New Guinea,population_2023,10389635
+Azerbaijan,population_2023,10318207
+Greece,population_2023,10242908
+Hungary,population_2023,9686463
+Togo,population_2023,9304337
+Israel,population_2023,9256314
+Austria,population_2023,9130429
+Belarus,population_2023,9115680
+Switzerland,population_2023,8870561
+Sierra Leone,population_2023,8460512
+Laos,population_2023,7664993
+Hong Kong (China)[k],population_2023,7442734
+Turkmenistan,population_2023,7364438
+Libya,population_2023,7305659
+Kyrgyzstan,population_2023,7073516
+Paraguay,population_2023,6844146
+Nicaragua,population_2023,6823613
+Bulgaria,population_2023,6795803
+Serbia[l],population_2023,6773201
+El Salvador,population_2023,6309624
+Congo,population_2023,6182885
+Denmark,population_2023,5948136
+Singapore,population_2023,5789090
+Lebanon,population_2023,5733493
+Finland[m],population_2023,5601185
+Norway[n],population_2023,5519167
+Slovakia,population_2023,5518055
+Liberia,population_2023,5493031
+Palestine[o],population_2023,5409202
+Ireland,population_2023,5196630
+New Zealand,population_2023,5172836
+Central African Republic,population_2023,5152421
+Costa Rica,population_2023,5105525
+Oman,population_2023,5049269
+Mauritania,population_2023,5022441
+Kuwait,population_2023,4838782
+Panama,population_2023,4458759
+Croatia,population_2023,3896023
+Georgia[p],population_2023,3807492
+Eritrea,population_2023,3470390
+Mongolia,population_2023,3431932
+Uruguay,population_2023,3388081
+Puerto Rico (United States),population_2023,3242023
+Bosnia and Herzegovina,population_2023,3185073
+Moldova[q],population_2023,3067070
+Qatar,population_2023,2979082
+Namibia,population_2023,2963095
+Armenia,population_2023,2943393
+Lithuania,population_2023,2854099
+Jamaica,population_2023,2839786
+Albania,population_2023,2811655
+Gambia,population_2023,2697845
+Gabon,population_2023,2484789
+Botswana,population_2023,2480244
+Lesotho,population_2023,2311472
+Guinea-Bissau,population_2023,2153339
+Slovenia,population_2023,2118396
+Latvia,population_2023,1882396
+Equatorial Guinea,population_2023,1847549
+North Macedonia,population_2023,1831802
+Kosovo[r],population_2023,1700031
+Bahrain,population_2023,1569666
+Trinidad and Tobago,population_2023,1502932
+Timor-Leste,population_2023,1384286
+Estonia,population_2023,1367196
+Cyprus[s],population_2023,1344976
+Mauritius,population_2023,1273588
+Eswatini,population_2023,1230506
+Djibouti,population_2023,1152944
+Fiji,population_2023,924145
+Réunion (France),population_2023,874883
+Comoros,population_2023,850387
+Guyana,population_2023,826353
+Solomon Islands,population_2023,800005
+Bhutan,population_2023,786385
+Macao (China)[t],population_2023,713912
+Luxembourg,population_2023,665098
+Montenegro,population_2023,633552
+Suriname,population_2023,628886
+Western Sahara (disputed),population_2023,579729
+Malta,population_2023,532956
+Maldives,population_2023,525994
+Cape Verde,population_2023,522331
+Brunei,population_2023,458949
+Belize,population_2023,411106
+Bahamas,population_2023,399440
+Iceland,population_2023,387558
+Guadeloupe (France),population_2023,376517
+Martinique (France),population_2023,346002
+Vanuatu,population_2023,320409
+Mayotte (France),population_2023,316015
+French Guiana (France),population_2023,303402
+New Caledonia (France),population_2023,289870
+Barbados,population_2023,282336
+French Polynesia (France),population_2023,281118
+São Tomé and Príncipe,population_2023,230871
+Samoa,population_2023,216663
+Curaçao (Netherlands),population_2023,185427
+Saint Lucia,population_2023,179285
+Guam (United States),population_2023,166506
+Kiribati,population_2023,132530
+Seychelles,population_2023,127951
+Grenada,population_2023,117081
+Micronesia,population_2023,112630
+Tonga,population_2023,104597
+Aruba (Netherlands),population_2023,107939
+Jersey (United Kingdom),population_2023,103674
+Saint Vincent and the Grenadines,population_2023,101323
+Antigua and Barbuda,population_2023,93316
+U.S. Virgin Islands (United States),population_2023,85701
+Isle of Man (United Kingdom),population_2023,84165
+Andorra,population_2023,80856
+Cayman Islands (United Kingdom),population_2023,73038
+Dominica,population_2023,66510
+Bermuda (United Kingdom),population_2023,64698
+Guernsey (United Kingdom),population_2023,64017
+Greenland (Denmark),population_2023,55922
+Faroe Islands (Denmark),population_2023,54714
+American Samoa (United States),population_2023,47521
+Saint Kitts and Nevis,population_2023,46758
+Turks and Caicos Islands (United Kingdom),population_2023,46198
+Northern Mariana Islands (United States),population_2023,45143
+Sint Maarten (Netherlands),population_2023,42749
+Liechtenstein,population_2023,39598
+British Virgin Islands (United Kingdom),population_2023,38985
+Monaco,population_2023,38956
+Gibraltar (United Kingdom),population_2023,38471
+Marshall Islands,population_2023,38827
+San Marino,population_2023,33733
+Caribbean Netherlands (Netherlands)[u],population_2023,29898
+Saint Martin (France),population_2023,27515
+Palau,population_2023,17727
+Anguilla (United Kingdom),population_2023,14410
+Cook Islands (New Zealand),population_2023,14222
+Nauru,population_2023,11875
+Wallis and Futuna (France),population_2023,11370
+Saint Barthélemy (France),population_2023,11085
+Tuvalu,population_2023,9816
+Saint Pierre and Miquelon (France),population_2023,5681
+Saint Helena (United Kingdom)[v],population_2023,5289
+Montserrat (United Kingdom),population_2023,4420
+Falkland Islands (United Kingdom),population_2023,3477
+Tokelau (New Zealand),population_2023,2397
+Niue (New Zealand),population_2023,1817
+Vatican City[w],population_2023,496
+World,change_percent,+0.88%
+India,change_percent,+0.89%
+China[a],change_percent,−0.18%
+United States,change_percent,+0.57%
+Indonesia,change_percent,+0.85%
+Pakistan,change_percent,+1.56%
+Nigeria,change_percent,+2.12%
+Brazil,change_percent,+0.40%
+Bangladesh,change_percent,+1.23%
+Russia,change_percent,−0.10%
+Mexico,change_percent,+0.88%
+Ethiopia,change_percent,+2.64%
+Japan,change_percent,−0.50%
+Philippines,change_percent,+0.81%
+Egypt,change_percent,+1.70%
+DR Congo,change_percent,+3.31%
+Vietnam,change_percent,+0.67%
+Iran,change_percent,+1.21%
+Turkey,change_percent,+0.24%
+Germany,change_percent,+0.55%
+Thailand,change_percent,−0.05%
+United Kingdom,change_percent,+0.74%
+Tanzania[b],change_percent,+2.95%
+France[c],change_percent,+0.24%
+South Africa,change_percent,+1.34%
+Italy,change_percent,−0.20%
+Kenya,change_percent,+2.00%
+Myanmar,change_percent,+0.70%
+Colombia,change_percent,+1.13%
+South Korea,change_percent,−0.07%
+Sudan,change_percent,+1.34%
+Uganda,change_percent,+2.84%
+Spain[d],change_percent,+0.17%
+Algeria,change_percent,+1.51%
+Argentina,change_percent,+0.29%
+Iraq,change_percent,+2.28%
+Afghanistan,change_percent,+2.16%
+Yemen,change_percent,+3.06%
+Canada,change_percent,+1.23%
+Poland,change_percent,+0.98%
+Ukraine[e],change_percent,−8.08%
+Morocco,change_percent,+1.03%
+Angola,change_percent,+3.13%
+Uzbekistan,change_percent,+2.04%
+Malaysia,change_percent,+1.24%
+Peru,change_percent,+1.11%
+Ghana,change_percent,+1.93%
+Mozambique,change_percent,+3.00%
+Saudi Arabia,change_percent,+0.28%
+Madagascar,change_percent,+2.49%
+Ivory Coast,change_percent,+2.54%
+Nepal,change_percent,+0.84%
+Cameroon,change_percent,+2.68%
+Venezuela,change_percent,+0.31%
+Australia[f],change_percent,+0.95%
+North Korea,change_percent,+0.34%
+Niger,change_percent,+3.35%
+Mali,change_percent,+3.02%
+Syria,change_percent,+5.04%
+Taiwan[g],change_percent,−0.44%
+Burkina Faso,change_percent,+2.30%
+Sri Lanka,change_percent,+0.60%
+Malawi,change_percent,+2.60%
+Zambia,change_percent,+2.83%
+Kazakhstan,change_percent,+1.47%
+Chile,change_percent,+0.54%
+Chad,change_percent,+4.68%
+Romania,change_percent,−0.25%
+Somalia[h],change_percent,+3.13%
+Guatemala,change_percent,+1.55%
+Senegal,change_percent,+2.42%
+Netherlands[i],change_percent,+1.05%
+Ecuador,change_percent,+0.88%
+Cambodia,change_percent,+1.29%
+Zimbabwe,change_percent,+1.69%
+Guinea,change_percent,+2.49%
+Benin,change_percent,+2.55%
+Rwanda,change_percent,+2.22%
+Burundi,change_percent,+2.77%
+Bolivia,change_percent,+1.38%
+Tunisia,change_percent,+0.67%
+Belgium,change_percent,+0.61%
+Haiti,change_percent,+1.16%
+South Sudan,change_percent,+4.19%
+Jordan,change_percent,+1.63%
+Dominican Republic,change_percent,+0.90%
+Cuba,change_percent,−0.36%
+Czechia,change_percent,+1.28%
+Honduras,change_percent,+1.73%
+United Arab Emirates,change_percent,+3.91%
+Sweden,change_percent,+0.61%
+Portugal[j],change_percent,+0.13%
+Tajikistan,change_percent,+2.04%
+Papua New Guinea,change_percent,+1.83%
+Azerbaijan,change_percent,+0.22%
+Greece,change_percent,−1.63%
+Hungary,change_percent,−2.79%
+Togo,change_percent,+2.36%
+Israel,change_percent,+1.68%
+Austria,change_percent,+0.73%
+Belarus,change_percent,−0.63%
+Switzerland,change_percent,+0.89%
+Sierra Leone,change_percent,+2.22%
+Laos,change_percent,+1.40%
+Hong Kong (China)[k],change_percent,−0.31%
+Turkmenistan,change_percent,+1.86%
+Libya,change_percent,+1.13%
+Kyrgyzstan,change_percent,+1.69%
+Paraguay,change_percent,+1.24%
+Nicaragua,change_percent,+1.38%
+Bulgaria,change_percent,−0.44%
+Serbia[l],change_percent,−0.27%
+El Salvador,change_percent,+0.47%
+Congo,change_percent,+2.45%
+Denmark,change_percent,+0.77%
+Singapore,change_percent,+2.46%
+Lebanon,change_percent,−0.19%
+Finland[m],change_percent,+0.57%
+Norway[n],change_percent,+1.12%
+Slovakia,change_percent,+0.82%
+Liberia,change_percent,+2.23%
+Palestine[o],change_percent,+1.96%
+Ireland,change_percent,+1.69%
+New Zealand,change_percent,+0.80%
+Central African Republic,change_percent,+1.07%
+Costa Rica,change_percent,+0.47%
+Oman,change_percent,+6.74%
+Mauritania,change_percent,+3.01%
+Kuwait,change_percent,+5.43%
+Panama,change_percent,+1.32%
+Croatia,change_percent,−0.28%
+Georgia[p],change_percent,+0.33%
+Eritrea,change_percent,+1.79%
+Mongolia,change_percent,+1.36%
+Uruguay,change_percent,−0.08%
+Puerto Rico (United States),change_percent,+0.03%
+Bosnia and Herzegovina,change_percent,−0.62%
+Moldova[q],change_percent,+0.89%
+Qatar,change_percent,+2.99%
+Namibia,change_percent,+2.54%
+Armenia,change_percent,+2.17%
+Lithuania,change_percent,+1.32%
+Jamaica,change_percent,+0.02%
+Albania,change_percent,−0.56%
+Gambia,change_percent,+2.33%
+Gabon,change_percent,+2.22%
+Botswana,change_percent,+1.65%
+Lesotho,change_percent,+1.11%
+Guinea-Bissau,change_percent,+2.27%
+Slovenia,change_percent,+0.15%
+Latvia,change_percent,+0.07%
+Equatorial Guinea,change_percent,+2.44%
+North Macedonia,change_percent,−0.46%
+Kosovo[r],change_percent,−1.04%
+Bahrain,change_percent,+2.36%
+Trinidad and Tobago,change_percent,+0.47%
+Timor-Leste,change_percent,+1.09%
+Estonia,change_percent,+1.27%
+Cyprus[s],change_percent,+1.02%
+Mauritius,change_percent,−0.20%
+Eswatini,change_percent,+0.95%
+Djibouti,change_percent,+1.39%
+Fiji,change_percent,+0.51%
+Réunion (France),change_percent,+0.38%
+Comoros,change_percent,+1.94%
+Guyana,change_percent,+0.57%
+Solomon Islands,change_percent,+2.42%
+Bhutan,change_percent,+0.70%
+Macao (China)[t],change_percent,+1.36%
+Luxembourg,change_percent,+1.80%
+Montenegro,change_percent,+3.08%
+Suriname,change_percent,+0.92%
+Western Sahara (disputed),change_percent,+1.93%
+Malta,change_percent,+0.90%
+Maldives,change_percent,+0.36%
+Cape Verde,change_percent,+0.50%
+Brunei,change_percent,+0.79%
+Belize,change_percent,+2.08%
+Bahamas,change_percent,+0.48%
+Iceland,change_percent,+1.89%
+Guadeloupe (France),change_percent,−2.13%
+Martinique (France),change_percent,−0.99%
+Vanuatu,change_percent,+2.35%
+Mayotte (France),change_percent,+3.52%
+French Guiana (France),change_percent,+1.71%
+New Caledonia (France),change_percent,+0.96%
+Barbados,change_percent,−2.07%
+French Polynesia (France),change_percent,+0.26%
+São Tomé and Príncipe,change_percent,+2.02%
+Samoa,change_percent,+0.65%
+Curaçao (Netherlands),change_percent,+0.04%
+Saint Lucia,change_percent,+0.28%
+Guam (United States),change_percent,+0.80%
+Kiribati,change_percent,+1.58%
+Seychelles,change_percent,+1.94%
+Grenada,change_percent,+0.14%
+Micronesia,change_percent,+0.46%
+Tonga,change_percent,−0.42%
+Aruba (Netherlands),change_percent,+0.15%
+Jersey (United Kingdom),change_percent,+0.18%
+Saint Vincent and the Grenadines,change_percent,−0.71%
+Antigua and Barbuda,change_percent,+0.51%
+U.S. Virgin Islands (United States),change_percent,−0.93%
+Isle of Man (United Kingdom),change_percent,+0.04%
+Andorra,change_percent,+1.44%
+Cayman Islands (United Kingdom),change_percent,+2.02%
+Dominica,change_percent,−0.47%
+Bermuda (United Kingdom),change_percent,−0.08%
+Guernsey (United Kingdom),change_percent,+0.46%
+Greenland (Denmark),change_percent,+1.69%
+Faroe Islands (Denmark),change_percent,+1.30%
+American Samoa (United States),change_percent,−1.70%
+Saint Kitts and Nevis,change_percent,+0.10%
+Turks and Caicos Islands (United Kingdom),change_percent,+0.77%
+Northern Mariana Islands (United States),change_percent,−2.03%
+Sint Maarten (Netherlands),change_percent,+1.45%
+Liechtenstein,change_percent,+0.71%
+British Virgin Islands (United Kingdom),change_percent,+1.74%
+Monaco,change_percent,+0.06%
+Gibraltar (United Kingdom),change_percent,+2.29%
+Marshall Islands,change_percent,−3.12%
+San Marino,change_percent,−1.05%
+Caribbean Netherlands (Netherlands)[u],change_percent,+4.44%
+Saint Martin (France),change_percent,−4.69%
+Palau,change_percent,−0.18%
+Anguilla (United Kingdom),change_percent,+1.62%
+Cook Islands (New Zealand),change_percent,−3.40%
+Nauru,change_percent,+0.63%
+Wallis and Futuna (France),change_percent,−0.94%
+Saint Barthélemy (France),change_percent,+1.51%
+Tuvalu,change_percent,−1.76%
+Saint Pierre and Miquelon (France),change_percent,−0.89%
+Saint Helena (United Kingdom)[v],change_percent,−1.01%
+Montserrat (United Kingdom),change_percent,−0.74%
+Falkland Islands (United Kingdom),change_percent,−0.37%
+Tokelau (New Zealand),change_percent,+4.67%
+Niue (New Zealand),change_percent,−0.22%
+Vatican City[w],change_percent,−1.78%
