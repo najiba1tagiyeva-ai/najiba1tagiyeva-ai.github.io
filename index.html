@@ -216,8 +216,23 @@ https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.i
  <section>
     <div class="chart-description">
         <h2>CC7. Maps. Base maps and choropleths</h2>
+    </div>
     
-</section>   
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      
+        <div style="flex: 1; min-width: 400px;">
+            <h3>Map 1: Base Map</h3>
+            <div id="map1" style="height: 500px;"></div>
+             <figure id="Location13"></figure> 
+        </div>
+        
+   
+        <div style="flex: 1; min-width: 400px;">
+            <h3>Map 2: Choropleth</h3>
+            <div id="map2" style="height: 500px;"></div>
+        </div>
+    </div>
+</section>
 
     <script>
     let figure_1_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1_barchart_totalinflation_oecd.json"; 
@@ -232,6 +247,7 @@ https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.i
     let figure_10_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Mobile.json";
     let figure_11_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Wk5.Scatter2.json";
     let figure_12_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Map2.json";
+    let figure_13_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.Wales_independent_schools.json";
         
     vegaEmbed('#Location1', figure_1_spec);
     vegaEmbed('#Location2', figure_2_spec);
@@ -245,6 +261,7 @@ https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.i
     vegaEmbed('#Location10', figure_10_spec);
     vegaEmbed('#Location11', figure_11_spec);
     vegaEmbed('#Location12', figure_12_spec);
+    vegaEmbed('#Location12', figure_13_spec);
 </script>
 
 </body>
