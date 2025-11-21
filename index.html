@@ -111,15 +111,32 @@ Despite the highest earnings, Londoners need eleven years' income for homes vers
 <section>
     <div class="chart-description">
         <h2>CC5. Accessing data: Scraper and API.</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page --> </p>
-        </div>
+
+        <p>
+            This visualization uses live data from the World Bank Open Data API.  
+            <br><br>
+            <b>Base URL:</b> https://api.worldbank.org/v2/  
+            <br>
+            The API requires a country code, an indicator code, and a format parameter.  
+            <br><br>
+            <b>Internet Usage Indicator:</b> IT.NET.USER.ZS  
+            <br>
+            <b>Mobile Subscriptions Indicator:</b> IT.CEL.SETS.P2  
+            <br><br>
+            <b>Final API URL used:</b><br>
+            https://api.worldbank.org/v2/country/AGO;BDI;BEN;BFA;BWA;CAF;CIV;CMR;COD;COG;COM;CPV;ERI;ETH;GAB;GHA;GIN;GMB;GNB;GNQ;KEN;LBR;LSO;MDG;MLI;MOZ;MRT;MWI;NAM;NER;NGA;RWA;SDN;SEN;SLE;SOM;SSD;STP;SWZ;TCD;TGO;TZA;UGA;ZAF;ZMB;ZWE/indicator/IT.NET.USER.ZS?date=2023&format=json
+            <br><br>
+            The charts read the data directly from the API through Vega-Lite lookups.
+        </p>
+    </div>
         
     <div class="chart-row">
-        <figure id="Location9"></figure>
-       
+        <figure id="Location9"></figure> <!-- Map -->
+        <figure id="Location10"></figure> <!-- Top 5 Bar Chart -->
     </div>
 
-    </section>
+</section>
+
 
     <script>
     let figure_1_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1_barchart_totalinflation_oecd.json"; 
