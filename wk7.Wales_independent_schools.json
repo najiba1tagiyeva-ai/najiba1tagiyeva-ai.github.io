@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Distribution of Independent Schools in Wales",
+    "subtitle": [
+      "Mercator Projection",
+      "Distribution by Local Authority (2024)"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "fontSize": 16,
+    "anchor": "middle",
+    "color": "#1a1a1a"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "width": 400,
+  "height": 400,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/main/charts/maps/geoWalWards.json",
+        "format": {"type": "topojson", "feature": "wards"}
+      },
+      "projection": {
+        "type": "mercator",
+        "scale": 5500,
+        "center": [-3.5, 52.3],
+        "translate": [200, 200]
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e8e8e8",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.4
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.wales_independent_schools.csv"
+      },
+      "projection": {
+        "type": "mercator",
+        "scale": 4500,
+        "center": [-3.5, 52.3],
+        "translate": [200, 200]
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.85,
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {"value": 200},
+        "color": {
+          "field": "Local Authority",
+          "type": "nominal",
+          "scale": {"scheme": "tableau20"},
+          "legend": {
+            "title": "",
+            "labelFontSize": 10,
+            "symbolSize": 150,
+            "orient": "right",
+            "offset": 10
+          }
+        },
+        "tooltip": [
+          {"field": "School Name", "type": "nominal", "title": "School"},
+          {
+            "field": "Local Authority",
+            "type": "nominal",
+            "title": "Local Authority"
+          },
+          {"field": "Address 2", "type": "nominal", "title": "Location"},
+          {"field": "Postcode", "type": "nominal", "title": "Postcode"},
+          {"field": "Phone Number", "type": "nominal", "title": "Phone"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"label": "Local Authority", "x": 420, "y": 50}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#1a1a1a"
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null},
+        "y": {"field": "y", "type": "quantitative", "axis": null},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ]
+}
