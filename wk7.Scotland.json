@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Scotland Population Density by Local Authority (2024)",
+    "subtitle": "Source: Scottish Government & ONS — Population Density Dataset (2024)",
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic",
+    "anchor": "start",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "color": "#222"
+  },
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.LAD25NM",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.scotland_population_density.csv"
+        },
+        "key": "council",
+        "fields": ["density", "population", "area_km2"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "#ffffff", "strokeWidth": 0.6},
+  "encoding": {
+    "color": {
+      "field": "density",
+      "type": "quantitative",
+      "scale": {"scheme": "magma"},
+      "title": "People per km²"
+    },
+    "tooltip": [
+      {"field": "properties.LAD25NM", "title": "Local Authority"},
+      {"field": "density", "title": "Density", "format": ",.1f"},
+      {"field": "population", "title": "Population", "format": ",.0f"},
+      {"field": "area_km2", "title": "Area (km²)", "format": ",.0f"}
+    ]
+  },
+  "projection": {"type": "mercator"},
+  "config": {}
+}
