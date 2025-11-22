@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth map of Scotland showing 2024 wage data by Local Authority District using blue color scale.",
+  "title": "Scotland Wages by Local Authority (2024)",
+  "width": 350,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.LAD25CD",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/series_data/wages_LAD_SCT.csv"
+        },
+        "key": "geo_id",
+        "fields": ["value", "date"]
+      }
+    },
+    {
+      "filter": "datum.date == 2024"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"},
+      "title": "Wages (£)"
+    },
+    "tooltip": [
+      {"field": "properties.LAD25NM", "type": "nominal", "title": "Local Authority District"},
+      {"field": "value", "type": "quantitative", "title": "Wages (£)", "format": ",.0f"},
+      {"field": "date", "type": "quantitative", "title": "Year"}
+    ]
+  },
+  "projection": {
+    "type": "mercator"
+  }
+}
