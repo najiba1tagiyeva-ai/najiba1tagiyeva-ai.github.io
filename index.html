@@ -3,7 +3,7 @@
     
 <head>    
     <link rel="stylesheet" type="text/css" href="New.css">
-    <title> Najiba Taghiyeva|Portfolio</title> 
+    <title> Najiba Taghiyeva | Portfolio</title> 
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -13,6 +13,7 @@
     <h1 class="big" style="margin-bottom: 0px;">
         Najiba E. Taghiyeva's Portfolio
     </h1>
+
     <p style="margin-top: 0px; color: rgb(0, 0, 52)">
         <a href="https://drive.google.com/file/d/1L8yQJMR6_VcEm6Tz1jx_2QnU0YmL352u/view?usp=share_link" target="_blank">CV</a> | 
         <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp">LinkedIn</a> | 
@@ -20,7 +21,7 @@
     </p>
 
     <h3 class="small">
-        Welcome to my chart portfolio. Here you’ll find visualisations I’ve designed to explore data, uncover patterns, and communicate insights clearly and effectively.  
+        Welcome to my chart portfolio. Here you’ll find visualisations to explore data, uncover patterns, and communicate insights clearly.
     </h3>
 
   
@@ -54,7 +55,7 @@
         <div class="chart-description">
             <h2>CC3. Debate. Use a visualisation in policy commentary</h2>
             <p>
-                Should UK prioritise regional investment over London, given capital's severe housing unaffordability despite highest salaries?
+                Should UK prioritise regional investment over London, given capital's high housing unaffordability despite highest salaries?
             </p>
         </div>
 
@@ -65,27 +66,25 @@
         <figure id="Location6" style="display:flex; justify-content:center; margin:0 auto;"></figure>
 
         <p>
-            Despite the highest earnings, Londoners need eleven years' income for homes versus five in the North East, revealing failed housing policy priorities.
+            Despite highest earnings, Londoners need eleven years' income for homes versus five in the North East.
         </p>
     </section>
 
     <!-- CC4 -->
     <section>
         <div class="chart-description">
-            <h2>CC4. Replication. Re-create, then improve, someone else's chart.</h2>
-            <p>For this task, I selected a chart used by YouGov in their political analysis...</p>
+            <h2>CC4. Replication. Re-create, then improve someone else's chart.</h2>
         </div>
     
         <h3>The original chart</h3>
         <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
-             alt="Original YouGov Voting Chart"
-             style="width: 100%; max-width: 850px; display: block; margin: 0 auto 40px auto; border: 1px solid #ccc;">
+             style="width: 100%; max-width: 850px; border: 1px solid #ccc; margin: 0 auto 40px auto; display: block;">
 
         <h3>Chart 1. Replication using Vega-Lite</h3>
-        <figure id="Location7" style="width: 100%; max-width: 850px; margin: 0 auto 40px auto;"></figure>
+        <figure id="Location7"></figure>
 
         <h3>Chart 2. Improved version</h3>
-        <figure id="Location8" style="width: 100%; max-width: 850px; margin: 0 auto 40px auto;"></figure>
+        <figure id="Location8"></figure>
     </section>
 
     <!-- CC5 -->
@@ -106,15 +105,17 @@
     </section>
 
 
-    <!-- ⭐⭐⭐ CC6 — FULLY UPDATED WITH JAVASCRIPT LOOP ⭐⭐⭐ -->
+    <!-- ⭐⭐⭐ CC6 — JS LOOP DASHBOARD ⭐⭐⭐ -->
     <section>
         <h2>CC6 - Loops. Build a dashboard.</h2>
 
         <p style="text-align: center;">
-            <a href="https://colab.research.google.com/drive/1KNmi2SCl4Ujs2ca5D11-sTNfacq4saT_?usp=sharing">Colab notebook.</a>
+            <a href="https://colab.research.google.com/drive/1KNmi2SCl4Ujs2ca5D11-sTNfacq4saT_?usp=sharing" target="_blank">
+                Colab notebook.
+            </a>
         </p>
 
-        <!-- New grid container for looped charts -->
+        <!-- GRID for 6 CHARTS -->
         <div id="cpi-dashboard" 
              style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 90%; margin: 0 auto;">
         </div>
@@ -123,9 +124,7 @@
 
     <!-- CC7 -->
     <section>
-        <div class="chart-description">
-            <h2>CC7. Maps. Base maps and choropleths</h2>
-        </div>
+        <h2>CC7. Maps. Base maps and choropleths</h2>
         
         <div style="display: flex; gap: 20px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 400px;">
@@ -140,8 +139,11 @@
         </div>
     </section>
 
+
+
     <!-- JAVASCRIPT -->
     <script>
+    /* CC1–CC5 & CC7 charts */
     let figure_1_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1_barchart_totalinflation_oecd.json"; 
     let figure_2_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1.consumer-price-index_2004-2024.json";
     let figure_3_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk2.GDPgrowth_Turkiye.json";
@@ -173,10 +175,10 @@
     vegaEmbed('#Location14', figure_14_spec);
 
 
-    / CC6 — EMBED 6 CHARTS USING A LOOP/
+    /CC6 — EMBED 6 CHARTS USING A LOOP/
     let cpiCharts = [
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_Consumer%20Price%20Index%20_All%20Items_CPIAUCSL.json",
-        ""https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6.CPI_Food_CPIUFDSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6.CPI_Food_CPIUFDSL.json",
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Energy_CPIENGSL.json",
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Housing_CPIHOSSL.json",
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Medical%20Care_CPIMEDSL.json",
