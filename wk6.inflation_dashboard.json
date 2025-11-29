@@ -1,0 +1,5122 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "date": "2014-01-01",
+        "value": 235.288,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 235.547,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 236.028,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 236.468,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 236.918,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 237.231,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 237.498,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 237.46,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 237.477,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 237.43,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 236.983,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 236.252,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 234.747,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 235.342,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 235.976,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 236.222,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 237.001,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 237.657,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 238.034,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 238.033,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 237.498,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 237.733,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 238.017,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 237.761,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 237.652,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 237.336,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 238.08,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 238.992,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 239.557,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 240.222,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 240.101,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 240.545,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 241.176,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 241.741,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 242.026,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 242.637,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 243.618,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 244.006,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 243.892,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 244.193,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 244.004,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 244.163,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 244.243,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 245.183,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 246.435,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 246.626,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 247.284,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 247.805,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 248.859,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 249.529,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 249.577,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 250.227,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 250.792,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 251.018,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 251.214,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 251.663,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 252.182,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 252.772,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 252.594,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 252.767,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 252.561,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 253.319,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 254.277,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 255.233,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 255.296,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 255.213,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 255.802,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 256.036,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 256.43,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 257.155,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 257.879,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 258.63,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 259.127,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 259.25,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 258.076,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 256.032,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 255.802,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 257.042,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 258.352,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 259.316,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 259.997,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 260.319,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 260.911,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 262.045,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 262.639,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 263.573,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 264.847,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 266.625,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 268.404,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 270.71,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 271.965,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 272.752,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 273.942,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 276.528,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 278.824,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 280.806,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 282.542,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 284.525,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 287.467,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 288.582,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 291.299,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 295.072,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 294.94,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 295.162,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 296.421,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 297.979,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 298.708,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 298.808,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 300.456,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 301.476,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 301.643,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 302.858,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 303.316,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 304.099,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 304.615,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 306.138,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 307.374,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 307.653,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 308.087,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 308.735,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 309.794,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 311.022,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 312.107,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 313.016,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 313.14,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 313.131,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 313.566,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 314.131,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 314.851,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 315.564,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 316.449,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 317.603,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 319.086,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 319.775,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 319.615,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 320.321,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 320.58,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 321.5,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 322.132,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 323.364,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 324.368,
+        "series": "All Items CPI",
+        "series_id": "CPIAUCSL"
+      },
+      {
+        "date": "2014-01-01",
+        "value": 238.492,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 239.408,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 240.447,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 241.241,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 242.408,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 242.646,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 243.235,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 243.792,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 244.48,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 244.866,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 245.394,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 246.237,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 246.197,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 246.495,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 246.072,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 246.002,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 246.239,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 246.937,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 247.157,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 247.742,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 248.492,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 248.755,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 248.525,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 248.206,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 248.353,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 248.606,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 248.029,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 248.235,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 247.856,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 247.683,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 247.658,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 247.746,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 247.772,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 247.812,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 247.741,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 247.725,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 248.065,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 248.735,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 249.244,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 249.589,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 249.972,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 249.77,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 250.185,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 250.469,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 250.826,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 251.048,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 251.195,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 251.716,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 252.377,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 252.264,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 252.365,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 252.867,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 252.864,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 253.167,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 253.598,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 253.949,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 254.302,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 254.17,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 254.887,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 255.877,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 256.533,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 257.253,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 257.681,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 257.325,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 257.818,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 257.952,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 258.059,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 258.288,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 258.865,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 259.434,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 260.048,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 260.483,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 261.293,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 261.962,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 262.622,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 266.37,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 268.086,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 269.553,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 268.532,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 268.957,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 269.043,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 269.653,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 269.636,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 270.781,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 271.223,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 271.498,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 271.756,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 272.761,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 273.89,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 276.002,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 277.759,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 278.985,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 281.299,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 283.972,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 286.057,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 287.798,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 290.144,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 292.978,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 295.713,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 298.363,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 301.684,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 304.845,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 308.083,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 310.739,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 312.835,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 315.023,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 316.5,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 317.798,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 319.421,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 320.651,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 320.797,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 321.209,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 321.933,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 322.406,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 323.046,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 323.957,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 324.332,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 325.424,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 325.808,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 326.442,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 327.575,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 327.803,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 328.004,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 328.413,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 328.864,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 329.651,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 330.142,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 330.644,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 331.716,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 332.418,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 333.492,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 334.456,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 335.671,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 336.223,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 337.686,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 337.424,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 338.386,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 339.498,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 339.652,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 341.208,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 342.054,
+        "series": "Food CPI",
+        "series_id": "CPIUFDSL"
+      },
+      {
+        "date": "2014-01-01",
+        "value": 250.34,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 249.925,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 249.961,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 249.864,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 249.213,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 249.714,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 248.744,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 245.699,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 241.61,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 237.061,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 229.016,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 218.536,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 199.926,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 203.021,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 205.757,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 203.577,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 208.973,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 212.015,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 211.623,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 208.579,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 197.246,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 195.616,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 195.114,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 190.143,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 185.235,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 176.401,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 182.234,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 186.713,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 188.596,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 192.899,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 189.046,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 188.772,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 192.243,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 195.979,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 196.372,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 199.513,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 205.369,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 204.133,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 202.528,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 202.954,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 198.449,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 197.808,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 195.994,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 201.45,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 212.723,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 208.328,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 213.047,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 213.574,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 216.855,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 220.141,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 215.72,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 219.165,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 221.045,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 220.947,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 219.929,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 222.781,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 223.955,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 226.022,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 218.5,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 213.63,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 204.34,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 208.144,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 214.934,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 222.42,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 220.523,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 214.926,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 216.696,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 213.847,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 213.015,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 215.268,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 217.488,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 221.18,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 220.147,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 214.294,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 201.681,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 182.586,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 180.04,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 188.734,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 191.966,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 193.307,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 196.705,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 196.113,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 197.017,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 205.67,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 211.551,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 219.204,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 228.068,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 227.637,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 230.26,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 234.697,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 237.425,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 241.446,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 245.525,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 254.669,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 262.745,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 267.047,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 269.67,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 275.672,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 300.345,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 296.071,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 309.418,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 332.281,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 314.944,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 298.772,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 294.581,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 299.791,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 297.403,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 285.672,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 292.447,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 289.134,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 280.323,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 281.5,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 274.466,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 277.109,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 275.9,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 287.508,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 293.194,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 286.478,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 281.732,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 280.311,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 280.238,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 283.983,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 285.463,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 288.138,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 284.275,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 279.824,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 278.634,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 275.863,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 273.238,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 272.629,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 272.863,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 279.455,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 282.481,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 283.035,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 276.274,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 278.118,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 275.406,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 278.012,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 275.044,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 276.936,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 281.12,
+        "series": "Energy CPI",
+        "series_id": "CPIENGSL"
+      },
+      {
+        "date": "2014-01-01",
+        "value": 230.52,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 231.084,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 232.119,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 232.014,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 232.785,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 233.117,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 233.695,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 233.928,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 234.234,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 234.656,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 235.0,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 235.425,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 235.735,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 236.2,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 236.602,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 237.086,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 237.21,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 237.804,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 238.334,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 238.7,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 239.236,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 239.593,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 240.001,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 240.224,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 240.673,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 241.124,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 241.587,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 242.071,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 242.833,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 243.515,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 244.224,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 244.911,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 245.755,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 246.48,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 246.985,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 247.543,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 248.164,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 248.807,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 249.098,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 249.8,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 250.408,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 250.933,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 251.21,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 252.086,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 252.603,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 253.292,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 253.798,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 254.575,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 255.117,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 255.827,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 256.508,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 257.232,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 257.894,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 258.004,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 258.594,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 259.39,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 259.582,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 260.391,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 261.054,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 262.124,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 262.46,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 263.144,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 263.951,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 264.649,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 265.129,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 265.866,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 266.527,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 266.832,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 267.574,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 267.93,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 268.444,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 268.86,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 269.689,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 270.365,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 270.321,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 270.366,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 270.785,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 271.26,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 271.942,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 272.539,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 272.895,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 273.154,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 273.806,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 274.303,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 274.435,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 275.136,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 276.028,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 277.441,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 278.625,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 279.786,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 281.076,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 282.074,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 283.496,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 285.495,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 286.923,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 288.252,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 289.925,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 291.442,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 293.498,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 295.468,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 297.911,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 300.401,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 301.896,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 304.249,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 306.271,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 307.991,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 309.309,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 311.432,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 313.783,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 315.343,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 316.34,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 317.414,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 318.159,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 319.392,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 320.599,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 321.619,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 323.299,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 324.182,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 325.457,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 326.476,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 328.362,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 329.645,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 331.013,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 331.746,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 332.654,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 333.42,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 334.521,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 335.606,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 336.524,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 337.759,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 338.894,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 339.853,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 340.995,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 342.32,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 343.292,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 344.919,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 345.867,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 346.957,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 347.713,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 348.967,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 349.516,
+        "series": "Housing CPI",
+        "series_id": "CPIHOSSL"
+      },
+      {
+        "date": "2014-01-01",
+        "value": 429.989,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 431.137,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 432.211,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 433.26,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 434.262,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 435.187,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 435.864,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 436.041,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 437.091,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 437.758,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 439.408,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 441.464,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 441.351,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 441.101,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 442.943,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 445.822,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 446.743,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 446.33,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 446.953,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 446.612,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 447.648,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 450.681,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 452.225,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 452.732,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 454.194,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 456.922,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 457.723,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 459.245,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 460.487,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 462.09,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 464.439,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 469.02,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 469.816,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 469.749,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 469.914,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 470.539,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 471.484,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 473.139,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 473.685,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 473.007,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 472.981,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 474.492,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 476.279,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 477.199,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 477.19,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 477.671,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 477.791,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 478.891,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 480.797,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 481.6,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 483.078,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 483.577,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 484.543,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 486.209,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 485.246,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 484.273,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 485.039,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 485.652,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 487.615,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 488.82,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 489.968,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 490.16,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 491.412,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 492.97,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 494.859,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 495.745,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 497.714,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 500.662,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 501.71,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 506.433,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 508.315,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 510.875,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 511.854,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 512.967,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 514.743,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 516.77,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 519.152,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 520.867,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 522.675,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 522.922,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 522.947,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 520.943,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 520.567,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 519.866,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 521.774,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 523.455,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 523.943,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 524.39,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 523.935,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 523.117,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 524.376,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 524.785,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 525.098,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 527.688,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 529.529,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 531.041,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 534.649,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 536.283,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 538.973,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 541.35,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 543.521,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 546.84,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 549.967,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 553.036,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 556.558,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 554.071,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 551.402,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 551.943,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 550.887,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 548.946,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 547.054,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 547.039,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 547.452,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 547.487,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 547.356,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 547.848,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 548.636,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 549.746,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 552.23,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 554.294,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 556.567,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 556.727,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 559.182,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 561.416,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 564.235,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 565.299,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 564.919,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 564.364,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 566.497,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 567.835,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 569.16,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 569.902,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 571.234,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 572.797,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 573.966,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 576.785,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 578.236,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 580.978,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 584.77,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 583.832,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 585.097,
+        "series": "Medical Care CPI",
+        "series_id": "CPIMEDSL"
+      },
+      {
+        "date": "2014-01-01",
+        "value": 219.287,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-02-01",
+        "value": 218.525,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-03-01",
+        "value": 217.491,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-04-01",
+        "value": 218.989,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-05-01",
+        "value": 218.306,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-06-01",
+        "value": 218.653,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-07-01",
+        "value": 218.126,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-08-01",
+        "value": 217.071,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-09-01",
+        "value": 215.41,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-10-01",
+        "value": 213.73,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-11-01",
+        "value": 210.033,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2014-12-01",
+        "value": 204.124,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-01-01",
+        "value": 194.852,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-02-01",
+        "value": 197.087,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-03-01",
+        "value": 199.119,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-04-01",
+        "value": 198.636,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-05-01",
+        "value": 202.277,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-06-01",
+        "value": 203.86,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-07-01",
+        "value": 204.166,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-08-01",
+        "value": 202.609,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-09-01",
+        "value": 197.162,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-10-01",
+        "value": 196.445,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-11-01",
+        "value": 196.644,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2015-12-01",
+        "value": 194.728,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-01-01",
+        "value": 192.648,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-02-01",
+        "value": 188.784,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-03-01",
+        "value": 191.583,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-04-01",
+        "value": 194.491,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-05-01",
+        "value": 195.474,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-06-01",
+        "value": 197.236,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-07-01",
+        "value": 194.654,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-08-01",
+        "value": 194.205,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-09-01",
+        "value": 195.762,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-10-01",
+        "value": 197.151,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-11-01",
+        "value": 197.331,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2016-12-01",
+        "value": 199.146,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-01-01",
+        "value": 202.082,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-02-01",
+        "value": 201.566,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-03-01",
+        "value": 201.165,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-04-01",
+        "value": 200.904,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-05-01",
+        "value": 198.623,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-06-01",
+        "value": 198.062,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-07-01",
+        "value": 196.903,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-08-01",
+        "value": 199.59,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-09-01",
+        "value": 204.503,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-10-01",
+        "value": 203.282,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-11-01",
+        "value": 205.698,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2017-12-01",
+        "value": 206.332,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-01-01",
+        "value": 208.964,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-02-01",
+        "value": 210.466,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-03-01",
+        "value": 208.649,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-04-01",
+        "value": 209.542,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-05-01",
+        "value": 210.576,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-06-01",
+        "value": 210.83,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-07-01",
+        "value": 210.467,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-08-01",
+        "value": 211.843,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-09-01",
+        "value": 212.734,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-10-01",
+        "value": 213.82,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-11-01",
+        "value": 211.019,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2018-12-01",
+        "value": 208.595,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-01-01",
+        "value": 205.719,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-02-01",
+        "value": 207.495,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-03-01",
+        "value": 210.097,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-04-01",
+        "value": 213.037,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-05-01",
+        "value": 211.761,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-06-01",
+        "value": 209.25,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-07-01",
+        "value": 209.934,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-08-01",
+        "value": 209.27,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-09-01",
+        "value": 209.085,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-10-01",
+        "value": 210.25,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-11-01",
+        "value": 211.286,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2019-12-01",
+        "value": 213.354,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-01-01",
+        "value": 213.14,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-02-01",
+        "value": 211.402,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-03-01",
+        "value": 204.709,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-04-01",
+        "value": 192.375,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-05-01",
+        "value": 188.733,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-06-01",
+        "value": 192.554,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-07-01",
+        "value": 197.289,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-08-01",
+        "value": 199.971,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-09-01",
+        "value": 202.572,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-10-01",
+        "value": 203.23,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-11-01",
+        "value": 204.355,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2020-12-01",
+        "value": 208.196,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-01-01",
+        "value": 210.241,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-02-01",
+        "value": 212.747,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-03-01",
+        "value": 216.728,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-04-01",
+        "value": 220.726,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-05-01",
+        "value": 225.932,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-06-01",
+        "value": 233.5,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-07-01",
+        "value": 234.827,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-08-01",
+        "value": 234.912,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-09-01",
+        "value": 235.987,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-10-01",
+        "value": 241.133,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-11-01",
+        "value": 247.735,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2021-12-01",
+        "value": 252.96,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-01-01",
+        "value": 254.498,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-02-01",
+        "value": 257.932,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-03-01",
+        "value": 265.504,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-04-01",
+        "value": 264.608,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-05-01",
+        "value": 269.626,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-06-01",
+        "value": 279.429,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-07-01",
+        "value": 272.826,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-08-01",
+        "value": 266.144,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-09-01",
+        "value": 265.777,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-10-01",
+        "value": 268.176,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-11-01",
+        "value": 267.192,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2022-12-01",
+        "value": 262.087,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-01-01",
+        "value": 263.801,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-02-01",
+        "value": 264.042,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-03-01",
+        "value": 262.546,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-04-01",
+        "value": 265.333,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-05-01",
+        "value": 265.1,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-06-01",
+        "value": 266.075,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-07-01",
+        "value": 265.585,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-08-01",
+        "value": 270.492,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-09-01",
+        "value": 272.18,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-10-01",
+        "value": 270.184,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-11-01",
+        "value": 269.416,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2023-12-01",
+        "value": 269.182,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-01-01",
+        "value": 268.569,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-02-01",
+        "value": 271.433,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-03-01",
+        "value": 273.045,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-04-01",
+        "value": 274.517,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-05-01",
+        "value": 272.166,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-06-01",
+        "value": 269.234,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-07-01",
+        "value": 268.635,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-08-01",
+        "value": 268.788,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-09-01",
+        "value": 269.122,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-10-01",
+        "value": 269.319,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-11-01",
+        "value": 270.229,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2024-12-01",
+        "value": 273.452,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-01-01",
+        "value": 276.799,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-02-01",
+        "value": 275.729,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-03-01",
+        "value": 270.791,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-04-01",
+        "value": 270.671,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-05-01",
+        "value": 268.815,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-06-01",
+        "value": 269.016,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-07-01",
+        "value": 269.099,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-08-01",
+        "value": 271.635,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      },
+      {
+        "date": "2025-09-01",
+        "value": 273.892,
+        "series": "Transportation CPI",
+        "series_id": "CPITRNSL"
+      }
+    ]
+  },
+  "repeat": {
+    "row": [
+      "All Items CPI",
+      "Food CPI"
+    ],
+    "column": [
+      "Energy CPI",
+      "Housing CPI",
+      "Medical Care CPI",
+      "Transportation CPI"
+    ]
+  },
+  "spec": {
+    "width": 300,
+    "height": 200,
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Year"
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "CPI"
+      }
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "series",
+          "equal": {
+            "repeat": "repeat"
+          }
+        }
+      }
+    ]
+  }
+}
