@@ -7,244 +7,140 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-  
 </head>
 
 <body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
+    <h1 class="big" style="margin-bottom: 0px;">
         Najiba E. Taghiyeva's Portfolio
     </h1>
     <p style="margin-top: 0px; color: rgb(0, 0, 52)">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        <a href="https://drive.google.com/file/d/1L8yQJMR6_VcEm6Tz1jx_2QnU0YmL352u/view?usp=share_link" target="_blank">CV</a> | <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
+        <a href="https://drive.google.com/file/d/1L8yQJMR6_VcEm6Tz1jx_2QnU0YmL352u/view?usp=share_link" target="_blank">CV</a> | 
+        <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp">LinkedIn</a> | 
+        <a href="https://www.github.com/YOUR_GITHUB">GitHub</a>
     </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+
+    <h3 class="small">
         Welcome to my chart portfolio. Here you’ll find visualisations I’ve designed to explore data, uncover patterns, and communicate insights clearly and effectively.  
     </h3>
 
   
+    <!-- CC1 -->
     <section>
-    <div class="chart-description">
-        <h2>CC1. Hosting. Display charts in your own site.</h2>
-        <p>Below are two economic indicators displayed side by side.</p>
-    </div>
+        <div class="chart-description">
+            <h2>CC1. Hosting. Display charts in your own site.</h2>
+            <p>Below are two economic indicators displayed side by side.</p>
+        </div>
 
-    <div class="chart-row">
-        <figure id="Location1"></figure>
-        <figure id="Location2"></figure>
-    </div>
-</section>
+        <div class="chart-row">
+            <figure id="Location1"></figure>
+            <figure id="Location2"></figure>
+        </div>
+    </section>
 
+    <!-- CC2 -->
     <section>
         <div class="chart-description">
             <h2>CC2. Building. Create your own visualisations</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page --> </p>
         </div>
         
-    <div class="chart-row">
-        <figure id="Location3"></figure>
-        <figure id="Location4"></figure>
-    </div>
-
+        <div class="chart-row">
+            <figure id="Location3"></figure>
+            <figure id="Location4"></figure>
+        </div>
     </section>
 
+    <!-- CC3 -->
     <section>
-    <div class="chart-description">
-        <h2>CC3. Debate. Use a visualisation in policy commentary</h2>
-
-        <p>
-        Should UK prioritise regional investment over London, given capital's severe housing unaffordability despite highest salaries?
-        </p>
-    </div>
-
-    <h3>Chart 1</h3>
-
-    <figure id="Location5" style="display:flex; justify-content:center; margin:0 auto;"></figure>
-
-    <h3>Chart 2</h3>
-
-<figure id="Location6" style="display:flex; justify-content:center; margin:0 auto;"></figure>
-
-
-<p>
-Despite the highest earnings, Londoners need eleven years' income for homes versus five in the North East, revealing failed housing policy priorities.
-</p>
-</section>
-
-    <section>
-    <div class="chart-description">
-        <h2>CC4. Replication. Re-create, then improve, someone else's chart.</h2>
-        <p>
-            For this task, I selected a chart used by YouGov in their political analysis. Below, I first display the original chart, 
-            then replicate it using Vega-Lite, and finally present an improved version.
-        </p>
-    </div>
-    
-    <h3>The original chart</h3>
-    <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
-         alt="Original YouGov Voting Chart"
-         style="width: 100%; max-width: 850px; display: block; margin: 0 auto 40px auto; border: 1px solid #ccc;">
-
-    <h3>Chart 1. Replication using Vega-Lite</h3>
-    <figure id="CC4_replication" 
-            style="width: 100%; max-width: 850px; margin: 0 auto 40px auto; display: block;">
-        <figure id="Location7"></figure>
-    </figure>
-
-    <h3>Chart 2. Improved version</h3>
-    <figure id="CC4_improved" 
-            style="width: 100%; max-width: 850px; margin: 0 auto 40px auto; display: block;">
-        <figure id="Location8"></figure>
-    </figure>
-
-    <div style="max-width: 850px; margin: 0 auto; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #2E7DC4;">
-        <p style="margin: 0; line-height: 1.6;">
-            <strong>Improvements:</strong> Added Y-axis with gridlines for precise comparison, darkened yellow for accessibility,included tooltips for interactivity, added legend for clarity, and repositioned labels outside bars for better readability.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>CC5. Accessing data: Scraper and API.</h2>
-    
-    <h3>Chart 1</h3>
-
-    <div class="chart-row">
-        <figure id="Location10"></figure> 
-        <figure id="Location9"></figure> 
-    </div>
-
-    <div class="chart-description">
-
-        <p>
-        This visualization uses live data from the World Bank Open Data API.The API allows users to retrieve country-level indicators by specifying a country code, an indicator code, and a format parameter.
-        </p>
-
-        <p>
-            <strong>Base URL:</strong><br>
-            https://api.worldbank.org/v2/
-        </p>
-
-        <p>
-            <strong>Indicators used:</strong><br>
-            • <b>Internet Usage Indicator:</b> IT.NET.USER.ZS (Individuals using the internet, % of population)<br>
-            • <b>Mobile Subscriptions Indicator:</b> IT.CEL.SETS.P2 (Mobile cellular subscriptions, per 100 people)
-        </p>
-
-        <p>
-            <strong>Final API URL Used (shortened):</strong><br>
-            https://api.worldbank.org/.../IT.NET.USER.ZS?date=2023
-        </p>
-
-        <details>
-            <summary style="cursor:pointer; font-weight:bold;">
-                Show full API URL
-            </summary>
-            <pre style="
-                white-space: pre-wrap;
-                overflow-wrap: break-word;
-                padding: 8px;
-                background: #f7f7f7;
-                border-radius: 6px;">
-https://api.worldbank.org/v2/country/AGO;BDI;BEN;BFA;BWA;CAF;CIV;CMR;COD;COG;COM;CPV;ERI;ETH;GAB;GHA;GIN;GMB;GNB;GNQ;KEN;LBR;LSO;MDG;MLI;MOZ;MRT;MWI;NAM;NER;NGA;RWA;SDN;SEN;SLE;SOM;SSD;STP;SWZ;TCD;TGO;TZA;UGA;ZAF;ZMB;ZWE/indicator/IT.NET.USER.ZS?date=2023&format=json
-            </pre>
-        </details>
-
-        <p>
-        The charts above retrieve data directly from the API through Vega-Lite lookups, merging country codes with indicator values in real time.
-        </p>
-
-    </div>
-    <h3>Chart 2</h3>
-    <div class="chart-row">
-        <figure id="Location11"></figure> 
-        <figure id="Location12"></figure> 
-    </div>
-    <div class="chart-description">
-        <p>
-        This visualization is built using scraped data from Wikipedia's UN Population Statistics. The data was collected using Python (pandas and requests), cleaned, and transformed into tidy (long) format.
-        </p>
-        <p>
-            <strong>Data Source:</strong><br>
-            <a href="https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)" target="_blank">
-                Wikipedia - List of countries by population (United Nations)
-            </a>
-        </p>
-        <p>
-            <strong>Scraping Method:</strong><br>
-            • Python libraries: pandas, requests<br>
-            • HTML table parsing with pd.read_html()<br>
-            • Data cleaning and normalization
-        </p>
-        <p>
-            <strong>Data Format:</strong><br>
-            Tidy (long) format with columns: country, variable, value
-        </p>
-        <p>
-            <strong>Google Colab Notebook:</strong><br>
-            <a href="https://colab.research.google.com/drive/1px6ZW4MnwOj9goT1RFHnq31v5L9BCjJJ?usp=sharing" target="_blank">View the data scraping notebook</a>
-        </p>
-        <details>
-            <summary style="cursor:pointer; font-weight:bold;">
-                Show CSV Data URL
-            </summary><pre style="
-                white-space: pre-wrap;
-                overflow-wrap: break-word;
-                padding: 8px;
-                background: #f7f7f7;
-                border-radius: 6px;">
-https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/population_tidy.csv
-            </pre>
-        </details>
-        <p>
-        The charts display population growth rates (2022-2023) using both choropleth map and scatter plot visualizations.
-        </p>
-    </div>
-
-</section>
-
-
-    
- <section>
-    <h2>CC6 - Loops. Build a dashboard.</h2>
-   <div class="column-container" style="justify-content: center;">
-        <div class="column" style="margin-left: 40px;">
-            <p style="text-align: center;">
-        <a href="https://colab.research.google.com/drive/1KNmi2SCl4Ujs2ca5D11-sTNfacq4saT_?usp=sharing">Colab notebook.</a> 
-    </p>
-    <div class="chart-description">
-        <figure id="Location15"></figure>
-             </div>
+        <div class="chart-description">
+            <h2>CC3. Debate. Use a visualisation in policy commentary</h2>
+            <p>
+                Should UK prioritise regional investment over London, given capital's severe housing unaffordability despite highest salaries?
+            </p>
         </div>
-    </div>
-</section>
+
+        <h3>Chart 1</h3>
+        <figure id="Location5" style="display:flex; justify-content:center; margin:0 auto;"></figure>
+
+        <h3>Chart 2</h3>
+        <figure id="Location6" style="display:flex; justify-content:center; margin:0 auto;"></figure>
+
+        <p>
+            Despite the highest earnings, Londoners need eleven years' income for homes versus five in the North East, revealing failed housing policy priorities.
+        </p>
+    </section>
+
+    <!-- CC4 -->
+    <section>
+        <div class="chart-description">
+            <h2>CC4. Replication. Re-create, then improve, someone else's chart.</h2>
+            <p>For this task, I selected a chart used by YouGov in their political analysis...</p>
+        </div>
+    
+        <h3>The original chart</h3>
+        <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
+             alt="Original YouGov Voting Chart"
+             style="width: 100%; max-width: 850px; display: block; margin: 0 auto 40px auto; border: 1px solid #ccc;">
+
+        <h3>Chart 1. Replication using Vega-Lite</h3>
+        <figure id="Location7" style="width: 100%; max-width: 850px; margin: 0 auto 40px auto;"></figure>
+
+        <h3>Chart 2. Improved version</h3>
+        <figure id="Location8" style="width: 100%; max-width: 850px; margin: 0 auto 40px auto;"></figure>
+    </section>
+
+    <!-- CC5 -->
+    <section>
+        <h2>CC5. Accessing data: Scraper and API.</h2>
+    
+        <h3>Chart 1</h3>
+        <div class="chart-row">
+            <figure id="Location10"></figure> 
+            <figure id="Location9"></figure> 
+        </div>
+
+        <h3>Chart 2</h3>
+        <div class="chart-row">
+            <figure id="Location11"></figure> 
+            <figure id="Location12"></figure> 
+        </div>
+    </section>
 
 
-    
- <section>
-    <div class="chart-description">
-        <h2>CC7. Maps. Base maps and choropleths</h2>
-    </div>
-    
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-      
-        <div style="flex: 1; min-width: 400px;">
-            <h3>Map 1: Base Map</h3>
-            <div id="Location13" style="height: 500px;"></div>
+    <!-- ⭐⭐⭐ CC6 — FULLY UPDATED WITH JAVASCRIPT LOOP ⭐⭐⭐ -->
+    <section>
+        <h2>CC6 - Loops. Build a dashboard.</h2>
+
+        <p style="text-align: center;">
+            <a href="https://colab.research.google.com/drive/1KNmi2SCl4Ujs2ca5D11-sTNfacq4saT_?usp=sharing">Colab notebook.</a>
+        </p>
+
+        <!-- New grid container for looped charts -->
+        <div id="cpi-dashboard" 
+             style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 90%; margin: 0 auto;">
+        </div>
+    </section>
+
+
+    <!-- CC7 -->
+    <section>
+        <div class="chart-description">
+            <h2>CC7. Maps. Base maps and choropleths</h2>
         </div>
         
-   
-        <div style="flex: 1; min-width: 400px;">
-            <h3>Map 2: Choropleth</h3>
-            <div id="Location14" style="height: 500px;"></div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 400px;">
+                <h3>Map 1: Base Map</h3>
+                <div id="Location13" style="height: 500px;"></div>
+            </div>
+            
+            <div style="flex: 1; min-width: 400px;">
+                <h3>Map 2: Choropleth</h3>
+                <div id="Location14" style="height: 500px;"></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- JAVASCRIPT -->
     <script>
     let figure_1_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1_barchart_totalinflation_oecd.json"; 
     let figure_2_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk1.consumer-price-index_2004-2024.json";
@@ -260,8 +156,7 @@ https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.i
     let figure_12_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Map2.json";
     let figure_13_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.Wales_independent_schools.json";
     let figure_14_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.Scotland.json";
-    let figure_15_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6.CPI_Dashboard.json";   
-        
+
     vegaEmbed('#Location1', figure_1_spec);
     vegaEmbed('#Location2', figure_2_spec);
     vegaEmbed('#Location3', figure_3_spec);
@@ -276,9 +171,37 @@ https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.i
     vegaEmbed('#Location12', figure_12_spec);
     vegaEmbed('#Location13', figure_13_spec);
     vegaEmbed('#Location14', figure_14_spec);
-    vegaEmbed('#Location15', figure_15_spec);   
-</script>
+
+
+    /* ⭐⭐ CC6 — EMBED 6 CHARTS USING A LOOP ⭐⭐ */
+    let cpiCharts = [
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_Consumer%20Price%20Index%20_All%20Items_CPIAUCSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.github.io/refs/heads/main/wk6.CPI_Food_CPIUFDSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Energy_CPIENGSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Housing_CPIHOSSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Medical%20Care_CPIMEDSL.json",
+        "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_CPI_Transportation_CPITRNSL.json"
+    ];
+
+    cpiCharts.forEach((url, index) => {
+
+        let chartDiv = document.createElement("div");
+        chartDiv.id = "cpiChart" + index;
+        document.getElementById("cpi-dashboard").appendChild(chartDiv);
+
+        vegaEmbed("#" + chartDiv.id, {
+            $schema: "https://vega.github.io/schema/vega-lite/v5.json",
+            title: "",
+            data: { url: url, format: { property: "data" }},
+            mark: { type: "line", color: "#1f77b4" },
+            encoding: {
+                x: { field: "date", type: "temporal" },
+                y: { field: "value", type: "quantitative" }
+            }
+        });
+    });
+
+    </script>
 
 </body>
-    
 </html>
