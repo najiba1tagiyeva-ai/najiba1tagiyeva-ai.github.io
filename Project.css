@@ -56,24 +56,24 @@ body.project-page {
 }
 
 .project-topbar h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     color: white;
     margin: 0;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
 }
 
 .project-nav {
     display: flex;
-    gap: 35px;
+    gap: 40px;
     align-items: center;
 }
 
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -107,9 +107,9 @@ body.project-page {
 .hero-banner {
     margin-top: 0;
     position: relative;
-    height: 65vh;
-    min-height: 550px;
-    max-height: 650px;
+    height: 75vh;
+    min-height: 620px;
+    max-height: 750px;
     width: 100%;
     overflow: hidden;
     background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
@@ -165,7 +165,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 50px;
+    font-size: 54px;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px 0;
@@ -173,7 +173,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.5;
