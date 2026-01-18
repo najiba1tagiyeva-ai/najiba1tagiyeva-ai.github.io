@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html> 
 
-<head>
+<head>    
     <meta charset="UTF-8">
-    <title>Najiba Taghiyeva – Energy Transition Project</title>
+    <title>Najiba Taghiyeva's Project | Azerbaijan Energy Transition</title>
 
-    <!-- PROJECT CSS -->
     <link rel="stylesheet" type="text/css" href="Project.css">
 
-    <!-- Vega -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
-<body class="project-page">
+<body class="project-page"> 
 
-    <!-- TOP BAR -->
-    <header class="project-topbar">
+    <!-- TOP NAV -->
+    <div class="project-topbar">
         <h1>Najiba Taghiyeva’s Project</h1>
-        <p class="project-nav">
+        <div class="project-nav">
             <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a> |
             <a href="index.html">Portfolio</a> |
             <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
-        </p>
-    </header>
+        </div>
+    </div>
 
-    <!-- HERO IMAGE -->
-    <section class="hero-section">
-        <img class="hero-img" src="img/energy-transition-hero.jpg" alt="Energy transition hero image">
-        <div class="hero-caption">Visualising Azerbaijan’s pathway from hydrocarbons to renewables</div>
-    </section>
 
+    <!-- McKinsey Style HERO SECTION -->
+    <div class="hero-banner">
+        <img src="img/energy-transition-hero.jpg" alt="Energy image">
+        
+        <div class="hero-overlay-text">
+            <h1>Najiba Taghiyeva’s Project</h1>
+            <h2>Azerbaijan’s Energy Transition</h2>
+        </div>
+    </div>
+
+
+    <!-- PAGE CONTENT WRAPPER -->
     <main class="project-wrapper">
 
-        <!-- INTRO CARD -->
+        <!-- Intro card -->
         <section class="project-intro-card">
             <h2>Azerbaijan’s Path Toward an Energy Transition</h2>
-            <p>
-                Data visualisations exploring Azerbaijan’s movement from hydrocarbons toward renewable energy.
-                Charts will be added progressively as datasets are refined and compiled.
-            </p>
+            <p>Data visualisations exploring Azerbaijan’s movement from hydrocarbons toward renewable energy. Charts will be added progressively.</p>
         </section>
 
-        <!-- SECTIONS -->
+
         <section>
             <h2>1. Introduction</h2>
         </section>
@@ -62,25 +64,25 @@
 
         <section>
             <h2>4. Are renewables on the rise?</h2>
-            <h3>Chart 3 – Renewable energy growth</h3>
+            <h3>Chart 3 – Growth in renewable energy</h3>
             <figure id="EnergyLocation3"></figure>
         </section>
 
         <section>
-            <h2>5. Geography of renewables</h2>
-            <h3>Chart 4 – Solar, wind, hydro map</h3>
+            <h2>5. Where are the renewables located?</h2>
+            <h3>Chart 4 – Geography of solar, wind and hydro</h3>
             <figure id="EnergyLocation4"></figure>
         </section>
 
         <section>
             <h2>6. Trading the transition</h2>
-            <h3>Chart 5 – Oil exports vs renewables</h3>
+            <h3>Chart 5 – Oil exports vs renewable share</h3>
             <figure id="EnergyLocation5"></figure>
         </section>
 
         <section>
-            <h2>7. Regional comparison</h2>
-            <h3>Chart 6 – Azerbaijan, Georgia, Armenia</h3>
+            <h2>7. Comparing the region</h2>
+            <h3>Chart 6 – Azerbaijan, Georgia and Armenia</h3>
             <figure id="EnergyLocation6"></figure>
         </section>
 
@@ -90,21 +92,14 @@
 
     </main>
 
-    <!-- Vega JS -->
-    <script>
-        let energy_fig1_spec = "energy_chart1_mix.json";
-        let energy_fig2_spec = "energy_chart2_co2_gdp.json";
-        let energy_fig3_spec = "energy_chart3_renewables.json";
-        let energy_fig4_spec = "energy_chart4_map.json";
-        let energy_fig5_spec = "energy_chart5_exports.json";
-        let energy_fig6_spec = "energy_chart6_region.json";
 
-        vegaEmbed('#EnergyLocation1', energy_fig1_spec);
-        vegaEmbed('#EnergyLocation2', energy_fig2_spec);
-        vegaEmbed('#EnergyLocation3', energy_fig3_spec);
-        vegaEmbed('#EnergyLocation4', energy_fig4_spec);
-        vegaEmbed('#EnergyLocation5', energy_fig5_spec);
-        vegaEmbed('#EnergyLocation6', energy_fig6_spec);
+    <script>
+        vegaEmbed('#EnergyLocation1', "energy_chart1_mix.json");
+        vegaEmbed('#EnergyLocation2', "energy_chart2_co2_gdp.json");
+        vegaEmbed('#EnergyLocation3', "energy_chart3_renewables.json");
+        vegaEmbed('#EnergyLocation4', "energy_chart4_map.json");
+        vegaEmbed('#EnergyLocation5', "energy_chart5_exports.json");
+        vegaEmbed('#EnergyLocation6', "energy_chart6_region.json");
     </script>
 
 </body>
