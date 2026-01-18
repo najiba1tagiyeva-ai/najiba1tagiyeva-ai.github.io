@@ -1,4 +1,14 @@
 /* ============================================
+   HERO SECTION - McKinsey Style
+   ============================================ */
+.hero-banner {
+    margin-top: 72px;
+    position: relative;
+    height: 80vh;
+    min-height: 650px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f/* ============================================
    RESET & BASE STYLES
    ============================================ */
 * {
@@ -33,53 +43,56 @@ body.project-page {
    NAVIGATION - McKinsey Style
    ============================================ */
 .project-topbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e5e5;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
     z-index: 1000;
     padding: 0;
-    margin-top: 3px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 0;
+    box-shadow: none;
 }
 
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 25px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .project-topbar h1 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
     margin: 0;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-nav {
     display: flex;
-    gap: 35px;
+    gap: 25px;
     align-items: center;
 }
 
 .project-nav a {
-    color: #4a4a4a;
+    color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
     padding-bottom: 4px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-nav a:hover {
-    color: #667eea;
+    color: #a8b3ff;
+    transform: translateY(-2px);
 }
 
 .project-nav a::after {
@@ -89,7 +102,7 @@ body.project-page {
     left: 0;
     width: 0;
     height: 2px;
-    background: #667eea;
+    background: #a8b3ff;
     transition: width 0.3s ease;
 }
 
@@ -101,9 +114,9 @@ body.project-page {
    HERO SECTION - McKinsey Style
    ============================================ */
 .hero-banner {
-    margin-top: 72px;
+    margin-top: 0;
     position: relative;
-    height: 75vh;
+    height: 70vh;
     min-height: 600px;
     width: 100%;
     overflow: hidden;
@@ -112,13 +125,15 @@ body.project-page {
 
 .hero-banner img {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.35;
-    filter: brightness(60%);
+    object-position: center center;
+    opacity: 0.4;
+    filter: brightness(65%);
 }
 
 .hero-overlay {
@@ -178,9 +193,9 @@ body.project-page {
    CONTENT WRAPPER
    ============================================ */
 .project-wrapper {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding: 80px 60px;
 }
 
 /* ============================================
@@ -189,7 +204,7 @@ body.project-page {
 .project-intro-card {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 16px;
-    padding: 60px;
+    padding: 70px 80px;
     margin-bottom: 80px;
     color: white;
     box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
@@ -229,7 +244,7 @@ body.project-page {
    ============================================ */
 section {
     background: white;
-    padding: 50px;
+    padding: 60px 70px;
     border-radius: 16px;
     margin: 40px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -433,19 +448,27 @@ figure[id^="EnergyLocation"]:hover {
 
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
+        flex-direction: row;
+        gap: 0;
+        padding: 20px 25px;
+    }
+
+    .project-topbar h1 {
+        font-size: 14px;
     }
 
     .project-nav {
-        gap: 20px;
+        gap: 15px;
+    }
+
+    .project-nav a {
+        font-size: 12px;
     }
 
     .hero-banner {
         height: 60vh;
         min-height: 500px;
-        margin-top: 90px;
+        margin-top: 0;
     }
 
     .hero-overlay-text h1 {
@@ -462,11 +485,11 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-wrapper {
-        padding: 40px 20px;
+        padding: 40px 25px;
     }
 
     .project-intro-card {
-        padding: 40px 30px;
+        padding: 45px 35px;
     }
 
     .project-intro-card h2 {
@@ -474,7 +497,7 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     section {
-        padding: 30px 25px;
+        padding: 40px 35px;
     }
 
     section h2 {
