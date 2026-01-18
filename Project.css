@@ -1,126 +1,120 @@
-/* =============== GLOBAL STYLES =============== */
+/* PAGE BASE */
 body.project-page {
     margin: 0;
     padding: 0;
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
-    background: #f3f4f6;
-    color: #111;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
 }
 
-/* =============== TOP NAVIGATION =============== */
+
+/* TOP BAR */
 .project-topbar {
-    background: #ffffff;
+    background: white;
+    padding: 25px 0 15px;
     width: 100%;
-    padding: 22px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .project-topbar h1 {
-    text-align: center;
     margin: 0;
-    font-size: 28px;
-    font-weight: 600;
-    color: #0a1c2e;
-}
-
-.project-nav {
-    text-align: center;
-    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .project-nav a {
+    margin: 0 10px;
     text-decoration: none;
     color: #003366;
     font-weight: 600;
-    font-size: 15px;
-    margin: 0 12px;
 }
 
 .project-nav a:hover {
     text-decoration: underline;
 }
 
-/* =============== HERO IMAGE =============== */
-.hero-section {
+
+/* HERO SECTION (McKinsey Style) */
+.hero-banner {
     width: 100%;
-    max-width: 1400px;
-    margin: 40px auto 10px auto;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-img {
+.hero-banner img {
     width: 100%;
-    border-radius: 18px;
+    height: 100%;
     object-fit: cover;
-    height: 370px;
-    box-shadow: 0 22px 40px rgba(0,0,0,0.28);
+    filter: brightness(50%);
 }
 
-.hero-caption {
+.hero-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
-    margin-top: 10px;
-    color: #666;
-    font-size: 14px;
-    font-style: italic;
 }
 
-/* =============== MAIN WRAPPER =============== */
+.hero-overlay-text h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.hero-overlay-text h2 {
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+
+/* PAGE CONTENT */
 .project-wrapper {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 40px 0 70px;
+    max-width: 950px;
+    margin: 40px auto;
 }
 
-/* Main title card */
+
+/* Intro Card */
 .project-intro-card {
-    background: #ffffff;
-    padding: 26px 32px;
+    background: white;
+    padding: 24px 28px;
     border-radius: 18px;
     margin-bottom: 35px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
 .project-intro-card h2 {
     margin-top: 0;
-    font-size: 26px;
-    font-weight: 700;
-    color: #0a1c2e;
+    font-size: 22px;
 }
 
-.project-intro-card p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
 
-/* Each section card */
+/* Section Boxes */
 section {
-    background: #ffffff;
+    background: white;
+    padding: 20px 26px;
     border-radius: 16px;
-    padding: 22px 32px;
-    margin: 26px 0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    margin: 22px 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 section h2 {
-    margin: 0 0 12px;
-    font-size: 22px;
-    font-weight: 650;
-    color: #0a1c2e;
+    margin: 0 0 8px;
+    font-size: 20px;
 }
 
 section h3 {
-    margin-bottom: 10px;
-    color: #003366;
+    margin: 4px 0 10px;
     font-size: 16px;
-    font-weight: 600;
+    color: #003366;
 }
 
-/* Vega chart wrapper */
 figure[id^="EnergyLocation"] {
-    margin: 18px auto 8px;
+    margin: 18px auto;
     width: 100%;
-    max-width: 850px;
 }
