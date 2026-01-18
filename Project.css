@@ -1,4 +1,5 @@
-body.project-page {
+/* BODY */
+body.energy-page {
     margin: 0;
     padding: 0;
     font-family: "Inter", "Segoe UI", Arial, sans-serif;
@@ -6,15 +7,16 @@ body.project-page {
     color: #222;
 }
 
-
-.project-topbar {
+/* HEADER TOP BAR */
+.project-header {
     background: #ffffff;
     width: 100%;
     padding: 25px 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
 }
 
-.project-topbar h1 {
+.project-title {
     text-align: center;
     margin: 0;
     font-size: 26px;
@@ -34,13 +36,14 @@ body.project-page {
     font-weight: 600;
     font-size: 15px;
     margin: 0 10px;
+    transition: opacity 0.3s ease;
 }
 
 .project-nav a:hover {
-    text-decoration: underline;
+    opacity: 0.7;
 }
 
-
+/* HERO SECTION */
 .hero-section {
     width: 100%;
     max-width: 1300px;
@@ -54,14 +57,23 @@ body.project-page {
     box-shadow: 0 12px 35px rgba(0,0,0,0.28);
 }
 
+/* HERO CAPTION */
+.hero-caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+}
 
+/* MAIN WRAPPER */
 .project-wrapper {
     max-width: 950px;
     margin: 0 auto;
     padding-bottom: 60px;
 }
 
-
+/* INTRO CARD */
 .project-intro-card {
     background: #ffffff;
     padding: 24px 28px;
@@ -80,8 +92,10 @@ body.project-page {
 .project-intro-card p {
     font-size: 15px;
     line-height: 1.55;
+    margin-bottom: 0;
 }
 
+/* CONTENT SECTIONS */
 section {
     background: #ffffff;
     border-radius: 16px;
@@ -103,19 +117,10 @@ section h3 {
     color: #003366;
 }
 
+/* FIGURES (CHART CONTAINERS) */
 figure[id^="EnergyLocation"] {
     margin: 18px auto 8px;
     padding: 0;
     width: 100%;
     max-width: 900px;
 }
-
-
-.hero-caption {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 13px;
-    color: #777;
-    font-style: italic;
-}
-
