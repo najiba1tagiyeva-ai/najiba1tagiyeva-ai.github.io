@@ -1,106 +1,207 @@
 <!DOCTYPE html>
-<html> 
-
+<html lang="en">
 <head>    
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najiba Taghiyeva's Project | Azerbaijan Energy Transition</title>
-
     <link rel="stylesheet" type="text/css" href="Project.css">
-
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
-
-<body class="project-page"> 
+<body class="project-page">
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
     <!-- TOP NAV -->
     <div class="project-topbar">
-        <h1>Najiba Taghiyeva’s Project</h1>
-        <div class="project-nav">
-            <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a> |
-            <a href="index.html">Portfolio</a> |
-            <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
+        <div class="nav-container">
+            <h1>Najiba Taghiyeva's Project</h1>
+            <div class="project-nav">
+                <a href="index.html">Portfolio</a>
+                <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </div>
-
 
     <!-- McKinsey Style HERO SECTION -->
     <div class="hero-banner">
         <img src="img/energy-transition-hero.jpg" alt="Energy image">
-        
+        <div class="hero-overlay"></div>
         <div class="hero-overlay-text">
-            <h1>Najiba Taghiyeva’s Project</h1>
-            <h2>Azerbaijan’s Energy Transition</h2>
+            <div class="hero-tag">ENERGY TRANSITION ANALYSIS</div>
+            <h1>Azerbaijan's Path Toward an Energy Transition</h1>
+            <h2>Exploring the shift from hydrocarbons to renewable energy</h2>
         </div>
     </div>
 
-
     <!-- PAGE CONTENT WRAPPER -->
     <main class="project-wrapper">
-
+        
         <!-- Intro card -->
         <section class="project-intro-card">
-            <h2>Azerbaijan’s Path Toward an Energy Transition</h2>
-            <p>Data visualisations exploring Azerbaijan’s movement from hydrocarbons toward renewable energy. Charts will be added progressively.</p>
+            <h2>Understanding Azerbaijan's Energy Future</h2>
+            <p>This comprehensive analysis explores Azerbaijan's journey from a hydrocarbon-dependent economy toward a sustainable energy future. Through data visualizations and regional comparisons, we examine the challenges, opportunities, and progress in renewable energy adoption.</p>
         </section>
 
-
+        <!-- Section 1: Introduction -->
         <section>
             <h2>1. Introduction</h2>
+            <p class="section-text">
+                Azerbaijan has long been known for its rich oil and gas reserves, playing a crucial role in the global energy market. However, as the world transitions toward cleaner energy sources, the country faces both challenges and opportunities in diversifying its energy portfolio.
+            </p>
         </section>
 
+        <!-- Section 2: Oil Dependency -->
         <section>
             <h2>2. Is Azerbaijan still oil-dependent?</h2>
             <h3>Chart 1 – Energy production mix</h3>
             <figure id="EnergyLocation1"></figure>
+            <div class="insight-box">
+                <h4>Key Insight</h4>
+                <p>Despite global energy transition trends, fossil fuels continue to dominate Azerbaijan's energy production mix, highlighting the significant challenge ahead in diversifying energy sources.</p>
+            </div>
         </section>
 
+        <!-- Section 3: Carbon Cost -->
         <section>
             <h2>3. The carbon cost of growth</h2>
             <h3>Chart 2 – CO₂ emissions vs GDP</h3>
             <figure id="EnergyLocation2"></figure>
+            <div class="insight-box">
+                <h4>Key Insight</h4>
+                <p>Economic growth and carbon emissions show a complex relationship, revealing opportunities for decoupling development from environmental impact through strategic energy policies.</p>
+            </div>
         </section>
 
+        <!-- Section 4: Renewable Growth -->
         <section>
             <h2>4. Are renewables on the rise?</h2>
             <h3>Chart 3 – Growth in renewable energy</h3>
             <figure id="EnergyLocation3"></figure>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Target Renewable Share by 2030</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1.5GW</div>
+                    <div class="stat-label">Solar Capacity Goal</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2GW</div>
+                    <div class="stat-label">Wind Capacity Goal</div>
+                </div>
+            </div>
         </section>
 
+        <!-- Section 5: Geographic Distribution -->
         <section>
             <h2>5. Where are the renewables located?</h2>
             <h3>Chart 4 – Geography of solar, wind and hydro</h3>
             <figure id="EnergyLocation4"></figure>
+            <div class="insight-box">
+                <h4>Key Insight</h4>
+                <p>Geographic distribution of renewable energy infrastructure reveals strategic placement aligned with natural resource availability and grid connectivity requirements.</p>
+            </div>
         </section>
 
+        <!-- Section 6: Trading Transition -->
         <section>
             <h2>6. Trading the transition</h2>
             <h3>Chart 5 – Oil exports vs renewable share</h3>
             <figure id="EnergyLocation5"></figure>
+            <div class="insight-box">
+                <h4>Key Insight</h4>
+                <p>The balance between maintaining oil export revenues and increasing renewable energy capacity represents a critical economic and policy challenge for Azerbaijan's energy transition.</p>
+            </div>
         </section>
 
+        <!-- Section 7: Regional Comparison -->
         <section>
             <h2>7. Comparing the region</h2>
             <h3>Chart 6 – Azerbaijan, Georgia and Armenia</h3>
             <figure id="EnergyLocation6"></figure>
+            <div class="insight-box">
+                <h4>Key Insight</h4>
+                <p>Regional comparison highlights different transition pathways, with each country leveraging unique geographic and economic advantages in their renewable energy strategies.</p>
+            </div>
         </section>
 
-        <section>
+        <!-- Section 8: Conclusion -->
+        <section class="conclusion-section">
             <h2>8. Conclusion</h2>
+            <p class="section-text">
+                Azerbaijan stands at a critical juncture in its energy history. While hydrocarbons continue to dominate the economy, significant opportunities exist for renewable energy development. Success will require sustained policy commitment, strategic investment, and regional cooperation. The transition presents both challenges and opportunities that will shape the country's economic and environmental future for decades to come.
+            </p>
         </section>
 
     </main>
 
-
+    <!-- Scripts -->
     <script>
-        vegaEmbed('#EnergyLocation1', "energy_chart1_mix.json");
-        vegaEmbed('#EnergyLocation2', "energy_chart2_co2_gdp.json");
-        vegaEmbed('#EnergyLocation3', "energy_chart3_renewables.json");
-        vegaEmbed('#EnergyLocation4', "energy_chart4_map.json");
-        vegaEmbed('#EnergyLocation5', "energy_chart5_exports.json");
-        vegaEmbed('#EnergyLocation6', "energy_chart6_region.json");
-    </script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
 
+        // Vega Charts - with error handling
+        const charts = [
+            { id: '#EnergyLocation1', file: 'energy_chart1_mix.json' },
+            { id: '#EnergyLocation2', file: 'energy_chart2_co2_gdp.json' },
+            { id: '#EnergyLocation3', file: 'energy_chart3_renewables.json' },
+            { id: '#EnergyLocation4', file: 'energy_chart4_map.json' },
+            { id: '#EnergyLocation5', file: 'energy_chart5_exports.json' },
+            { id: '#EnergyLocation6', file: 'energy_chart6_region.json' }
+        ];
+
+        charts.forEach(chart => {
+            vegaEmbed(chart.id, chart.file, {
+                actions: false,
+                theme: 'latimes'
+            }).catch(error => {
+                console.error('Error loading chart:', chart.file, error);
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
