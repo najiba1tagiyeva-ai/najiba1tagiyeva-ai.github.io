@@ -1,29 +1,121 @@
-/* Richard Davies */
-/* Data Science */
-
-/* This is a comment in CSS */
-
-/* This is a 
-multi line comment */
-
-/* CSS files can be used to access e.g. fonts */
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
-
-
-/* Format my paragraph */
-p {
-	font-size: 18px;
-	margin: 5px 5px;
-	line-height: 22.4px;
-	color: #323232;
+body.project-page {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
 }
 
-/* Format my heading */
-h1 {
-	font-family: "Catamaran";
-	font-variant: small-caps;
-	font-size: 60px;
-	color: #320064;
-	font-weight: 900;
-	margin: 0px 0px 30px 0px;
+
+.project-topbar {
+    background: #ffffff;
+    width: 100%;
+    padding: 25px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
+.project-topbar h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #0a1c2e;
+}
+
+.project-nav {
+    text-align: center;
+    margin-top: 6px;
+}
+
+.project-nav a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.project-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.hero-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.28);
+}
+
+
+.project-wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+
+.project-intro-card {
+    background: #ffffff;
+    padding: 24px 28px;
+    border-radius: 18px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+.project-intro-card h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #0a1c2e;
+    font-weight: 600;
+}
+
+.project-intro-card p {
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 26px;
+    margin: 22px 0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+section h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #0a1c2e;
+}
+
+section h3 {
+    margin: 4px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #003366;
+}
+
+figure[id^="EnergyLocation"] {
+    margin: 18px auto 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 900px;
+}
+
+
+.hero-caption {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+    font-style: italic;
+}
+
