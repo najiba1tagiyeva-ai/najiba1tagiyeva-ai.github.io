@@ -56,7 +56,7 @@ body.project-page {
 }
 
 .project-topbar h1 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: white;
     margin: 0;
@@ -66,14 +66,14 @@ body.project-page {
 
 .project-nav {
     display: flex;
-    gap: 40px;
+    gap: 45px;
     align-items: center;
 }
 
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -165,7 +165,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 54px;
+    font-size: 58px;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px 0;
@@ -173,7 +173,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.5;
@@ -452,15 +452,15 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-topbar h1 {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .project-nav {
-        gap: 15px;
+        gap: 18px;
     }
 
     .project-nav a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .hero-banner {
@@ -470,11 +470,11 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .hero-overlay-text h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .hero-tag {
@@ -522,19 +522,19 @@ figure[id^="EnergyLocation"]:hover {
 
 @media (max-width: 480px) {
     .project-topbar h1 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .project-nav a {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .hero-overlay-text h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     section h2 {
