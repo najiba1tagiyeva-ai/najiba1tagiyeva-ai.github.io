@@ -24,7 +24,7 @@ body.project-page {
     left: 0;
     width: 0%;
     height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     z-index: 1001;
     transition: width 0.1s ease;
 }
@@ -56,7 +56,7 @@ body.project-page {
 }
 
 .project-topbar h1 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     margin: 0;
@@ -66,14 +66,14 @@ body.project-page {
 
 .project-nav {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     align-items: center;
 }
 
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -107,11 +107,11 @@ body.project-page {
 .hero-banner {
     margin-top: 0;
     position: relative;
-    height: 70vh;
-    min-height: 600px;
+    height: 85vh;
+    min-height: 700px;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
 }
 
 .hero-banner img {
@@ -193,13 +193,13 @@ body.project-page {
    INTRO CARD - McKinsey Style
    ============================================ */
 .project-intro-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
     border-radius: 16px;
     padding: 70px 90px;
     margin: 0 auto 80px;
     max-width: 1400px;
     color: white;
-    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+    box-shadow: 0 20px 60px rgba(26, 133, 102, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -265,7 +265,7 @@ section h2::after {
     left: 0;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 2px;
 }
 
@@ -296,16 +296,16 @@ figure[id^="EnergyLocation"] {
 }
 
 figure[id^="EnergyLocation"]:hover {
-    border-color: #667eea;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+    border-color: #1a8566;
+    box-shadow: 0 4px 15px rgba(26, 133, 102, 0.15);
 }
 
 /* ============================================
    INSIGHT BOXES
    ============================================ */
 .insight-box {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-left: 4px solid #667eea;
+    background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
+    border-left: 4px solid #1a8566;
     padding: 30px;
     border-radius: 8px;
     margin: 30px 0;
@@ -355,14 +355,14 @@ figure[id^="EnergyLocation"]:hover {
 
 .stat-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.2);
-    border-color: #667eea;
+    box-shadow: 0 12px 30px rgba(26, 133, 102, 0.25);
+    border-color: #1a8566;
 }
 
 .stat-number {
     font-size: 48px;
     font-weight: 700;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
