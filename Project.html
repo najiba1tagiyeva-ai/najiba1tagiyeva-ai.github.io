@@ -1,130 +1,96 @@
 <!DOCTYPE html>
-<html> 
+<html>
 
-<head>    
+<head>
     <meta charset="UTF-8">
-    <title>Najiba Taghiyeva | Energy Transition Project</title>
+    <title>Najiba Taghiyeva – Energy Transition Project</title>
 
-    <!-- CSS files -->
-    <link rel="stylesheet" type="text/css" href="New.css">
+    <!-- PROJECT CSS -->
     <link rel="stylesheet" type="text/css" href="Project.css">
 
-    <!-- Vega / Vega-Lite -->
+    <!-- Vega -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
-<body class="project-page"> 
+<body class="project-page">
 
-    <!-- ⭐ McKinsey-style HERO BANNER ⭐ -->
-    <header class="hero-banner">
-        <div class="hero-overlay">
-
-            <!-- Top Links -->
-            <div class="hero-nav">
-                <span class="hero-name">Najiba Taghiyeva’s Project</span>
-
-                <span class="hero-links">
-                    <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a> |
-                    <a href="index.html">Portfolio</a> |
-                    <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
-                </span>
-            </div>
-
-            <!-- Main Hero Text -->
-            <div class="hero-text">
-                <h1>Azerbaijan’s Path Toward an Energy Transition</h1>
-                <p>Visualising the country’s shift from hydrocarbons toward renewable energy.</p>
-            </div>
-
-        </div>
+    <!-- TOP BAR -->
+    <header class="project-topbar">
+        <h1>Najiba Taghiyeva’s Project</h1>
+        <p class="project-nav">
+            <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a> |
+            <a href="index.html">Portfolio</a> |
+            <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
+        </p>
     </header>
 
-    <!-- ⭐ MAIN PAGE CONTENT ⭐ -->
+    <!-- HERO IMAGE -->
+    <section class="hero-section">
+        <img class="hero-img" src="img/energy-transition-hero.jpg" alt="Energy transition hero image">
+        <div class="hero-caption">Visualising Azerbaijan’s pathway from hydrocarbons to renewables</div>
+    </section>
+
     <main class="project-wrapper">
 
-        <!-- Overview Card -->
+        <!-- INTRO CARD -->
         <section class="project-intro-card">
-            <h2 class="project-question">Project Overview</h2>
-            <p class="project-intro-text">
-                This project presents a series of data visualisations analysing Azerbaijan’s energy transition:
-                energy mix, emissions, investments, renewable geography and regional comparison. 
-                Charts will be added progressively.
+            <h2>Azerbaijan’s Path Toward an Energy Transition</h2>
+            <p>
+                Data visualisations exploring Azerbaijan’s movement from hydrocarbons toward renewable energy.
+                Charts will be added progressively as datasets are refined and compiled.
             </p>
         </section>
 
-        <!-- 1 -->
+        <!-- SECTIONS -->
         <section>
-            <div class="chart-description">
-                <h2>1. Introduction</h2>
-            </div>
+            <h2>1. Introduction</h2>
         </section>
 
-        <!-- 2 -->
         <section>
-            <div class="chart-description">
-                <h2>2. Is Azerbaijan still oil-dependent?</h2>
-                <h3>Chart 1 – Energy production mix, 1990–2024</h3>
-            </div>
+            <h2>2. Is Azerbaijan still oil-dependent?</h2>
+            <h3>Chart 1 – Energy production mix</h3>
             <figure id="EnergyLocation1"></figure>
         </section>
 
-        <!-- 3 -->
         <section>
-            <div class="chart-description">
-                <h2>3. The Carbon Cost of Growth</h2>
-                <h3>Chart 2 – CO₂ Emissions vs GDP</h3>
-            </div>
+            <h2>3. The carbon cost of growth</h2>
+            <h3>Chart 2 – CO₂ emissions vs GDP</h3>
             <figure id="EnergyLocation2"></figure>
         </section>
 
-        <!-- 4 -->
         <section>
-            <div class="chart-description">
-                <h2>4. Are renewables on the rise?</h2>
-                <h3>Chart 3 – Growth in renewable energy</h3>
-            </div>
+            <h2>4. Are renewables on the rise?</h2>
+            <h3>Chart 3 – Renewable energy growth</h3>
             <figure id="EnergyLocation3"></figure>
         </section>
 
-        <!-- 5 -->
         <section>
-            <div class="chart-description">
-                <h2>5. Where are the renewables located?</h2>
-                <h3>Chart 4 – Geography of solar, wind and hydro</h3>
-            </div>
+            <h2>5. Geography of renewables</h2>
+            <h3>Chart 4 – Solar, wind, hydro map</h3>
             <figure id="EnergyLocation4"></figure>
         </section>
 
-        <!-- 6 -->
         <section>
-            <div class="chart-description">
-                <h2>6. Trading the transition</h2>
-                <h3>Chart 5 – Oil exports vs renewable share</h3>
-            </div>
+            <h2>6. Trading the transition</h2>
+            <h3>Chart 5 – Oil exports vs renewables</h3>
             <figure id="EnergyLocation5"></figure>
         </section>
 
-        <!-- 7 -->
         <section>
-            <div class="chart-description">
-                <h2>7. Comparing the region</h2>
-                <h3>Chart 6 – Azerbaijan, Georgia, Armenia</h3>
-            </div>
+            <h2>7. Regional comparison</h2>
+            <h3>Chart 6 – Azerbaijan, Georgia, Armenia</h3>
             <figure id="EnergyLocation6"></figure>
         </section>
 
-        <!-- 8 -->
         <section>
-            <div class="chart-description">
-                <h2>8. Conclusion</h2>
-            </div>
+            <h2>8. Conclusion</h2>
         </section>
 
     </main>
 
-    <!-- ⭐ Vega Embed Scripts ⭐ -->
+    <!-- Vega JS -->
     <script>
         let energy_fig1_spec = "energy_chart1_mix.json";
         let energy_fig2_spec = "energy_chart2_co2_gdp.json";
