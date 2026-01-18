@@ -5,150 +5,96 @@
     <meta charset="UTF-8">
     <title>Najiba E. Taghiyeva's PP434 Project | Azerbaijan Energy Transition</title>
 
-    <!-- Eyni CSS faylı -->
     <link rel="stylesheet" type="text/css" href="New.css">
 
-    <!-- Vega / Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-    </style>
 </head>
 
 <body class="energy-page"> 
 
-    <!-- YUXARI HİSSƏ – Mary stilində -->
     <header class="project-header">
         <h1 class="project-title">Najiba Taghiyeva's PP434 Project</h1>
         <p class="project-nav">
             <a href="https://github.com/najiba1tagiyeva-ai" target="_blank">GitHub</a> |
-            <a href="index.html">Portfolio</a>
+            <a href="index.html">Portfolio</a> |
+            <a href="https://www.linkedin.com/in/najiba-e-taghiyeva-pmp" target="_blank">LinkedIn</a>
         </p>
     </header>
 
-    <!-- Bütün kartlar üçün container -->
     <main class="project-wrapper">
 
-        <!-- SƏHİFƏ BAŞLIĞI + QISA İZAH -->
         <section class="project-intro-card">
-            <h2 class="project-question">
-                Azerbaijan’s Path Toward an Energy Transition
-            </h2>
+            <h2 class="project-question">Azerbaijan’s Path Toward an Energy Transition</h2>
             <p class="project-intro-text">
-                This project uses data from 1990–2024 to explore how far Azerbaijan has moved from oil and gas
-                toward renewable energy. The sections below combine energy mix, emissions, investment, geography
-                and regional comparison into one narrative.
+                Data visualisations exploring Azerbaijan’s shift from hydrocarbons toward renewable energy.
+                Charts will be added progressively.
             </p>
         </section>
 
-        <!-- 1. INTRODUCTION -->
         <section>
             <div class="chart-description">
                 <h2>1. Introduction</h2>
-                <p>
-                    Azerbaijan’s economy has long been shaped by hydrocarbons. As the host of COP29 and a country
-                    with growing renewable ambitions, it faces a key question: is it really transitioning to clean
-                    energy, or does fossil fuel dependence still dominate? This page provides a data-driven overview
-                    of that transition.
-                </p>
             </div>
         </section>
 
-        <!-- 2. Is Azerbaijan still oil-dependent? -->
         <section>
             <div class="chart-description">
                 <h2>2. Is Azerbaijan still oil-dependent?</h2>
                 <h3>Chart 1 – Energy production mix, 1990–2024</h3>
-                <p>
-                    This chart shows the share of oil, gas, hydro and other renewables in Azerbaijan’s energy mix
-                    over time.
-                </p>
             </div>
             <figure id="EnergyLocation1"></figure>
         </section>
 
-        <!-- 3. The carbon cost of growth -->
         <section>
             <div class="chart-description">
                 <h2>3. The carbon cost of growth</h2>
                 <h3>Chart 2 – CO₂ emissions vs GDP</h3>
-                <p>
-                    Using GDP in constant prices and annual CO₂ emissions, this chart examines whether economic growth
-                    has been accompanied by rising emissions, or if there are signs of decoupling.
-                </p>
             </div>
             <figure id="EnergyLocation2"></figure>
         </section>
 
-        <!-- 4. Are renewables on the rise? -->
         <section>
             <div class="chart-description">
                 <h2>4. Are renewables on the rise?</h2>
                 <h3>Chart 3 – Growth in renewable energy</h3>
-                <p>
-                    Here we track the expansion of renewable capacity or investment over time, comparing it with fossil
-                    fuels where possible.
-                </p>
             </div>
             <figure id="EnergyLocation3"></figure>
         </section>
 
-        <!-- 5. Where are the renewables located? -->
         <section>
             <div class="chart-description">
                 <h2>5. Where are the renewables located?</h2>
                 <h3>Chart 4 – Geography of solar, wind and hydro projects</h3>
-                <p>
-                    This map visualises where major renewable projects are being built across Azerbaijan.
-                </p>
             </div>
             <figure id="EnergyLocation4"></figure>
         </section>
 
-        <!-- 6. Trading the transition -->
         <section>
             <div class="chart-description">
                 <h2>6. Trading the transition</h2>
                 <h3>Chart 5 – Oil exports vs renewable share</h3>
-                <p>
-                    This chart compares hydrocarbon export revenues with the growth of renewables at home.
-                </p>
             </div>
             <figure id="EnergyLocation5"></figure>
         </section>
 
-        <!-- 7. Comparing the region -->
         <section>
             <div class="chart-description">
                 <h2>7. Comparing the region</h2>
                 <h3>Chart 6 – Azerbaijan, Georgia and Armenia</h3>
-                <p>
-                    We benchmark Azerbaijan against its South Caucasus neighbours in terms of renewable share,
-                    investment and CO₂ intensity.
-                </p>
             </div>
             <figure id="EnergyLocation6"></figure>
         </section>
 
-        <!-- 8. Conclusion -->
         <section>
             <div class="chart-description">
                 <h2>8. Conclusion</h2>
-                <p>
-                    Taken together, these charts provide a concise picture of Azerbaijan’s energy transition.
-                    The project can be updated as new data arrive, especially around COP29.
-                </p>
             </div>
         </section>
 
     </main>
 
-    <!-- JAVASCRIPT: Vega-Lite qrafiklərini embed etmək üçün -->
     <script>
         let energy_fig1_spec = "energy_chart1_mix.json";
         let energy_fig2_spec = "energy_chart2_co2_gdp.json";
