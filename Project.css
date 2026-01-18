@@ -107,8 +107,9 @@ body.project-page {
 .hero-banner {
     margin-top: 0;
     position: relative;
-    height: 85vh;
-    min-height: 700px;
+    height: 65vh;
+    min-height: 550px;
+    max-height: 650px;
     width: 100%;
     overflow: hidden;
     background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
@@ -164,7 +165,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 56px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 20px 0;
@@ -172,7 +173,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.5;
