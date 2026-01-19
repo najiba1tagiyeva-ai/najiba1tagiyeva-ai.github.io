@@ -9,11 +9,11 @@
 
 body.project-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #1a1a1a;
     background: #ffffff;
     overflow-x: hidden;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* ============================================
@@ -57,7 +57,7 @@ body.project-page {
 }
 
 .project-topbar h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     color: white;
     margin: 0;
@@ -74,7 +74,7 @@ body.project-page {
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -160,7 +160,7 @@ body.project-page {
     -webkit-backdrop-filter: blur(12px);
     padding: 14px 32px;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 30px;
@@ -170,7 +170,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 78px;
+    font-size: 84px;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 25px 0;
@@ -179,7 +179,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.6;
@@ -188,7 +188,7 @@ body.project-page {
 }
 
 /* ============================================
-   CONTENT WRAPPER - FIXED
+   CONTENT WRAPPER
    ============================================ */
 .project-wrapper {
     max-width: 1600px;
@@ -224,7 +224,7 @@ body.project-page {
 }
 
 .project-intro-card h2 {
-    font-size: 46px;
+    font-size: 50px;
     font-weight: 700;
     margin: 0 0 25px 0;
     line-height: 1.3;
@@ -233,7 +233,7 @@ body.project-page {
 }
 
 .project-intro-card p {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.8;
     opacity: 0.95;
     margin: 0;
@@ -259,7 +259,7 @@ section:hover {
 }
 
 section h2 {
-    font-size: 46px;
+    font-size: 50px;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 20px 0;
@@ -280,7 +280,7 @@ section h2::after {
 }
 
 section h3 {
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 600;
     color: #2a2a2a;
     margin: 45px 0 25px 0;
@@ -288,14 +288,14 @@ section h3 {
 }
 
 .section-text {
-    font-size: 21px;
+    font-size: 23px;
     line-height: 1.9;
     color: #3a3a3a;
     margin-top: 25px;
 }
 
 /* ============================================
-   CHART FIGURES
+   CHART FIGURES - BOTH VEGA AND IFRAME
    ============================================ */
 figure[id^="EnergyLocation"] {
     margin: 40px 0;
@@ -312,83 +312,111 @@ figure[id^="EnergyLocation"]:hover {
     transform: translateY(-3px);
 }
 
+/* IFRAME CHARTS - Same styling as Vega charts */
+section iframe {
+    margin: 40px 0;
+    padding: 0;
+    background: #fafbfc;
+    border-radius: 16px;
+    border: 1px solid #e8eaed;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100% !important;
+    min-height: 700px;
+}
+
+section iframe:hover {
+    border-color: #1a8566;
+    box-shadow: 0 6px 20px rgba(26, 133, 102, 0.18);
+    transform: translateY(-3px);
+}
+
 /* ============================================
-   INSIGHT BOXES
+   INSIGHT BOXES - CONSISTENT SIZING
    ============================================ */
 .insight-box {
     background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
-    border-left: 5px solid #1a8566;
-    padding: 38px 45px;
-    border-radius: 12px;
-    margin: 35px 0;
-    box-shadow: 0 4px 15px rgba(26, 133, 102, 0.1);
+    border-left: 6px solid #1a8566;
+    padding: 45px 50px;
+    border-radius: 14px;
+    margin: 40px 0;
+    box-shadow: 0 6px 20px rgba(26, 133, 102, 0.12);
+    transition: all 0.3s ease;
+}
+
+.insight-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(26, 133, 102, 0.18);
 }
 
 .insight-box h4 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #1a1a1a;
-    margin: 0 0 15px 0;
+    margin: 0 0 18px 0;
     display: flex;
     align-items: center;
+    letter-spacing: -0.3px;
 }
 
 .insight-box h4::before {
     content: '💡';
-    margin-right: 12px;
-    font-size: 26px;
+    margin-right: 14px;
+    font-size: 30px;
 }
 
 .insight-box p {
-    font-size: 20px;
-    color: #3a3a3a;
+    font-size: 22px;
+    color: #2a2a2a;
     line-height: 1.8;
     margin: 0;
+    font-weight: 400;
 }
 
 /* ============================================
-   STATS GRID
+   STATS GRID - CONSISTENT SIZING
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
     margin: 60px 0;
 }
 
 .stat-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 20px;
-    padding: 55px;
+    border-radius: 24px;
+    padding: 60px 50px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
 
 .stat-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(26, 133, 102, 0.28);
+    transform: translateY(-12px);
+    box-shadow: 0 18px 50px rgba(26, 133, 102, 0.30);
     border-color: #1a8566;
 }
 
 .stat-number {
-    font-size: 62px;
+    font-size: 72px;
     font-weight: 700;
     background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 15px;
-    line-height: 1.2;
+    margin-bottom: 18px;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .stat-label {
-    font-size: 18px;
-    color: #5a5a5a;
+    font-size: 20px;
+    color: #4a4a4a;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     line-height: 1.5;
 }
 
@@ -411,7 +439,7 @@ figure[id^="EnergyLocation"]:hover {
 
 .conclusion-section .section-text {
     color: rgba(255, 255, 255, 0.92);
-    font-size: 21px;
+    font-size: 23px;
 }
 
 /* ============================================
@@ -431,17 +459,32 @@ figure[id^="EnergyLocation"]:hover {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+@media (max-width: 1200px) {
+    .project-wrapper {
+        padding: 80px 80px;
+        width: 92%;
+    }
+    
+    section {
+        padding: 60px 80px;
+    }
+    
+    section iframe {
+        min-height: 650px;
+    }
+}
+
 @media (max-width: 1024px) {
     .nav-container {
         padding: 25px 40px;
     }
 
     .project-topbar h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .project-nav a {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .project-wrapper {
@@ -450,19 +493,23 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .hero-overlay-text h1 {
-        font-size: 60px;
+        font-size: 66px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     section {
-        padding: 60px 70px;
+        padding: 60px 60px;
     }
 
     section h2 {
-        font-size: 40px;
+        font-size: 44px;
+    }
+    
+    section h3 {
+        font-size: 30px;
     }
 
     .project-intro-card {
@@ -470,13 +517,37 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-intro-card h2 {
-        font-size: 40px;
+        font-size: 44px;
+    }
+    
+    section iframe {
+        min-height: 600px;
+    }
+    
+    .insight-box {
+        padding: 40px 45px;
+    }
+    
+    .insight-box h4 {
+        font-size: 26px;
+    }
+    
+    .insight-box p {
+        font-size: 20px;
+    }
+    
+    .stat-card {
+        padding: 50px 40px;
+    }
+    
+    .stat-number {
+        font-size: 64px;
     }
 }
 
 @media (max-width: 768px) {
     body.project-page {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .nav-container {
@@ -486,7 +557,7 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-topbar h1 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .project-nav {
@@ -494,7 +565,7 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-nav a {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .hero-banner {
@@ -503,15 +574,15 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .hero-overlay-text h1 {
-        font-size: 44px;
+        font-size: 48px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .hero-tag {
-        font-size: 13px;
+        font-size: 14px;
         padding: 10px 20px;
     }
 
@@ -524,94 +595,117 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-intro-card h2 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .project-intro-card p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     section {
-        padding: 50px 40px;
+        padding: 50px 35px;
     }
 
     section h2 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     section h3 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .section-text {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     figure[id^="EnergyLocation"] {
-        padding: 25px;
+        padding: 30px;
+    }
+    
+    section iframe {
+        min-height: 500px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
     }
 
     .stat-card {
-        padding: 40px;
+        padding: 45px 35px;
+    }
+
+    .stat-number {
+        font-size: 56px;
+    }
+
+    .stat-label {
+        font-size: 18px;
+    }
+
+    .insight-box {
+        padding: 35px 35px;
+    }
+
+    .insight-box h4 {
+        font-size: 24px;
+    }
+
+    .insight-box p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-topbar h1 {
+        font-size: 20px;
+    }
+
+    .project-nav a {
+        font-size: 16px;
+    }
+
+    .hero-overlay-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+    
+    section h3 {
+        font-size: 22px;
+    }
+
+    .section-text {
+        font-size: 18px;
     }
 
     .stat-number {
         font-size: 48px;
     }
 
-    .stat-label {
-        font-size: 15px;
-    }
-
-    .insight-box h4 {
-        font-size: 20px;
-    }
-
-    .insight-box p {
-        font-size: 17px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-topbar h1 {
-        font-size: 18px;
-    }
-
-    .project-nav a {
-        font-size: 14px;
-        gap: 20px;
-    }
-
-    .hero-overlay-text h1 {
-        font-size: 36px;
-    }
-
-    .hero-overlay-text h2 {
-        font-size: 19px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    .section-text {
-        font-size: 17px;
-    }
-
-    .stat-number {
-        font-size: 42px;
-    }
-
     .project-intro-card h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .project-intro-card p {
-        font-size: 17px;
+        font-size: 18px;
+    }
+    
+    section iframe {
+        min-height: 450px;
+    }
+    
+    .insight-box h4 {
+        font-size: 22px;
+    }
+    
+    .insight-box p {
+        font-size: 18px;
     }
 }
