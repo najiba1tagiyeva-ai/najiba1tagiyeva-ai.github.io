@@ -9,11 +9,11 @@
 
 body.project-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #1a1a1a;
     background: #ffffff;
     overflow-x: hidden;
-    font-size: 20px;
+    font-size: 22px; /* 20px-dən 22px-ə artırıldı */
 }
 
 /* ============================================
@@ -24,7 +24,7 @@ body.project-page {
     top: 0;
     left: 0;
     width: 0%;
-    height: 4px;
+    height: 5px;
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     z-index: 1001;
     transition: width 0.1s ease;
@@ -50,14 +50,14 @@ body.project-page {
 .nav-container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 30px 60px;
+    padding: 35px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .project-topbar h1 {
-    font-size: 36px;
+    font-size: 40px; /* 36px-dən 40px-ə */
     font-weight: 700;
     color: white;
     margin: 0;
@@ -74,7 +74,7 @@ body.project-page {
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 22px;
+    font-size: 24px; /* 22px-dən 24px-ə */
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -148,7 +148,7 @@ body.project-page {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 90%;
     z-index: 2;
 }
@@ -158,28 +158,28 @@ body.project-page {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 14px 32px;
+    padding: 16px 36px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 20px; /* 18px-dən 20px-ə */
     font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    letter-spacing: 2.5px;
+    margin-bottom: 35px;
     text-transform: uppercase;
     border: 1px solid rgba(255, 255, 255, 0.35);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-overlay-text h1 {
-    font-size: 84px;
+    font-size: 92px; /* 84px-dən 92px-ə */
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 25px 0;
+    margin: 0 0 30px 0;
     text-shadow: 3px 5px 25px rgba(0, 0, 0, 0.5);
     letter-spacing: -0.5px;
 }
 
 .hero-overlay-text h2 {
-    font-size: 36px;
+    font-size: 40px; /* 36px-dən 40px-ə */
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.6;
@@ -193,7 +193,7 @@ body.project-page {
 .project-wrapper {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 90px 120px;
+    padding: 100px 120px;
     width: 95%;
 }
 
@@ -202,9 +202,9 @@ body.project-page {
    ============================================ */
 .project-intro-card {
     background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
-    border-radius: 20px;
-    padding: 80px 100px;
-    margin: 0 auto 90px;
+    border-radius: 24px;
+    padding: 90px 110px;
+    margin: 0 auto 100px;
     max-width: 1600px;
     color: white;
     box-shadow: 0 25px 70px rgba(26, 133, 102, 0.35);
@@ -224,17 +224,17 @@ body.project-page {
 }
 
 .project-intro-card h2 {
-    font-size: 50px;
+    font-size: 56px; /* 50px-dən 56px-ə */
     font-weight: 700;
-    margin: 0 0 25px 0;
+    margin: 0 0 30px 0;
     line-height: 1.3;
     position: relative;
     letter-spacing: -0.5px;
 }
 
 .project-intro-card p {
-    font-size: 24px;
-    line-height: 1.8;
+    font-size: 27px; /* 24px-dən 27px-ə */
+    line-height: 1.9;
     opacity: 0.95;
     margin: 0;
     position: relative;
@@ -245,11 +245,11 @@ body.project-page {
    ============================================ */
 section {
     background: white;
-    padding: 70px 100px;
-    border-radius: 20px;
-    margin: 50px auto;
+    padding: 80px 110px;
+    border-radius: 24px;
+    margin: 60px auto;
     max-width: 1600px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -259,13 +259,13 @@ section:hover {
 }
 
 section h2 {
-    font-size: 50px;
+    font-size: 56px; /* 50px-dən 56px-ə */
     font-weight: 700;
     color: #1a1a1a;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
     position: relative;
-    padding-bottom: 25px;
-    letter-spacing: -0.5px;
+    padding-bottom: 30px;
+    letter-spacing: -0.8px;
 }
 
 section h2::after {
@@ -273,151 +273,151 @@ section h2::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 85px;
-    height: 5px;
+    width: 90px;
+    height: 6px;
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 3px;
 }
 
 section h3 {
-    font-size: 34px;
+    font-size: 38px; /* 34px-dən 38px-ə */
     font-weight: 600;
     color: #2a2a2a;
-    margin: 45px 0 25px 0;
-    letter-spacing: -0.3px;
+    margin: 50px 0 30px 0;
+    letter-spacing: -0.5px;
 }
 
 .section-text {
-    font-size: 23px;
-    line-height: 1.9;
+    font-size: 26px; /* 23px-dən 26px-ə */
+    line-height: 2;
     color: #3a3a3a;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 /* ============================================
    CHART FIGURES - BOTH VEGA AND IFRAME
    ============================================ */
 figure[id^="EnergyLocation"] {
-    margin: 40px 0;
-    padding: 45px;
+    margin: 50px 0;
+    padding: 50px;
     background: #fafbfc;
-    border-radius: 16px;
-    border: 1px solid #e8eaed;
+    border-radius: 18px;
+    border: 2px solid #e8eaed;
     transition: all 0.3s ease;
 }
 
 figure[id^="EnergyLocation"]:hover {
     border-color: #1a8566;
-    box-shadow: 0 6px 20px rgba(26, 133, 102, 0.18);
-    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
+    transform: translateY(-4px);
 }
 
 /* IFRAME CHARTS - Same styling as Vega charts */
 section iframe {
-    margin: 40px 0;
+    margin: 50px 0;
     padding: 0;
     background: #fafbfc;
-    border-radius: 16px;
-    border: 1px solid #e8eaed;
+    border-radius: 18px;
+    border: 2px solid #e8eaed;
     transition: all 0.3s ease;
     display: block;
     width: 100% !important;
-    min-height: 700px;
+    min-height: 750px;
 }
 
 section iframe:hover {
     border-color: #1a8566;
-    box-shadow: 0 6px 20px rgba(26, 133, 102, 0.18);
-    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
+    transform: translateY(-4px);
 }
 
 /* ============================================
-   INSIGHT BOXES - CONSISTENT SIZING
+   INSIGHT BOXES - LARGER TEXT
    ============================================ */
 .insight-box {
     background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
-    border-left: 6px solid #1a8566;
-    padding: 45px 50px;
-    border-radius: 14px;
-    margin: 40px 0;
-    box-shadow: 0 6px 20px rgba(26, 133, 102, 0.12);
+    border-left: 7px solid #1a8566;
+    padding: 50px 55px;
+    border-radius: 16px;
+    margin: 50px 0;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.14);
     transition: all 0.3s ease;
 }
 
 .insight-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(26, 133, 102, 0.18);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(26, 133, 102, 0.20);
 }
 
 .insight-box h4 {
-    font-size: 28px;
+    font-size: 32px; /* 28px-dən 32px-ə */
     font-weight: 700;
     color: #1a1a1a;
-    margin: 0 0 18px 0;
+    margin: 0 0 20px 0;
     display: flex;
     align-items: center;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
 }
 
 .insight-box h4::before {
     content: '💡';
-    margin-right: 14px;
-    font-size: 30px;
+    margin-right: 15px;
+    font-size: 34px;
 }
 
 .insight-box p {
-    font-size: 22px;
+    font-size: 25px; /* 22px-dən 25px-ə */
     color: #2a2a2a;
-    line-height: 1.8;
+    line-height: 1.9;
     margin: 0;
     font-weight: 400;
 }
 
 /* ============================================
-   STATS GRID - CONSISTENT SIZING
+   STATS GRID - LARGER NUMBERS
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin: 60px 0;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 45px;
+    margin: 70px 0;
 }
 
 .stat-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 24px;
-    padding: 60px 50px;
+    border-radius: 26px;
+    padding: 70px 55px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
 }
 
 .stat-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 18px 50px rgba(26, 133, 102, 0.30);
+    transform: translateY(-14px);
+    box-shadow: 0 20px 55px rgba(26, 133, 102, 0.32);
     border-color: #1a8566;
 }
 
 .stat-number {
-    font-size: 72px;
+    font-size: 80px; /* 72px-dən 80px-ə */
     font-weight: 700;
     background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     line-height: 1.1;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
 }
 
 .stat-label {
-    font-size: 20px;
+    font-size: 22px; /* 20px-dən 22px-ə */
     color: #4a4a4a;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.5;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
 }
 
 /* ============================================
@@ -426,7 +426,7 @@ section iframe:hover {
 .conclusion-section {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
     color: white;
-    margin-top: 90px;
+    margin-top: 100px;
 }
 
 .conclusion-section h2 {
@@ -438,8 +438,8 @@ section iframe:hover {
 }
 
 .conclusion-section .section-text {
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 23px;
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 26px; /* 23px-dən 26px-ə */
 }
 
 /* ============================================
@@ -447,7 +447,7 @@ section iframe:hover {
    ============================================ */
 .fade-in {
     opacity: 0;
-    transform: translateY(35px);
+    transform: translateY(40px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -460,88 +460,128 @@ section iframe:hover {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1200px) {
+    body.project-page {
+        font-size: 20px;
+    }
+
     .project-wrapper {
-        padding: 80px 80px;
+        padding: 90px 90px;
         width: 92%;
     }
     
     section {
-        padding: 60px 80px;
+        padding: 70px 90px;
+    }
+    
+    section h2 {
+        font-size: 50px;
+    }
+    
+    section h3 {
+        font-size: 34px;
+    }
+    
+    .section-text {
+        font-size: 24px;
+    }
+    
+    section iframe {
+        min-height: 700px;
+    }
+    
+    .insight-box h4 {
+        font-size: 29px;
+    }
+    
+    .insight-box p {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body.project-page {
+        font-size: 19px;
+    }
+
+    .nav-container {
+        padding: 30px 50px;
+    }
+
+    .project-topbar h1 {
+        font-size: 34px;
+    }
+
+    .project-nav a {
+        font-size: 22px;
+    }
+
+    .project-wrapper {
+        padding: 80px 60px;
+        width: 92%;
+    }
+
+    .hero-overlay-text h1 {
+        font-size: 72px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 70px 70px;
+    }
+
+    section h2 {
+        font-size: 48px;
+    }
+    
+    section h3 {
+        font-size: 32px;
+    }
+    
+    .section-text {
+        font-size: 22px;
+    }
+
+    .project-intro-card {
+        padding: 80px 90px;
+    }
+
+    .project-intro-card h2 {
+        font-size: 48px;
+    }
+    
+    .project-intro-card p {
+        font-size: 24px;
     }
     
     section iframe {
         min-height: 650px;
     }
-}
-
-@media (max-width: 1024px) {
-    .nav-container {
-        padding: 25px 40px;
-    }
-
-    .project-topbar h1 {
-        font-size: 30px;
-    }
-
-    .project-nav a {
-        font-size: 20px;
-    }
-
-    .project-wrapper {
-        padding: 70px 50px;
-        width: 92%;
-    }
-
-    .hero-overlay-text h1 {
-        font-size: 66px;
-    }
-
-    .hero-overlay-text h2 {
-        font-size: 30px;
-    }
-
-    section {
-        padding: 60px 60px;
-    }
-
-    section h2 {
-        font-size: 44px;
-    }
-    
-    section h3 {
-        font-size: 30px;
-    }
-
-    .project-intro-card {
-        padding: 70px 80px;
-    }
-
-    .project-intro-card h2 {
-        font-size: 44px;
-    }
-    
-    section iframe {
-        min-height: 600px;
-    }
     
     .insight-box {
-        padding: 40px 45px;
+        padding: 45px 50px;
     }
     
     .insight-box h4 {
-        font-size: 26px;
+        font-size: 28px;
     }
     
     .insight-box p {
-        font-size: 20px;
+        font-size: 22px;
     }
     
     .stat-card {
-        padding: 50px 40px;
+        padding: 60px 45px;
     }
     
     .stat-number {
-        font-size: 64px;
+        font-size: 70px;
+    }
+    
+    .stat-label {
+        font-size: 20px;
     }
 }
 
@@ -553,19 +593,19 @@ section iframe:hover {
     .nav-container {
         flex-direction: row;
         gap: 0;
-        padding: 22px 30px;
+        padding: 25px 35px;
     }
 
     .project-topbar h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .project-nav {
-        gap: 25px;
+        gap: 30px;
     }
 
     .project-nav a {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .hero-banner {
@@ -574,44 +614,44 @@ section iframe:hover {
     }
 
     .hero-overlay-text h1 {
-        font-size: 48px;
+        font-size: 52px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .hero-tag {
-        font-size: 14px;
-        padding: 10px 20px;
+        font-size: 15px;
+        padding: 12px 24px;
     }
 
     .project-wrapper {
-        padding: 50px 30px;
+        padding: 60px 40px;
     }
 
     .project-intro-card {
-        padding: 55px 45px;
+        padding: 60px 50px;
     }
 
     .project-intro-card h2 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     .project-intro-card p {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     section {
-        padding: 50px 35px;
+        padding: 60px 45px;
     }
 
     section h2 {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     section h3 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .section-text {
@@ -619,93 +659,97 @@ section iframe:hover {
     }
 
     figure[id^="EnergyLocation"] {
-        padding: 30px;
+        padding: 35px;
     }
     
     section iframe {
-        min-height: 500px;
+        min-height: 550px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
     }
 
     .stat-card {
-        padding: 45px 35px;
+        padding: 50px 40px;
     }
 
     .stat-number {
-        font-size: 56px;
+        font-size: 60px;
     }
 
     .stat-label {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .insight-box {
-        padding: 35px 35px;
+        padding: 40px 40px;
     }
 
     .insight-box h4 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .insight-box p {
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    body.project-page {
+        font-size: 17px;
+    }
+
     .project-topbar h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .project-nav a {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .hero-overlay-text h1 {
-        font-size: 38px;
+        font-size: 42px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     section h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
     
     section h3 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .section-text {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .stat-number {
-        font-size: 48px;
+        font-size: 52px;
     }
 
     .project-intro-card h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .project-intro-card p {
-        font-size: 18px;
+        font-size: 19px;
     }
     
     section iframe {
-        min-height: 450px;
+        min-height: 480px;
     }
     
     .insight-box h4 {
-        font-size: 22px;
+        font-size: 24px;
     }
     
     .insight-box p {
-        font-size: 18px;
+        font-size: 19px;
     }
 }
