@@ -48,7 +48,7 @@ body.project-page {
 }
 
 .nav-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 30px 60px;
     display: flex;
@@ -148,7 +148,7 @@ body.project-page {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    max-width: 1000px;
+    max-width: 1100px;
     width: 90%;
     z-index: 2;
 }
@@ -158,9 +158,9 @@ body.project-page {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 12px 28px;
+    padding: 14px 32px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 30px;
@@ -170,7 +170,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 72px;
+    font-size: 78px;
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 25px 0;
@@ -179,7 +179,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.6;
@@ -188,12 +188,13 @@ body.project-page {
 }
 
 /* ============================================
-   CONTENT WRAPPER
+   CONTENT WRAPPER - FIXED
    ============================================ */
 .project-wrapper {
-    max-width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 90px 80px;
+    padding: 90px 120px;
+    width: 95%;
 }
 
 /* ============================================
@@ -204,7 +205,7 @@ body.project-page {
     border-radius: 20px;
     padding: 80px 100px;
     margin: 0 auto 90px;
-    max-width: 1400px;
+    max-width: 1600px;
     color: white;
     box-shadow: 0 25px 70px rgba(26, 133, 102, 0.35);
     position: relative;
@@ -223,7 +224,7 @@ body.project-page {
 }
 
 .project-intro-card h2 {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 700;
     margin: 0 0 25px 0;
     line-height: 1.3;
@@ -232,7 +233,7 @@ body.project-page {
 }
 
 .project-intro-card p {
-    font-size: 21px;
+    font-size: 22px;
     line-height: 1.8;
     opacity: 0.95;
     margin: 0;
@@ -247,7 +248,7 @@ section {
     padding: 70px 100px;
     border-radius: 20px;
     margin: 50px auto;
-    max-width: 1400px;
+    max-width: 1600px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -258,7 +259,7 @@ section:hover {
 }
 
 section h2 {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 20px 0;
@@ -272,14 +273,14 @@ section h2::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80px;
+    width: 85px;
     height: 5px;
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 3px;
 }
 
 section h3 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 600;
     color: #2a2a2a;
     margin: 45px 0 25px 0;
@@ -287,7 +288,7 @@ section h3 {
 }
 
 .section-text {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.9;
     color: #3a3a3a;
     margin-top: 25px;
@@ -298,7 +299,7 @@ section h3 {
    ============================================ */
 figure[id^="EnergyLocation"] {
     margin: 40px 0;
-    padding: 40px;
+    padding: 45px;
     background: #fafbfc;
     border-radius: 16px;
     border: 1px solid #e8eaed;
@@ -317,14 +318,14 @@ figure[id^="EnergyLocation"]:hover {
 .insight-box {
     background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
     border-left: 5px solid #1a8566;
-    padding: 35px 40px;
+    padding: 38px 45px;
     border-radius: 12px;
     margin: 35px 0;
     box-shadow: 0 4px 15px rgba(26, 133, 102, 0.1);
 }
 
 .insight-box h4 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 15px 0;
@@ -335,11 +336,11 @@ figure[id^="EnergyLocation"]:hover {
 .insight-box h4::before {
     content: '💡';
     margin-right: 12px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .insight-box p {
-    font-size: 19px;
+    font-size: 20px;
     color: #3a3a3a;
     line-height: 1.8;
     margin: 0;
@@ -350,15 +351,15 @@ figure[id^="EnergyLocation"]:hover {
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
     margin: 60px 0;
 }
 
 .stat-card {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 20px;
-    padding: 50px;
+    padding: 55px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
@@ -372,7 +373,7 @@ figure[id^="EnergyLocation"]:hover {
 }
 
 .stat-number {
-    font-size: 58px;
+    font-size: 62px;
     font-weight: 700;
     background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
@@ -383,7 +384,7 @@ figure[id^="EnergyLocation"]:hover {
 }
 
 .stat-label {
-    font-size: 17px;
+    font-size: 18px;
     color: #5a5a5a;
     font-weight: 600;
     text-transform: uppercase;
@@ -410,7 +411,7 @@ figure[id^="EnergyLocation"]:hover {
 
 .conclusion-section .section-text {
     color: rgba(255, 255, 255, 0.92);
-    font-size: 20px;
+    font-size: 21px;
 }
 
 /* ============================================
@@ -444,15 +445,16 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-wrapper {
-        padding: 70px 40px;
+        padding: 70px 50px;
+        width: 92%;
     }
 
     .hero-overlay-text h1 {
-        font-size: 56px;
+        font-size: 60px;
     }
 
     .hero-overlay-text h2 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     section {
@@ -460,7 +462,7 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     section h2 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .project-intro-card {
@@ -468,7 +470,7 @@ figure[id^="EnergyLocation"]:hover {
     }
 
     .project-intro-card h2 {
-        font-size: 38px;
+        font-size: 40px;
     }
 }
 
