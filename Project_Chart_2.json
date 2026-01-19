@@ -1,84 +1,76 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "CO₂ vs GDP scatter with carbon intensity, regression line, and 95% confidence interval (Azerbaijan, 1990–2024).",
+  "description": "CO₂ vs GDP with carbon intensity categories (Azerbaijan, 1990–2024).",
+
+  "autosize": { "type": "fit", "contains": "padding" },
+  "width": "container",
+  "height": 420,
+
   "data": {
     "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart2_Azerbaijan's_annual-co2-emissions-per-country.csv",
-    "format": {"type": "csv"}
+    "format": { "type": "csv" }
   },
+
   "title": {
     "text": "The Carbon Cost of Growth: CO₂ Emissions vs GDP",
-    "subtitle": [
-      "Linear Regression (R² = 0.430) | Azerbaijan, 1990–2024 (n=35 years) | Source: World Bank Open Data",
-      "Click legend categories to filter • Hover points for details",
-      ""
-    ],
-    "subtitleFontStyle": "italic",
-    "subtitleFontSize": 11,
-    "fontSize": 18,
-    "fontWeight": "normal",
+    "subtitle": "Circle color shows carbon intensity (tonnes CO₂ per million USD); dashed line shows regression trend.",
+    "fontSize": 16,
+    "fontWeight": "bold",
     "anchor": "start",
-    "color": "#1f2937",
-    "subtitleColor": "#6b7280"
+    "color": "#111827",
+    "subtitleFontSize": 11,
+    "subtitleColor": "#6b7280",
+    "subtitleFontStyle": "italic"
   },
-  "width": 700,
-  "height": 450,
+
   "transform": [
-    {"calculate": "toNumber(datum['Year'])", "as": "year"},
-    {"calculate": "toNumber(datum['GDP (constant 2015 US$)'])", "as": "gdp"},
-    {"calculate": "toNumber(datum['Annual CO₂ emissions'])", "as": "co2"},
-    {"calculate": "datum.gdp / 1e9", "as": "gdpB"},
-    {"calculate": "datum.co2 / 1e6", "as": "co2M"},
-    {"calculate": "(datum.co2 / datum.gdp) * 1000", "as": "carbonIntensity"},
+    { "calculate": "toNumber(datum['Year'])", "as": "year" },
+    { "calculate": "toNumber(datum['GDP (constant 2015 US$)'])", "as": "gdp" },
+    { "calculate": "toNumber(datum['Annual CO₂ emissions'])", "as": "co2" },
+    { "calculate": "datum.gdp / 1e9", "as": "gdpB" },
+    { "calculate": "datum.co2 / 1e6", "as": "co2M" },
     {
-      "calculate": "datum.carbonIntensity >= 2 ? 'High (≥2.0)' : datum.carbonIntensity <= 1 ? 'Low (<1.0)' : 'Medium (1.0–2.0)'",
-      "as": "intensityCategory"
+      "calculate": "(datum.co2 / datum.gdp) * 1000",
+      "as": "carbonIntensity"
     },
     {
-      "calculate": "datum.year + ': $' + format(datum.gdpB, '.1f') + 'B GDP, ' + format(datum.co2M, '.1f') + 'M tonnes CO₂'",
-      "as": "summary"
+      "calculate": "datum.carbonIntensity >= 2 ? 'High' : datum.carbonIntensity <= 1 ? 'Low' : 'Medium'",
+      "as": "intensityCategory"
     }
   ],
+
   "layer": [
     {
-      "description": "95% Confidence interval band",
-      "mark": {
-        "type": "errorband",
-        "extent": "ci",
-        "opacity": 0.15,
-        "color": "#475569"
-      },
-      "encoding": {
-        "x": {
-          "field": "gdpB",
-          "type": "quantitative",
-          "title": "GDP (constant 2015 US$ billions)",
-          "scale": {"domain": [0, 70], "nice": true}
-        },
-        "y": {
-          "field": "co2M",
-          "type": "quantitative",
-          "title": "Annual CO₂ emissions (million tonnes)",
-          "scale": {"domain": [25, 60], "nice": true}
-        }
-      }
-    },
-    {
-      "description": "Linear regression trend line",
+      "description": "Regression trend line",
       "transform": [
-        {"regression": "co2M", "on": "gdpB", "as": ["gdpB_fit", "co2M_fit"]}
+        {
+          "regression": "co2M",
+          "on": "gdpB",
+          "as": ["gdpB_reg", "co2M_pred"]
+        }
       ],
       "mark": {
         "type": "line",
-        "stroke": "#475569",
-        "strokeWidth": 2.5,
-        "opacity": 0.8
+        "strokeDash": [8, 4],
+        "stroke": "#94a3b8",
+        "strokeWidth": 2
       },
       "encoding": {
-        "x": {"field": "gdpB_fit", "type": "quantitative"},
-        "y": {"field": "co2M_fit", "type": "quantitative"}
+        "x": {
+          "field": "gdpB_reg",
+          "type": "quantitative",
+          "scale": { "domain": [0, 70] }
+        },
+        "y": {
+          "field": "co2M_pred",
+          "type": "quantitative",
+          "scale": { "domain": [25, 60] }
+        }
       }
     },
+
     {
+      "description": "Scatter points with intensity color",
       "params": [
         {
           "name": "hover",
@@ -90,8 +82,11 @@
           }
         },
         {
-          "name": "select",
-          "select": {"type": "point", "fields": ["intensityCategory"]},
+          "name": "selectCat",
+          "select": {
+            "type": "point",
+            "fields": ["intensityCategory"]
+          },
           "bind": "legend"
         }
       ],
@@ -105,85 +100,125 @@
         "x": {
           "field": "gdpB",
           "type": "quantitative",
+          "title": "GDP (billion USD, constant 2015)",
+          "scale": { "domain": [0, 70] },
           "axis": {
             "grid": true,
-            "gridOpacity": 0.15,
-            "tickCount": 7,
-            "labelFontSize": 10,
-            "titleFontSize": 11
+            "gridOpacity": 0.2,
+            "tickCount": 8,
+            "labelFontSize": 11,
+            "titleFontSize": 12
           }
         },
         "y": {
           "field": "co2M",
           "type": "quantitative",
+          "title": "CO₂ Emissions (million tonnes)",
+          "scale": { "domain": [25, 60] },
           "axis": {
             "grid": true,
-            "gridOpacity": 0.15,
-            "tickCount": 7,
-            "labelFontSize": 10,
-            "titleFontSize": 11
+            "gridOpacity": 0.2,
+            "tickCount": 8,
+            "labelFontSize": 11,
+            "titleFontSize": 12
           }
         },
         "color": {
           "field": "intensityCategory",
           "type": "nominal",
-          "title": "Carbon intensity (tonnes CO₂ per million USD)",
+          "title": "Carbon Intensity (CO₂ per million USD)",
           "scale": {
-            "domain": ["High (≥2.0)", "Medium (1.0–2.0)", "Low (<1.0)"],
-            "range": ["#d73027", "#f59e0b", "#1a9850"]
+            "domain": ["High", "Medium", "Low"],
+            "range": ["#ef4444", "#f59e0b", "#10b981"]
           },
           "legend": {
-            "orient": "right",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3,
             "titleFontSize": 11,
-            "titleFontWeight": "normal",
-            "titleLimit": 250,
             "labelFontSize": 10,
-            "symbolSize": 150,
-            "symbolStrokeWidth": 0,
-            "padding": 5,
-            "offset": 5
+            "padding": 5
           }
         },
         "size": {
-          "condition": [
-            {"test": {"param": "hover", "empty": false}, "value": 400}
-          ],
-          "value": 180
+          "condition": { "param": "hover", "empty": false, "value": 220 },
+          "value": 150
         },
         "opacity": {
           "condition": [
-            {"test": {"param": "hover", "empty": false}, "value": 1},
-            {"test": {"param": "select", "empty": false}, "value": 0.9}
+            { "param": "hover", "empty": false, "value": 1 },
+            { "param": "selectCat", "empty": false, "value": 0.9 }
           ],
           "value": 0.25
         },
-        "strokeWidth": {
-          "condition": [
-            {"test": {"param": "hover", "empty": false}, "value": 3}
-          ],
-          "value": 1.5
-        },
         "tooltip": [
-          {"field": "summary", "type": "nominal", "title": "Summary"},
+          { "field": "year", "type": "quantitative", "title": "Year" },
+          {
+            "field": "gdpB",
+            "type": "quantitative",
+            "title": "GDP ($B)",
+            "format": ".1f"
+          },
+          {
+            "field": "co2M",
+            "type": "quantitative",
+            "title": "CO₂ (M tonnes)",
+            "format": ".1f"
+          },
           {
             "field": "carbonIntensity",
             "type": "quantitative",
-            "title": "Carbon intensity (t CO₂/M$)",
+            "title": "Carbon intensity (t CO₂ per M$)",
             "format": ".2f"
           },
-          {"field": "intensityCategory", "type": "nominal", "title": "Category"}
+          {
+            "field": "intensityCategory",
+            "type": "nominal",
+            "title": "Intensity bucket"
+          }
         ]
+      }
+    },
+
+    {
+      "description": "Small explanatory text inside chart",
+      "data": {
+        "values": [
+          {
+            "x": 6,
+            "y": 59.2,
+            "text": "Circle color represents carbon intensity; hover or use legend to focus on a category."
+          },
+          {
+            "x": 52,
+            "y": 36,
+            "text": "Trend line (regression)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#64748b",
+        "align": "left"
+      },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative" },
+        "y": { "field": "y", "type": "quantitative" },
+        "text": { "field": "text", "type": "nominal" }
       }
     }
   ],
+
   "config": {
-    "view": {"strokeWidth": 0, "continuousWidth": 700, "continuousHeight": 450},
+    "view": { "strokeWidth": 0 },
     "axis": {
-      "labelFontSize": 10,
-      "titleFontSize": 11,
+      "labelFontSize": 11,
+      "titleFontSize": 12,
       "titleFontWeight": "normal",
       "labelColor": "#4b5563",
-      "titleColor": "#1f2937",
+      "titleColor": "#111827",
       "domainColor": "#d1d5db",
       "tickColor": "#d1d5db",
       "gridColor": "#e5e7eb"
@@ -191,10 +226,13 @@
     "legend": {
       "labelFontSize": 10,
       "titleFontSize": 11,
-      "titleColor": "#1f2937",
+      "titleColor": "#111827",
       "labelColor": "#4b5563"
     },
-    "title": {"font": "sans-serif", "fontWeight": "normal"},
+    "title": {
+      "font": "system-ui, -apple-system, sans-serif",
+      "fontWeight": "bold"
+    },
     "background": "#ffffff"
   }
 }
