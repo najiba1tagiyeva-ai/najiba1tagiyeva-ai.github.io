@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azerbaijan Energy Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f1f5f9 0%, #dbeafe 100%);
+            padding: 30px 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        button {
+            padding: 16px 32px;
+            font-size: 17px;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            color: #4b5563;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        button:hover {
+            background: #f9fafb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        button.active {
+            background: #2563eb;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
+        }
+        #chart-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            position: relative;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button id="btn-production" class="active" onclick="showChart('production')">
+                📊 Energy Production Mix
+            </button>
+            <button id="btn-oil" onclick="showChart('oil')">
+                🛢️ Oil Production Trends
+            </button>
+        </div>
+        <div id="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const years = [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+        const oil = [12513, 11742, 11084, 10295, 9563, 9161, 9100, 9071, 11424, 13807, 14017, 14909, 15334, 15381, 15549, 22214, 32268, 42598, 44514, 50416, 50838, 45626, 43375, 43457, 42076, 41628, 41050, 38688, 38814, 37501, 34532, 34580, 32646, 30147, 29052];
+        const gas = [9926, 8621, 7872, 6805, 6379, 6644, 6305, 5964, 5589, 5997, 5642, 5535, 5144, 5128, 4995, 5732, 9076, 16850, 23399, 23598, 26312, 25728, 26796, 29245, 29555, 29331, 28589, 28596, 30490, 35610, 37140, 43867, 46737, 48497, 50430];
+
+        let myChart = null;
+
+        function showChart(type) {
+            document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + type).classList.add('active');
+
+            if (myChart) {
+                myChart.destroy();
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            if (type === 'production') {
+                myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: years,
+                        datasets: [
+                            {
+                                label: 'Oil Production (kt)',
+                                data: oil,
+                                backgroundColor: 'rgba(245, 158, 11, 0.5)',
+                                borderColor: '#f59e0b',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Gas Production (million m³)',
+                                data: gas,
+                                backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                                borderColor: '#3b82f6',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Is Azerbaijan still oil-dependent?',
+                                font: {
+                                    size: 24,
+                                    weight: 'bold'
+                                },
+                                padding: 20,
+                                color: '#1f2937'
+                            },
+                            legend: {
+                                display: true,
+                                position: 'top',
+                                labels: {
+                                    font: {
+                                        size: 14,
+                                        weight: '600'
+                                    },
+                                    padding: 15,
+                                    usePointStyle: true,
+                                    pointStyle: 'rectRounded'
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                                titleColor: '#1f2937',
+                                bodyColor: '#4b5563',
+                                borderColor: '#e5e7eb',
+                                borderWidth: 1,
+                                padding: 12,
+                                displayColors: true,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': ' + context.parsed.y.toLocaleString();
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Year',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    maxRotation: 0,
+                                    autoSkip: true,
+                                    maxTicksLimit: 10
+                                }
+                            },
+                            y: {
+                                stacked: false,
+                                title: {
+                                    display: true,
+                                    text: 'Production (kt / million m³)',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.05)'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+            } else if (type === 'oil') {
+                const barColors = years.map(year => 
+                    year < 2010 ? '#10b981' : year === 2010 ? '#fbbf24' : '#ef4444'
+                );
+
+                myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: years,
+                        datasets: [{
+                            label: 'Crude Oil Production (kt)',
+                            data: oil,
+                            backgroundColor: barColors,
+                            borderWidth: 0,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'The carbon cost of growth: Oil Production Trends',
+                                font: {
+                                    size: 24,
+                                    weight: 'bold'
+                                },
+                                padding: 20,
+                                color: '#1f2937'
+                            },
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                                titleColor: '#1f2937',
+                                bodyColor: '#4b5563',
+                                borderColor: '#e5e7eb',
+                                borderWidth: 1,
+                                padding: 12,
+                                callbacks: {
+                                    label: function(context) {
+                                        let phase = context.parsed.x < 20 ? 'Growth Phase' : 
+                                                   context.parsed.x === 20 ? 'Peak (2010)' : 
+                                                   'Decline Phase';
+                                        return [
+                                            'Oil Production: ' + context.parsed.y.toLocaleString() + ' kt',
+                                            'Phase: ' + phase
+                                        ];
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Year',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                grid: {
+                                    display: false
+                                },
+                                ticks: {
+                                    maxRotation: 0,
+                                    autoSkip: true,
+                                    maxTicksLimit: 10
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Crude Oil Production (thousand tonnes)',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.05)'
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        window.addEventListener('load', () => showChart('production'));
+    </script>
+</body>
+</html>
