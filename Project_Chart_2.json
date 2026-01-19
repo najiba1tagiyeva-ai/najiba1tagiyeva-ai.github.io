@@ -13,8 +13,8 @@
       ""
     ],
     "subtitleFontStyle": "italic",
-    "subtitleFontSize": 11,
-    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "fontSize": 20,
     "fontWeight": "normal",
     "anchor": "start",
     "color": "#1f2937",
@@ -33,7 +33,10 @@
       "calculate": "datum.carbonIntensity >= 2 ? 'High (≥2.0)' : datum.carbonIntensity <= 1 ? 'Low (<1.0)' : 'Medium (1.0–2.0)'",
       "as": "intensityCategory"
     },
-    { "calculate": "datum.year + ': $' + format(datum.gdpB, '.1f') + 'B GDP, ' + format(datum.co2M, '.1f') + 'M tonnes CO₂'", "as": "summary" }
+    {
+      "calculate": "datum.year + ': $' + format(datum.gdpB, '.1f') + 'B GDP, ' + format(datum.co2M, '.1f') + 'M tonnes CO₂'",
+      "as": "summary"
+    }
   ],
   "layer": [
     {
@@ -109,8 +112,8 @@
             "grid": true, 
             "gridOpacity": 0.15,
             "tickCount": 7,
-            "labelFontSize": 10,
-            "titleFontSize": 11
+            "labelFontSize": 12,
+            "titleFontSize": 13
           }
         },
         "y": {
@@ -120,8 +123,8 @@
             "grid": true, 
             "gridOpacity": 0.15,
             "tickCount": 7,
-            "labelFontSize": 10,
-            "titleFontSize": 11
+            "labelFontSize": 12,
+            "titleFontSize": 13
           }
         },
         "color": {
@@ -134,10 +137,10 @@
           },
           "legend": {
             "orient": "right",
-            "titleFontSize": 11,
+            "titleFontSize": 13,
             "titleFontWeight": "normal",
             "titleLimit": 250,
-            "labelFontSize": 10,
+            "labelFontSize": 12,
             "symbolSize": 150,
             "symbolStrokeWidth": 0,
             "padding": 5,
@@ -165,8 +168,17 @@
         },
         "tooltip": [
           { "field": "summary", "type": "nominal", "title": "Summary" },
-          { "field": "carbonIntensity", "type": "quantitative", "title": "Carbon intensity (t CO₂/M$)", "format": ".2f" },
-          { "field": "intensityCategory", "type": "nominal", "title": "Category" }
+          {
+            "field": "carbonIntensity",
+            "type": "quantitative",
+            "title": "Carbon intensity (t CO₂/M$)",
+            "format": ".2f"
+          },
+          {
+            "field": "intensityCategory",
+            "type": "nominal",
+            "title": "Category"
+          }
         ]
       }
     }
@@ -178,8 +190,8 @@
       "continuousHeight": 450
     },
     "axis": {
-      "labelFontSize": 10,
-      "titleFontSize": 11,
+      "labelFontSize": 12,
+      "titleFontSize": 13,
       "titleFontWeight": "normal",
       "labelColor": "#4b5563",
       "titleColor": "#1f2937",
@@ -188,8 +200,8 @@
       "gridColor": "#e5e7eb"
     },
     "legend": {
-      "labelFontSize": 10,
-      "titleFontSize": 11,
+      "labelFontSize": 12,
+      "titleFontSize": 13,
       "titleColor": "#1f2937",
       "labelColor": "#4b5563"
     },
