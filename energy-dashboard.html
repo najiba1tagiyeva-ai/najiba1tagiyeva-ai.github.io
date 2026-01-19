@@ -50,6 +50,20 @@
             position: relative;
             height: 600px;
         }
+        .source {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            font-style: italic;
+        }
+        .source strong {
+            color: #374151;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -59,11 +73,14 @@
                 Energy Production Mix
             </button>
             <button id="btn-oil" onclick="showChart('oil')">
-                Oil Production Trends
+                Oil Production Decline
             </button>
         </div>
         <div id="chart-container">
             <canvas id="myChart"></canvas>
+        </div>
+        <div class="source">
+            <strong>Source:</strong> The State Statistics Committee of the Republic of Azerbaijan
         </div>
     </div>
 
@@ -120,7 +137,7 @@
                         plugins: {
                             title: {
                                 display: true,
-                                text: 'Is Azerbaijan still oil-dependent?',
+                                text: "Azerbaijan's Energy Production (1990-2024)",
                                 font: {
                                     size: 24,
                                     weight: 'bold'
@@ -221,7 +238,7 @@
                         plugins: {
                             title: {
                                 display: true,
-                                text: 'The carbon cost of growth: Oil Production Trends',
+                                text: 'Oil Production Decline (1990-2024)',
                                 font: {
                                     size: 24,
                                     weight: 'bold'
