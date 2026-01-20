@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Interactive view of renewable energy in Azerbaijan, 2007–2024.",
   "data": {
-    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_3_Renewables_Location.csv",
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/Project_Chart_3_Renewables_Location.csv",
     "format": {"type": "csv"}
   },
   "title": {
@@ -29,214 +29,88 @@
   ],
   "transform": [
     {"calculate": "toNumber(datum.Year)", "as": "year"},
-    {
-      "calculate": "toNumber(datum['Total Renewables (thousand MWh)'])",
-      "as": "totalRenewables"
-    },
+    {"calculate": "toNumber(datum['Total Renewables (thousand MWh)'])", "as": "totalRenewables"},
     {"calculate": "toNumber(datum['Renewables share (%)'])", "as": "renewShare"}
   ],
   "layer": [
     {
-      "description": "Total renewables (green thick line)",
+      "description": "Total renewables",
       "transform": [
-        {
-          "window": [
-            {"op": "lag", "field": "totalRenewables", "as": "prevTotal"}
-          ],
-          "sort": [{"field": "year"}]
-        },
-        {
-          "calculate": "isValid(datum.prevTotal) ? (datum.totalRenewables - datum.prevTotal) / datum.prevTotal * 100 : null",
-          "as": "totalYoY"
-        }
+        {"window": [{"op": "lag", "field": "totalRenewables", "as": "prevTotal"}], "sort": [{"field": "year"}]},
+        {"calculate": "isValid(datum.prevTotal) ? (datum.totalRenewables - datum.prevTotal) / datum.prevTotal * 100 : null", "as": "totalYoY"}
       ],
-      "mark": {
-        "type": "line",
-        "strokeWidth": 3,
-        "point": {"filled": true, "size": 60}
-      },
+      "mark": {"type": "line", "strokeWidth": 3, "point": {"filled": true, "size": 60}},
       "encoding": {
-        "x": {
-          "field": "year",
-          "type": "ordinal",
-          "title": "Year",
-          "axis": {"labelAngle": 0, "labelOverlap": true}
-        },
-        "y": {
-          "field": "totalRenewables",
-          "type": "quantitative",
-          "title": "MWh (thousands)",
-          "axis": {"titlePadding": 10}
-        },
+        "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelAngle": 0}},
+        "y": {"field": "totalRenewables", "type": "quantitative", "title": "MWh (thousands)"},
         "color": {"value": "#10b981"},
-        "opacity": {
-          "condition": {"test": "View == 'Total'", "value": 1},
-          "value": 0
-        },
+        "opacity": {"condition": {"test": "View == 'Total'", "value": 1}, "value": 0},
         "tooltip": [
           {"field": "year", "type": "ordinal", "title": "Year"},
-          {
-            "field": "totalRenewables",
-            "type": "quantitative",
-            "title": "Total renewables (thousand MWh)",
-            "format": ".1f"
-          },
-          {
-            "field": "totalYoY",
-            "type": "quantitative",
-            "title": "Year-on-year change (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "Renewables share (%)",
-            "type": "quantitative",
-            "title": "Renewables share (%)",
-            "format": ".1f"
-          }
+          {"field": "totalRenewables", "type": "quantitative", "title": "Total (k MWh)", "format": ".1f"},
+          {"field": "totalYoY", "type": "quantitative", "title": "YoY change (%)", "format": ".1f"},
+          {"field": "renewShare", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
         ]
       }
     },
     {
-      "description": "Renewables share (%) – blue dashed line on right axis",
+      "description": "Share percentage",
       "transform": [
-        {
-          "window": [{"op": "lag", "field": "renewShare", "as": "prevShare"}],
-          "sort": [{"field": "year"}]
-        },
-        {
-          "calculate": "isValid(datum.prevShare) ? (datum.renewShare - datum.prevShare) / datum.prevShare * 100 : null",
-          "as": "shareYoY"
-        }
+        {"window": [{"op": "lag", "field": "renewShare", "as": "prevShare"}], "sort": [{"field": "year"}]},
+        {"calculate": "isValid(datum.prevShare) ? (datum.renewShare - datum.prevShare) / datum.prevShare * 100 : null", "as": "shareYoY"}
       ],
-      "mark": {
-        "type": "line",
-        "strokeDash": [5, 4],
-        "strokeWidth": 2.5,
-        "point": {"filled": true, "size": 55}
-      },
+      "mark": {"type": "line", "strokeDash": [5, 4], "strokeWidth": 2.5, "point": {"filled": true, "size": 55}},
       "encoding": {
-        "x": {
-          "field": "year",
-          "type": "ordinal",
-          "axis": {"labelAngle": 0, "labelOverlap": true}
-        },
-        "y": {
-          "field": "renewShare",
-          "type": "quantitative",
-          "title": "Share (%)",
-          "axis": {"orient": "right", "titlePadding": 10},
-          "scale": {"domain": [0, 3.5]}
-        },
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {"field": "renewShare", "type": "quantitative", "title": "Share (%)", "axis": {"orient": "right"}, "scale": {"domain": [0, 3.5]}},
         "color": {"value": "#3b82f6"},
-        "opacity": {
-          "condition": {"test": "View == 'Share'", "value": 1},
-          "value": 0
-        },
+        "opacity": {"condition": {"test": "View == 'Share'", "value": 1}, "value": 0},
         "tooltip": [
           {"field": "year", "type": "ordinal", "title": "Year"},
-          {
-            "field": "renewShare",
-            "type": "quantitative",
-            "title": "Renewables share (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "shareYoY",
-            "type": "quantitative",
-            "title": "Year-on-year change (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "totalRenewables",
-            "type": "quantitative",
-            "title": "Total renewables (thousand MWh)",
-            "format": ".1f"
-          }
+          {"field": "renewShare", "type": "quantitative", "title": "Share (%)", "format": ".1f"},
+          {"field": "shareYoY", "type": "quantitative", "title": "YoY change (%)", "format": ".1f"},
+          {"field": "totalRenewables", "type": "quantitative", "title": "Total (k MWh)", "format": ".1f"}
         ]
       }
     },
     {
-      "description": "By source – stacked area chart (Hydro, Biomass, Wind, Solar)",
+      "description": "By source stacked",
       "transform": [
         {
-          "fold": [
-            "Hydropower (thousand MWh)",
-            "Biomass (thousand MWh)",
-            "Wind (thousand MWh)",
-            "Solar (thousand MWh)"
-          ],
+          "fold": ["Hydropower (thousand MWh)", "Biomass (thousand MWh)", "Wind (thousand MWh)", "Solar (thousand MWh)"],
           "as": ["source", "value"]
         },
-        {
-          "calculate": "datum.totalRenewables > 0 ? datum.value / datum.totalRenewables * 100 : null",
-          "as": "sourceShare"
-        }
+        {"calculate": "toNumber(datum.value)", "as": "val"},
+        {"filter": "isValid(datum.val)"},
+        {"calculate": "datum.totalRenewables > 0 ? datum.val / datum.totalRenewables * 100 : 0", "as": "pct"},
+        {"calculate": "replace(datum.source, ' (thousand MWh)', '')", "as": "tech"}
       ],
       "mark": {"type": "area"},
       "encoding": {
-        "x": {
-          "field": "year",
-          "type": "ordinal",
-          "title": "Year",
-          "axis": {"labelAngle": 0, "labelOverlap": true}
-        },
-        "y": {
-          "field": "value",
-          "type": "quantitative",
-          "stack": "zero",
-          "title": "MWh (thousands)",
-          "axis": {"titlePadding": 10}
-        },
+        "x": {"field": "year", "type": "ordinal", "title": "Year"},
+        "y": {"field": "val", "type": "quantitative", "stack": "zero", "title": "MWh (thousands)"},
         "color": {
           "field": "source",
           "type": "nominal",
           "scale": {
-            "domain": [
-              "Hydropower (thousand MWh)",
-              "Biomass (thousand MWh)",
-              "Wind (thousand MWh)",
-              "Solar (thousand MWh)"
-            ],
+            "domain": ["Hydropower (thousand MWh)", "Biomass (thousand MWh)", "Wind (thousand MWh)", "Solar (thousand MWh)"],
             "range": ["#b7e4c7", "#74c69d", "#52b788", "#40916c"]
           },
-          "legend": {
-            "title": "Source",
-            "labelFontSize": 12,
-            "titleFontSize": 13
-          }
+          "legend": {"title": "Source"}
         },
-        "opacity": {
-          "condition": {"test": "View == 'By source'", "value": 0.9},
-          "value": 0
-        },
+        "opacity": {"condition": {"test": "View == 'By source'", "value": 0.9}, "value": 0},
         "tooltip": [
           {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "source", "type": "nominal", "title": "Source"},
-          {
-            "field": "value",
-            "type": "quantitative",
-            "title": "Output (thousand MWh)",
-            "format": ".1f"
-          },
-          {
-            "field": "sourceShare",
-            "type": "quantitative",
-            "title": "Share of total renewables (%)",
-            "format": ".1f"
-          }
+          {"field": "tech", "type": "nominal", "title": "Technology"},
+          {"field": "val", "type": "quantitative", "title": "Output (k MWh)", "format": ".1f"},
+          {"field": "pct", "type": "quantitative", "title": "Share (%)", "format": ".1f"}
         ]
       }
     }
   ],
   "resolve": {"scale": {"y": "independent"}},
   "config": {
-    "axis": {
-      "labelFontSize": 10,
-      "titleFontSize": 12,
-      "labelColor": "#4b5563",
-      "titleColor": "#111827",
-      "gridColor": "#e5e7eb"
-    },
+    "axis": {"labelFontSize": 10, "titleFontSize": 12, "labelColor": "#4b5563", "titleColor": "#111827", "gridColor": "#e5e7eb"},
     "title": {"font": "system-ui, -apple-system, sans-serif"},
     "background": "#ffffff"
   }
