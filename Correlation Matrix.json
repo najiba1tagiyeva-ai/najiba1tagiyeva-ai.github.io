@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.2.0.json",
+  "description": "Correlation heatmap for Azerbaijan renewable energy drivers",
+  "config": {
+    "view": {"continuousWidth": 400, "continuousHeight": 400},
+    "background": "#FFFFFF",
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#555555",
+      "titleColor": "#333333"
+    },
+    "title": {
+      "anchor": "start",
+      "offset": 30,
+      "subtitleColor": "#555555",
+      "subtitleFontWeight": "lighter",
+      "fontSize": 16,
+      "subtitleFontSize": 11
+    }
+  },
+  "title": {
+    "text": "Correlation Matrix: Renewable Energy Drivers in Azerbaijan",
+    "subtitle": "GDP, population & electricity use vs renewable share (2000–2023)  |  Sources: World Bank, IRENA, NASA POWER"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Correlation_Data_Azerbaijan.csv",
+    "format": {"type": "csv", "parse": {"Correlation": "number"}}
+  },
+  "width": 400,
+  "height": 400,
+  "layer": [
+    {
+      "mark": {"type": "rect"},
+      "encoding": {
+        "x": {"field": "Var2", "type": "nominal", "title": null},
+        "y": {
+          "field": "Var1",
+          "type": "nominal",
+          "title": null,
+          "sort": [
+            "Renewable_share",
+            "Elec_Use_per_capita",
+            "GDP_PPP_per_capita",
+            "Population"
+          ]
+        },
+        "color": {
+          "field": "Correlation",
+          "type": "quantitative",
+          "legend": {"title": "Correlation"},
+          "scale": {
+            "domain": [-1, 0, 1],
+            "range": ["#E8F5E9", "#A5D6A7", "#1B5E20"]
+          }
+        },
+        "tooltip": [
+          {"field": "Var1", "title": "Variable 1", "type": "nominal"},
+          {"field": "Var2", "title": "Variable 2", "type": "nominal"},
+          {
+            "field": "Correlation",
+            "title": "Correlation",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "baseline": "middle"},
+      "encoding": {
+        "x": {"field": "Var2", "type": "nominal"},
+        "y": {
+          "field": "Var1",
+          "type": "nominal",
+          "sort": [
+            "Renewable_share",
+            "Elec_Use_per_capita",
+            "GDP_PPP_per_capita",
+            "Population"
+          ]
+        },
+        "text": {
+          "field": "Correlation",
+          "type": "quantitative",
+          "format": ".2f"
+        },
+        "color": {
+          "condition": {
+            "test": "abs(datum.Correlation) > 0.6",
+            "value": "white"
+          },
+          "value": "black"
+        }
+      }
+    }
+  ]
+}
