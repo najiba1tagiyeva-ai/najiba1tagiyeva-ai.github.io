@@ -7,7 +7,7 @@
   
   "title": {
     "text": "Renewable Energy Projects in Azerbaijan",
-    "subtitle": ["Total installed capacity by region - 55 projects aggregated from raw data", "Source: Azerbaijan Renewable Energy Agency under the Ministry of Energy"],
+    "subtitle": [ "Source: Azerbaijan Renewable Energy Agency under the Ministry of Energy"],
     "fontSize": 22,
     "subtitleFontSize": 13,
     "anchor": "start",
