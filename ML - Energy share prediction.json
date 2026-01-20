@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Actual vs Predicted Renewable Share – Azerbaijan",
+  "config": {
+    "view": {"continuousWidth": 420, "continuousHeight": 320},
+    "background": "#FFFFFF",
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#5D6D7E",
+      "titleColor": "#2C3E50",
+      "gridColor": "#E8E8E8",
+      "gridOpacity": 0.5
+    },
+    "title": {
+      "anchor": "start",
+      "color": "#2C3E50",
+      "subtitleColor": "#5D6D7E",
+      "fontSize": 18,
+      "subtitleFontSize": 11
+    }
+  },
+  "width": 420,
+  "height": 320,
+  "title": {
+    "text": "Machine Learning: Predicting Renewable Energy Growth in Azerbaijan",
+    "subtitle": "Linear model (R² = 0.54) using GDP, population & electricity consumption | Sources: World Bank, IRENA, NASA POWER"
+  },
+  "layer": [
+    {
+      "data": {"values": [{"x": 0, "y": 0}, {"x": 25, "y": 25}]},
+      "mark": {
+        "type": "line",
+        "color": "#95A5A6",
+        "strokeDash": [6, 4],
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Regression_Actual_vs_Predicted_Azerbaijan.csv"
+      },
+      "transform": [
+        {"calculate": "datum.Renewable_share * 100", "as": "Actual_pct"},
+        {"calculate": "datum.Predicted_share * 100", "as": "Predicted_pct"},
+        {"filter": "isValid(datum.Actual_pct) && isFinite(datum.Actual_pct)"},
+        {
+          "filter": "isValid(datum.Predicted_pct) && isFinite(datum.Predicted_pct)"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 120,
+        "opacity": 0.8,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Actual_pct",
+          "type": "quantitative",
+          "title": "Actual Renewable Share (%)"
+        },
+        "y": {
+          "field": "Predicted_pct",
+          "type": "quantitative",
+          "title": "Predicted Renewable Share (%)"
+        },
+        "color": {"value": "#10B981"},
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {
+            "field": "Actual_pct",
+            "type": "quantitative",
+            "title": "Actual (%)",
+            "format": ".2f"
+          },
+          {
+            "field": "Predicted_pct",
+            "type": "quantitative",
+            "title": "Predicted (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    }
+  ]
+}
