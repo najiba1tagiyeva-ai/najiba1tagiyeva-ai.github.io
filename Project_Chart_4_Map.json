@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.2.json",
+  "width": 900,
+  "height": 600,
+  "background": "#ffffff",
+  "padding": 20,
+  "title": {
+    "text": "Renewable Energy Projects in Azerbaijan",
+    "subtitle": [
+      "Source: Azerbaijan Renewable Energy Agency under the Ministry of Energy"
+    ],
+    "fontSize": 22,
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "color": "#1e293b",
+    "subtitleColor": "#64748b",
+    "offset": 20
+  },
+  "projection": {"type": "mercator", "center": [47.5, 40.4], "scale": 5500},
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/Project_Chart_4_Renewables_Location%20.csv"
+  },
+  "transform": [
+    {"calculate": "trim(datum.Region)", "as": "Region_clean"},
+    {"calculate": "toNumber(datum.Capacity_MW)", "as": "Capacity_numeric"},
+    {"calculate": "trim(datum.Type)", "as": "Type_clean"},
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Capacity_numeric", "as": "total_capacity"},
+        {"op": "count", "as": "project_count"},
+        {"op": "values", "field": "Type_clean", "as": "technologies"}
+      ],
+      "groupby": ["Region_clean"]
+    },
+    {
+      "calculate": "{'Baku': 'Bakı', 'Jabrayil': 'Cəbrayıl', 'Bilasuvar': 'Biləsuvar', 'Neftchala': 'Neftçala', 'Absheron': 'Abşeron', 'Gobustan': 'Qobustan', 'Garadagh': 'Qaradağ', 'Fuzuli': 'Füzuli', 'Mingachevir': 'Mingəçevir', 'Shamkir': 'Şəmkir', 'Tartar': 'Tərtər', 'Nakhchivan': 'Naxçıvan', 'Yevlakh': 'Yevlax', 'Lachin': 'Laçın', 'Imishli': 'İmişli', 'Goychay': 'Göyçay', 'Goygol': 'Göygöl', 'Ismayilli': 'İsmayıllı', 'Balakan': 'Balakən', 'Oghuz': 'Oğuz', 'Shaki': 'Şəki', 'Gusar': 'Qusar', 'Khizi': 'Xızı', 'Shabran': 'Şabran', 'Sumgayit': 'Sumqayıt', 'Karabakh': 'Qarabağ', 'Lachin/Kalbajar': 'Laçın/Kəlbəcər', 'Various': 'Various'}[datum.Region_clean] || datum.Region_clean",
+      "as": "Region_map"
+    },
+    {
+      "lookup": "Region_map",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/az.topojson",
+          "format": {"type": "topojson", "feature": "az"}
+        },
+        "key": "properties.name"
+      },
+      "as": "geo"
+    }
+  ],
+  "layer": [
+    {
+      "name": "Base map - all regions",
+      "data": {
+        "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/az.topojson",
+        "format": {"type": "topojson", "feature": "az"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e8e8e8",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      }
+    },
+    {
+      "name": "Regions with projects - colored by capacity",
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "total_capacity",
+          "type": "quantitative",
+          "title": "Total Capacity (MW)",
+          "scale": {"scheme": "teals", "domain": [0, 600], "type": "sqrt"},
+          "legend": {
+            "orient": "bottom-right",
+            "titleFontSize": 13,
+            "labelFontSize": 11,
+            "direction": "horizontal",
+            "gradientLength": 200,
+            "gradientThickness": 15
+          }
+        },
+        "tooltip": [
+          {"field": "Region_clean", "type": "nominal", "title": "Region"},
+          {
+            "field": "total_capacity",
+            "type": "quantitative",
+            "title": "Total Capacity (MW)",
+            "format": ".1f"
+          },
+          {
+            "field": "project_count",
+            "type": "quantitative",
+            "title": "Number of Projects"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}}
+}
