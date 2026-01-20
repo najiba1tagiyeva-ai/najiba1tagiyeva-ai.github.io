@@ -1,0 +1,17 @@
+Var1,Var2,Correlation
+Renewable_share,Renewable_share,1.0
+Renewable_share,Elec_Use_per_capita,-0.62
+Renewable_share,GDP_PPP_per_capita,-0.15
+Renewable_share,Population,-0.44
+Elec_Use_per_capita,Renewable_share,-0.62
+Elec_Use_per_capita,Elec_Use_per_capita,1.0
+Elec_Use_per_capita,GDP_PPP_per_capita,-0.08
+Elec_Use_per_capita,Population,0.2
+GDP_PPP_per_capita,Renewable_share,-0.15
+GDP_PPP_per_capita,Elec_Use_per_capita,-0.08
+GDP_PPP_per_capita,GDP_PPP_per_capita,1.0
+GDP_PPP_per_capita,Population,0.87
+Population,Renewable_share,-0.44
+Population,Elec_Use_per_capita,0.2
+Population,GDP_PPP_per_capita,0.87
+Population,Population,1.0
