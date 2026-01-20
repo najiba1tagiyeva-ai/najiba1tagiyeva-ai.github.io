@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "description": "Interactive view of renewable energy in Azerbaijan, 2007–2024.",
   "data": {
-    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_3_Rennewables.csv",
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_3_Renewables_Location.csv",
     "format": { "type": "csv" }
   },
 
