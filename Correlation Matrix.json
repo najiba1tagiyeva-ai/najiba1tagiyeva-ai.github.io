@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.2.0.json",
-  "description": "Correlation heatmap for Azerbaijan renewable energy drivers",
+  "description": "Feature Correlation Matrix for Renewable Energy Prediction"",
 
   "autosize": {
     "type": "fit",
@@ -27,8 +27,8 @@
   },
 
   "title": {
-    "text": "Correlation Matrix: Renewable Energy Drivers in Azerbaijan",
-    "subtitle": "GDP, population & electricity use vs renewable share (2000–2023)  |  Sources: World Bank, IRENA, NASA POWER"
+    "text": "Feature Correlation Matrix for Renewable Energy Prediction"",
+    "subtitle": "Analysis of variables used in machine learning model  |  Sources: World Bank, IRENA, NASA POWER"
   },
 
   "data": {
