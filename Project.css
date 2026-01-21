@@ -1,5 +1,5 @@
 /* ============================================
-   RESET & BASE
+   RESET & BASE STYLES
    ============================================ */
 * {
     margin: 0;
@@ -9,11 +9,11 @@
 
 body.project-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16.7px;
-    line-height: 1.6;
+    line-height: 2;
     color: #1a1a1a;
     background: #ffffff;
     overflow-x: hidden;
+    font-size: 23px; /* bir az böyüdülmüş base font */
 }
 
 /* ============================================
@@ -28,59 +28,77 @@ body.project-page {
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     z-index: 1001;
     transition: width 0.1s ease;
+    box-shadow: 0 2px 8px rgba(26, 133, 102, 0.4);
 }
 
 /* ============================================
-   NAVBAR
+   NAVIGATION
    ============================================ */
 .project-topbar {
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4), transparent);
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
     backdrop-filter: blur(8px);
-    padding: 0;
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     z-index: 1000;
+    padding: 0;
+    margin-top: 0;
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 35px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .project-topbar h1 {
-    font-size: 2.4rem;
+    font-size: 40px;
     font-weight: 700;
     color: white;
     margin: 0;
+    text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.8px;
 }
 
 .project-nav {
     display: flex;
-    gap: 30px;
+    gap: 50px;
+    align-items: center;
 }
 
 .project-nav a {
-    color: white;
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 24px;
     font-weight: 600;
+    transition: all 0.3s ease;
     position: relative;
+    padding-bottom: 5px;
+    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.3px;
+}
+
+.project-nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .project-nav a::after {
     content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 0;
     height: 3px;
-    left: 0;
-    bottom: -3px;
-    position: absolute;
     background: white;
-    transition: 0.3s;
+    transition: width 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
 }
 
 .project-nav a:hover::after {
@@ -88,146 +106,275 @@ body.project-page {
 }
 
 /* ============================================
-   HERO
+   HERO SECTION
    ============================================ */
 .hero-banner {
-    height: 75vh;
-    min-height: 550px;
+    margin-top: 0;
+    position: relative;
+    height: 80vh;
+    min-height: 700px;
+    max-height: 850px;
     width: 100%;
     overflow: hidden;
     background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
-    position: relative;
 }
 
 .hero-banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     opacity: 0.45;
     filter: brightness(65%);
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .hero-overlay {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.65));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
 }
 
 .hero-overlay-text {
     position: absolute;
-    inset: 0;
-    margin: auto;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    z-index: 2;
 }
 
 .hero-tag {
-    background: rgba(255,255,255,0.25);
-    padding: 12px 28px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 16px 36px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 24px;
+    letter-spacing: 2.5px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-overlay-text h1 {
-    font-size: 2.4rem;
-    line-height: 1.3;
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 30px 0;
+    text-shadow: 3px 5px 25px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
 }
 
 .hero-overlay-text h2 {
-    font-size: 1.25rem;
+    font-size: 40px;
     font-weight: 400;
     opacity: 0.95;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* ============================================
-   WRAPPER
+   CONTENT WRAPPER
    ============================================ */
 .project-wrapper {
-    max-width: 1100px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 100px 140px;
+    width: 95%;
 }
 
 /* ============================================
-   SECTION (NO CARD STYLE!)
+   INTRO CARD
+   ============================================ */
+.project-intro-card {
+    background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
+    border-radius: 24px;
+    padding: 90px 130px;
+    margin: 0 auto 100px;
+    max-width: 1800px;
+    color: white;
+    box-shadow: 0 25px 70px rgba(26, 133, 102, 0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-intro-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.project-intro-card h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    line-height: 1.3;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+.project-intro-card p {
+    font-size: 28px;
+    line-height: 1.9;
+    opacity: 0.95;
+    margin: 0;
+    position: relative;
+}
+
+/* ============================================
+   SECTIONS
    ============================================ */
 section {
-    background: #fdfdfd;
-    padding: 2rem 0;
-    margin: 2.5rem 0;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    background: white;
+    padding: 90px 130px;
+    border-radius: 24px;
+    margin: 70px auto;
+    max-width: 1800px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
 }
 
 section h2 {
-    font-size: 2.1rem;
-    margin-bottom: 1rem;
+    font-size: 58px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 25px 0;
     position: relative;
+    padding-bottom: 30px;
+    letter-spacing: -0.8px;
 }
 
 section h2::after {
     content: '';
-    width: 80px;
-    height: 5px;
-    background: linear-gradient(90deg, #1a8566, #3bc490);
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 0;
+    width: 90px;
+    height: 6px;
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 3px;
 }
 
 section h3 {
-    font-size: 1.4rem;
-    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin: 50px 0 30px 0;
+    letter-spacing: -0.5px;
 }
 
 .section-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 27px;
+    line-height: 2;
+    color: #3a3a3a;
+    margin-top: 30px;
 }
 
 /* ============================================
-   INSIGHT BOXES (KEEP)
+   CHART FIGURES
+   ============================================ */
+figure[id^="EnergyLocation"] {
+    margin: 50px 0;
+    padding: 60px;
+    background: #fafbfc;
+    border-radius: 18px;
+    border: 2px solid #e8eaed;
+    transition: all 0.3s ease;
+}
+
+figure[id^="EnergyLocation"]:hover {
+    border-color: #1a8566;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
+    transform: translateY(-4px);
+}
+
+/* IFRAME CHARTS (Chart 1) */
+.energy-iframe,
+section iframe {
+    margin: 50px 0;
+    padding: 0;
+    background: #fafbfc;
+    border-radius: 18px;
+    border: 2px solid #e8eaed;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100% !important;
+    min-height: 900px;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
+}
+
+.energy-iframe:hover,
+section iframe:hover {
+    border-color: #1a8566;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   INSIGHT BOXES
    ============================================ */
 .insight-box {
-    background: linear-gradient(135deg, #e8f5f1, #d4ebe5);
+    background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
     border-left: 7px solid #1a8566;
-    padding: 1.6rem 1.8rem;
+    padding: 50px 55px;
     border-radius: 16px;
-    margin: 2rem 0;
+    margin: 50px 0;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.14);
+    transition: all 0.3s ease;
+}
+
+.insight-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(26, 133, 102, 0.20);
+}
+
+.insight-box h4 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+}
+
+.insight-box h4::before {
+    content: '💡';
+    margin-right: 15px;
+    font-size: 34px;
 }
 
 .insight-box p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-}
-
-/* ============================================
-   CHARTS
-   ============================================ */
-figure[id^="EnergyLocation"] {
-    margin: 2rem 0;
-}
-
-.energy-iframe, 
-section iframe {
-    width: 100% !important;
-    min-height: 700px;
-    background: #fafbfc;
-    border: 2px solid #e8eaed;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(26,133,102,0.20);
+    font-size: 26px;
+    color: #2a2a2a;
+    line-height: 1.9;
+    margin: 0;
+    font-weight: 400;
 }
 
 /* ============================================
@@ -235,39 +382,77 @@ section iframe {
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-    gap: 1.8rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 45px;
+    margin: 70px 0;
 }
 
 .stat-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 20px;
-    border: 2px solid #e8eaed;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 26px;
+    padding: 70px 55px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 20px 55px rgba(26, 133, 102, 0.32);
+    border-color: #1a8566;
 }
 
 .stat-number {
-    font-size: 2.6rem;
+    font-size: 86px;
     font-weight: 700;
-    background: linear-gradient(135deg, #1a8566, #3bc490);
+    background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -2px;
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 23px;
+    color: #4a4a4a;
     font-weight: 600;
-    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
 }
 
 /* ============================================
-   ANIMATION
+   CONCLUSION SECTION
+   ============================================ */
+.conclusion-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: white;
+    margin-top: 100px;
+}
+
+.conclusion-section h2 {
+    color: white;
+}
+
+.conclusion-section h2::after {
+    background: white;
+}
+
+.conclusion-section .section-text {
+    color: rgba(255, 255, 255, 0.93);
+    font-size: 27px;
+}
+
+/* ============================================
+   ANIMATIONS
    ============================================ */
 .fade-in {
     opacity: 0;
-    transform: translateY(25px);
-    transition: 0.7s ease;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-in-visible {
@@ -276,16 +461,313 @@ section iframe {
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    ============================================ */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    body.project-page {
+        font-size: 20px;
+    }
+
+    .project-wrapper {
+        padding: 90px 90px;
+        width: 92%;
+    }
+    
+    section {
+        padding: 70px 90px;
+    }
+    
+    section h2 {
+        font-size: 50px;
+    }
+    
+    section h3 {
+        font-size: 34px;
+    }
+    
+    .section-text {
+        font-size: 24px;
+    }
+    
+    .energy-iframe,
+    section iframe {
+        min-height: 720px;
+    }
+    
+    .insight-box h4 {
+        font-size: 30px;
+    }
+    
+    .insight-box p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    body.project-page {
+        font-size: 19px;
+    }
+
+    .nav-container {
+        padding: 30px 50px;
+    }
+
+    .project-topbar h1 {
+        font-size: 34px;
+    }
+
+    .project-nav a {
+        font-size: 22px;
+    }
+
+    .project-wrapper {
+        padding: 80px 60px;
+        width: 92%;
+    }
+
     .hero-overlay-text h1 {
-        font-size: 2rem;
+        font-size: 72px;
     }
+
     .hero-overlay-text h2 {
-        font-size: 1rem;
+        font-size: 34px;
     }
+
+    section {
+        padding: 70px 70px;
+    }
+
+    section h2 {
+        font-size: 48px;
+    }
+    
+    section h3 {
+        font-size: 32px;
+    }
+    
+    .section-text {
+        font-size: 22px;
+    }
+
+    .project-intro-card {
+        padding: 80px 90px;
+    }
+
+    .project-intro-card h2 {
+        font-size: 48px;
+    }
+    
+    .project-intro-card p {
+        font-size: 24px;
+    }
+    
+    .energy-iframe,
+    section iframe {
+        min-height: 660px;
+    }
+    
+    .insight-box {
+        padding: 45px 50px;
+    }
+    
+    .insight-box h4 {
+        font-size: 29px;
+    }
+    
+    .insight-box p {
+        font-size: 23px;
+    }
+    
+    .stat-card {
+        padding: 60px 45px;
+    }
+    
+    .stat-number {
+        font-size: 74px;
+    }
+    
+    .stat-label {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 768px) {
+    body.project-page {
+        font-size: 18px;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        gap: 0;
+        padding: 25px 35px;
+    }
+
+    .project-topbar h1 {
+        font-size: 26px;
+    }
+
+    .project-nav {
+        gap: 30px;
+    }
+
+    .project-nav a {
+        font-size: 19px;
+    }
+
+    .hero-banner {
+        height: 65vh;
+        min-height: 550px;
+    }
+
+    .hero-overlay-text h1 {
+        font-size: 52px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 26px;
+    }
+
+    .hero-tag {
+        font-size: 15px;
+        padding: 12px 24px;
+    }
+
+    .project-wrapper {
+        padding: 60px 40px;
+    }
+
+    .project-intro-card {
+        padding: 60px 50px;
+    }
+
+    .project-intro-card h2 {
+        font-size: 38px;
+    }
+
+    .project-intro-card p {
+        font-size: 21px;
+    }
+
+    section {
+        padding: 60px 45px;
+    }
+
+    section h2 {
+        font-size: 38px;
+    }
+
+    section h3 {
+        font-size: 28px;
+    }
+
+    .section-text {
+        font-size: 20px;
+    }
+
+    figure[id^="EnergyLocation"] {
+        padding: 38px;
+    }
+    
+    .energy-iframe,
+    section iframe {
+        min-height: 570px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .stat-card {
+        padding: 50px 40px;
+    }
+
+    .stat-number {
+        font-size: 62px;
+    }
+
+    .stat-label {
+        font-size: 19px;
+    }
+
+    .insight-box {
+        padding: 40px 40px;
+    }
+
+    .insight-box h4 {
+        font-size: 27px;
+    }
+
+    .insight-box p {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    body.project-page {
+        font-size: 17px;
+    }
+
+    .project-topbar h1 {
+        font-size: 22px;
+    }
+
+    .project-nav a {
+        font-size: 17px;
+    }
+
+    .hero-overlay-text h1 {
+        font-size: 42px;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 22px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+    
+    section h3 {
+        font-size: 24px;
+    }
+
+    .section-text {
+        font-size: 19px;
+    }
+
+    .stat-number {
+        font-size: 54px;
+    }
+
+    .project-intro-card h2 {
+        font-size: 32px;
+    }
+
+    .project-intro-card p {
+        font-size: 19px;
+    }
+    
+    .energy-iframe,
     section iframe {
         min-height: 500px;
     }
+    
+    .insight-box h4 {
+        font-size: 25px;
+    }
+    
+    .insight-box p {
+        font-size: 20px;
+    }
 }
+
+
+
+section.chart-section figure[id^="EnergyLocation"],
+section.chart-section .energy-iframe {
+    padding: 10px;   
+}
+
+
+
