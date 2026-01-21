@@ -9,11 +9,11 @@
 
 body.project-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.9;
+    line-height: 2;
     color: #1a1a1a;
     background: #ffffff;
     overflow-x: hidden;
-    font-size: 23px; /* Bir az böyüdüldü (default 16px → 23px) */
+    font-size: 23px; /* bir az böyüdülmüş base font */
 }
 
 /* ============================================
@@ -32,7 +32,7 @@ body.project-page {
 }
 
 /* ============================================
-   NAVIGATION - Enhanced Professional Style
+   NAVIGATION
    ============================================ */
 .project-topbar {
     position: absolute;
@@ -106,7 +106,7 @@ body.project-page {
 }
 
 /* ============================================
-   HERO SECTION - Enhanced Professional
+   HERO SECTION
    ============================================ */
 .hero-banner {
     margin-top: 0;
@@ -191,19 +191,19 @@ body.project-page {
    CONTENT WRAPPER
    ============================================ */
 .project-wrapper {
-    max-width: 1800px; /* Box-lar daha geniş */
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 100px 140px; /* Bir az daha çox yan padding */
+    padding: 100px 140px;
     width: 95%;
 }
 
 /* ============================================
-   INTRO CARD - Enhanced Professional
+   INTRO CARD
    ============================================ */
 .project-intro-card {
     background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
     border-radius: 24px;
-    padding: 90px 120px;
+    padding: 90px 130px;
     margin: 0 auto 100px;
     max-width: 1800px;
     color: white;
@@ -233,7 +233,7 @@ body.project-page {
 }
 
 .project-intro-card p {
-    font-size: 28px; /* Bir az böyüdüldü */
+    font-size: 28px;
     line-height: 1.9;
     opacity: 0.95;
     margin: 0;
@@ -241,14 +241,14 @@ body.project-page {
 }
 
 /* ============================================
-   SECTIONS - Enhanced Typography
+   SECTIONS
    ============================================ */
 section {
     background: white;
-    padding: 90px 130px; /* Daha gərgin, geniş hiss */
+    padding: 90px 130px;
     border-radius: 24px;
     margin: 70px auto;
-    max-width: 1800px; /* box enini artırdıq */
+    max-width: 1800px;
     width: 100%;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -260,7 +260,7 @@ section:hover {
 }
 
 section h2 {
-    font-size: 58px; /* Bir az daha böyük */
+    font-size: 58px;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 25px 0;
@@ -281,7 +281,7 @@ section h2::after {
 }
 
 section h3 {
-    font-size: 40px; /* 38 → 40 */
+    font-size: 40px;
     font-weight: 600;
     color: #2a2a2a;
     margin: 50px 0 30px 0;
@@ -289,18 +289,18 @@ section h3 {
 }
 
 .section-text {
-    font-size: 27px; /* 26 → 27, oxunaqlılıq üçün */
+    font-size: 27px;
     line-height: 2;
     color: #3a3a3a;
     margin-top: 30px;
 }
 
 /* ============================================
-   CHART FIGURES - BOTH VEGA AND IFRAME
+   CHART FIGURES
    ============================================ */
 figure[id^="EnergyLocation"] {
     margin: 50px 0;
-    padding: 60px; /* Daha çox boşluq, qrafik daha aydın */
+    padding: 60px;
     background: #fafbfc;
     border-radius: 18px;
     border: 2px solid #e8eaed;
@@ -313,7 +313,8 @@ figure[id^="EnergyLocation"]:hover {
     transform: translateY(-4px);
 }
 
-/* IFRAME CHARTS */
+/* IFRAME CHARTS (Chart 1) */
+.energy-iframe,
 section iframe {
     margin: 50px 0;
     padding: 0;
@@ -323,9 +324,11 @@ section iframe {
     transition: all 0.3s ease;
     display: block;
     width: 100% !important;
-    min-height: 820px; /* 750 → 820, qrafik üçün daha çox hündürlük */
+    min-height: 900px;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
 }
 
+.energy-iframe:hover,
 section iframe:hover {
     border-color: #1a8566;
     box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
@@ -333,7 +336,7 @@ section iframe:hover {
 }
 
 /* ============================================
-   INSIGHT BOXES - LARGER TEXT
+   INSIGHT BOXES
    ============================================ */
 .insight-box {
     background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
@@ -351,7 +354,7 @@ section iframe:hover {
 }
 
 .insight-box h4 {
-    font-size: 34px; /* 32 → 34 */
+    font-size: 34px;
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 20px 0;
@@ -367,7 +370,7 @@ section iframe:hover {
 }
 
 .insight-box p {
-    font-size: 26px; /* 25 → 26 */
+    font-size: 26px;
     color: #2a2a2a;
     line-height: 1.9;
     margin: 0;
@@ -375,11 +378,11 @@ section iframe:hover {
 }
 
 /* ============================================
-   STATS GRID - LARGER NUMBERS
+   STATS GRID
    ============================================ */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* 340 → 360, kartlar genişləndi */
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 45px;
     margin: 70px 0;
 }
@@ -401,7 +404,7 @@ section iframe:hover {
 }
 
 .stat-number {
-    font-size: 86px; /* 80 → 86, vizual vurğu */
+    font-size: 86px;
     font-weight: 700;
     background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
@@ -413,7 +416,7 @@ section iframe:hover {
 }
 
 .stat-label {
-    font-size: 23px; /* 22 → 23 */
+    font-size: 23px;
     color: #4a4a4a;
     font-weight: 600;
     text-transform: uppercase;
@@ -486,6 +489,7 @@ section iframe:hover {
         font-size: 24px;
     }
     
+    .energy-iframe,
     section iframe {
         min-height: 720px;
     }
@@ -557,6 +561,7 @@ section iframe:hover {
         font-size: 24px;
     }
     
+    .energy-iframe,
     section iframe {
         min-height: 660px;
     }
@@ -663,6 +668,7 @@ section iframe:hover {
         padding: 38px;
     }
     
+    .energy-iframe,
     section iframe {
         min-height: 570px;
     }
@@ -742,6 +748,7 @@ section iframe:hover {
         font-size: 19px;
     }
     
+    .energy-iframe,
     section iframe {
         min-height: 500px;
     }
