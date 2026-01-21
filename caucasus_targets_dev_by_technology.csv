@@ -1,0 +1,15 @@
+Country,Status,Technology,Capacity_MW
+Azerbaijan,Targeted,Renewable,2000.0
+Azerbaijan,In development,Hydropower,91.0
+Azerbaijan,In development,Utility-scale solar,1200.0
+Azerbaijan,In development,Wind,480.5
+Armenia,Targeted,Utility-scale solar,870.0
+Armenia,Targeted,Wind,500.0
+Armenia,In development,Hydropower,176.0
+Armenia,In development,Utility-scale solar,255.0
+Georgia,Targeted,Hydropower,546.0
+Georgia,Targeted,Utility-scale solar,500.0
+Georgia,Targeted,Wind,750.0
+Georgia,In development,Hydropower,1979.0
+Georgia,In development,Utility-scale solar,96.0
+Georgia,In development,Wind,349.0
