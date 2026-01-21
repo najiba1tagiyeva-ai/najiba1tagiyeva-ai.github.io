@@ -20,8 +20,8 @@
   },
   "columns": 2,
   "spec": {
-    "width": 550,
-    "height": 100,
+    "width": 520,
+    "height": 80,
     "mark": "bar",
     "encoding": {
       "x": {
