@@ -1,487 +1,534 @@
 /* ============================================
-   RESET & BASE STYLES
+   RESET
    ============================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ============================================
+   BASE – Maria stilinə uyğun
+   ============================================ */
+
 body.project-page {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 16.7px;              /* nümunə CSS-ə uyğun */
-    line-height: 1.6;
-    color: #333;
-    background-color: #EFEFF6;      /* eyni fon */
-    overflow-x: hidden;
-    margin: 0 auto;
-    max-width: 1100px;              /* mərkəzdə daha dar kolon */
-    padding-top: 25px;
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 16.7px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #EFEFF6;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-top: 25px;
+  overflow-x: hidden;
+}
+
+/* Global mətn stilləri */
+body.project-page h1 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #1f1b5e;
+  margin: 1.2rem 0 0.8rem;
+  text-align: left;
+}
+
+body.project-page h2 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #333;
+  margin: 1.6rem 0 0.9rem;
+  text-align: center;
+}
+
+body.project-page h3 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 650;
+  color: #2d2a55;
+  margin: 1.2rem 0 0.7rem;
+  text-align: center;
+}
+
+body.project-page h4,
+body.project-page h5,
+body.project-page h6 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.44rem;
+  line-height: 1.6;
+  font-weight: 200;
+  color: #525A76;
+  margin: 1.2rem 0 0.7rem;
+  text-align: left;
+}
+
+body.project-page p {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.28rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #525A76;
+  margin: 2rem 0 0.6rem;
+}
+
+/* Links */
+body.project-page a {
+  color: #170e8f;
+  text-decoration: none;
+}
+
+body.project-page a:hover {
+  text-decoration: underline;
+  border-bottom: 2px solid #4b468d;
+}
+
+/* Images */
+body.project-page img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ============================================
    PROGRESS BAR
    ============================================ */
+
 .progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: linear-gradient(90deg, #1f1b5e 0%, #4b468d 100%);
-    z-index: 1001;
-    transition: width 0.1s ease;
-    box-shadow: 0 2px 8px rgba(31, 27, 94, 0.35);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #1f1b5e 0%, #4b468d 100%);
+  z-index: 1001;
+  transition: width 0.1s ease;
+  box-shadow: 0 2px 8px rgba(31, 27, 94, 0.35);
 }
 
 /* ============================================
-   NAVIGATION – nümunə stili
+   NAVIGATION – Maria stilinə bənzər
    ============================================ */
+
 .project-topbar {
-    position: relative;
-    width: 100%;
-    background: transparent;
-    margin-bottom: 0.5rem;
-    z-index: 1000;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    font-family: 'Palatino', 'URW Palladio L', serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
 }
 
 .project-topbar h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #1f1b5e;
-    margin: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #1f1b5e;
+  margin: 0;
 }
 
 .project-nav {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .project-nav a {
-    margin-left: 0;
-    font-size: 1.5rem;
-    color: #170e8f;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    font-weight: 500;
+  margin-left: 0;
+  font-size: 1.5rem;
+  color: #170e8f;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 .project-nav a:hover {
-    text-decoration: underline;
-    border-bottom: 2px solid #4b468d;
+  text-decoration: underline;
+  border-bottom: 2px solid #4b468d;
 }
 
 /* ============================================
-   HERO SECTION – stil yumşaldılıb
+   HERO SECTION
    ============================================ */
+
 .hero-banner {
-    margin-top: 1rem;
-    position: relative;
-    height: 55vh;
-    min-height: 380px;
-    max-height: 520px;
-    width: 100%;
-    overflow: hidden;
-    background: linear-gradient(135deg, #2d2a55 0%, #4b468d 50%, #1f1b5e 100%);
-    border-radius: 12px;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+  margin-top: 1rem;
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  max-height: 520px;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2d2a55 0%, #4b468d 50%, #1f1b5e 100%);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10);
 }
 
 .hero-banner img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    opacity: 0.35;
-    filter: brightness(70%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  filter: brightness(70%);
 }
 
 .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
 }
 
 .hero-overlay-text {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    z-index: 2;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  z-index: 2;
 }
 
 .hero-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.18);
-    padding: 0.7rem 1.6rem;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    margin-bottom: 1.3rem;
-    text-transform: uppercase;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.3rem;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .hero-overlay-text h1 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 2.3rem;        /* nümunə big class-a bənzər */
-    line-height: 1.3;
-    font-weight: 700;
-    margin: 0 0 0.75rem 0;
+  font-size: 2.4rem;     /* böyük, amma oxunaqlı */
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
 }
 
 .hero-overlay-text h2 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    opacity: 0.96;
-    line-height: 1.7;
-    margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.96;
+  line-height: 1.7;
+  margin: 0;
+  text-align: center;
 }
 
 /* ============================================
-   CONTENT WRAPPER
+   WRAPPER
    ============================================ */
+
 .project-wrapper {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0;
-    width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0;
+  width: 100%;
 }
 
 /* ============================================
-   INTRO CARD – section stilinə yaxınlaşdırılıb
+   INTRO CARD
    ============================================ */
-.project-intro-card {
-    background: #fdfdfd;
-    border-radius: 12px;
-    padding: 2rem 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
-    color: #525A76;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
-    position: relative;
-}
 
-.project-intro-card::before {
-    content: none; /* artıq radial glow lazım deyil */
+.project-intro-card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
 }
 
 .project-intro-card h2 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 2.1rem;
-    font-weight: 700;
-    line-height: 1.15;
-    color: #333;
-    margin: 0 0 0.9rem 0;
-    text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .project-intro-card p {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.28rem;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #525A76;
-    margin: 0.6rem 0 0.6rem;
-    text-align: center;
+  text-align: center;
+  margin-top: 0.6rem;
 }
 
 /* ============================================
-   SECTIONS – NÜMUNƏ CSS-LƏ EYNİ STİL
+   SECTIONS – əsas layout
    ============================================ */
-section {
-    margin-bottom: 2.5em;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 2rem 2rem;
-    background: #fdfdfd;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+
+body.project-page section {
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
+  background: #fdfdfd;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
 }
 
-section:hover {
-    transform: translateY(-2px);
-}
-
-section h2 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 2.1rem;
-    line-height: 1.15;
-    font-weight: 700;
-    color: #333;
-    margin: 0 0 0.9rem;
-    text-align: center;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-section h3 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.55rem;
-    line-height: 1.2;
-    font-weight: 650;
-    color: #2d2a55;
-    margin: 1.2rem 0 0.7rem;
-    text-align: center;
+body.project-page section > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .section-text {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.28rem;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #525A76;
-    margin: 2rem 0 0.6rem;
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: #525A76;
+  margin-top: 1.2rem;
+}
+
+/* Chart-sections fonu bir az fade olsun */
+section.chart-section {
+  background: #EFEFF6;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 2rem 0;
+}
+
+/* chart-section içindəki başlıqlar yenə mərkəzdə olsun */
+section.chart-section h2 {
+  margin-bottom: 0.6rem;
+}
+
+section.chart-section h3 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
 }
 
 /* ============================================
-   CHART FIGURES – ÜMUMİ
+   CHART CONTAINERS
    ============================================ */
+
 figure[id^="EnergyLocation"] {
-    margin: 2.5rem auto;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+  margin: 2.5rem auto;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 /* IFRAME CHARTS */
 .energy-iframe,
 section iframe {
-    display: block;
-    width: 100% !important;
-    min-height: 650px;
-    margin: 2.5rem auto;
-    padding: 0;
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid rgba(31, 27, 94, 0.25);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  display: block;
+  width: 100% !important;
+  min-height: 650px;
+  margin: 2.5rem auto 0;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(31, 27, 94, 0.25);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Vega embed responsive */
+.vega-embed,
+.vega-embed > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.vega-embed svg,
+.vega-embed canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Vega actions küncdə olsun */
+.vega-embed {
+  position: relative;
+}
+
+.vega-actions {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 5;
 }
 
 /* ============================================
-   INSIGHT BOXES – Nümunə palitrasına uyğun
+   INSIGHT BOXES
    ============================================ */
+
 .insight-box {
-    background: #fafaff;
-    border-left: 6px solid #1f1b5e;
-    padding: 1.8rem 1.9rem;
-    border-radius: 12px;
-    margin: 2.5rem 0;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-}
-
-.insight-box h4 {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.44rem;
-    line-height: 1.6;
-    font-weight: 650;
-    color: #1f1b5e;
-    margin: 0 0 0.8rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.insight-box h4::before {
-    content: '💡';
-    margin-right: 0.75rem;
-    font-size: 1.4rem;
+  background: #fafaff;
+  border-left: 6px solid #1f1b5e;
+  padding: 1.8rem 1.9rem;
+  border-radius: 12px;
+  margin: 2.5rem 0 0;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
 }
 
 .insight-box p {
-    font-family: 'Palatino', 'URW Palladio L', serif;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: #525A76;
-    margin: 0;
+  margin: 0;
 }
 
 /* ============================================
    STATS GRID
    ============================================ */
+
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.8rem;
-    margin: 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin: 2.5rem 0 0;
 }
 
 .stat-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 2.2rem 1.8rem;
-    text-align: center;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-    border: 1px solid rgba(31, 27, 94, 0.18);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+  border: 1px solid rgba(31, 27, 94, 0.18);
 }
 
 .stat-number {
-    font-size: 2.6rem;
-    font-weight: 800;
-    color: #1f1b5e;
-    margin-bottom: 0.7rem;
-    line-height: 1.1;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #1f1b5e;
+  margin-bottom: 0.7rem;
+  line-height: 1.1;
 }
 
 .stat-label {
-    font-size: 0.95rem;
-    color: #4a4a4a;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    line-height: 1.6;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
 }
 
 /* ============================================
    CONCLUSION SECTION
    ============================================ */
+
 .conclusion-section {
-    background: #EFEFF6;
-    color: #1f1b5e;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 2rem 0;
-    max-width: 1000px;
-    margin: 2rem auto;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
 }
 
 .conclusion-section h2 {
-    color: #1f1b5e;
+  margin-top: 0;
 }
 
 .conclusion-section .section-text {
-    color: #2d2a55;
-    font-size: 1.15rem;
+  text-align: left;
 }
 
 /* ============================================
-   ANIMATIONS
+   ANIMATIONS (sənin JS üçündür)
    ============================================ */
+
 .fade-in {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ============================================
-   QRAFİK LAYOUTU – Myriam stilinə bənzər
+   RESPONSIVE
    ============================================ */
-section.chart-section {
-    max-width: 1000px;
-    padding: 2rem 2rem;
-    background: #EFEFF6;
-    box-shadow: none;
-    border-radius: 0;
-}
 
-section.chart-section figure[id^="EnergyLocation"],
-section.chart-section .energy-iframe {
-    margin: 2rem auto;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-}
-
-/* Vega embed tam en */
-section.chart-section .vega-embed,
-section.chart-section .vega-embed > div,
-section.chart-section .vega-embed svg,
-section.chart-section .vega-embed canvas {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN – nümunəyə uyğunlaşdırılmış
-   ============================================ */
 @media (max-width: 900px) {
-    body.project-page {
-        font-size: 16px;
-        max-width: 100%;
-        padding: 16px;
-    }
+  body.project-page {
+    font-size: 16px;
+    max-width: 100%;
+    padding: 16px;
+  }
 
-    .hero-banner {
-        border-radius: 10px;
-        height: 50vh;
-        min-height: 320px;
-    }
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 
-    section {
-        padding: 1.5rem 1.5rem;
-    }
+  .project-topbar h1 {
+    font-size: 2.2rem;
+  }
 
-    .project-intro-card {
-        padding: 1.5rem 1.5rem;
-    }
+  .project-nav a {
+    font-size: 1.2rem;
+  }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
+  body.project-page section,
+  .project-intro-card {
+    padding: 1.5rem 1.5rem;
+  }
 
-    .energy-iframe,
-    section iframe {
-        min-height: 520px;
-    }
+  section.chart-section {
+    padding: 1.5rem 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .energy-iframe,
+  section iframe {
+    min-height: 520px;
+  }
+
+  .hero-banner {
+    height: 50vh;
+    min-height: 320px;
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay-text h2 {
+    font-size: 1.05rem;
+  }
 }
 
 @media (max-width: 480px) {
-    body.project-page {
-        font-size: 15.5px;
-        padding: 12px;
-    }
+  body.project-page {
+    font-size: 15.5px;
+    padding: 12px;
+  }
 
-    section {
-        padding: 1.25rem 1rem;
-    }
+  body.project-page section,
+  .project-intro-card {
+    padding: 1.25rem 1rem;
+  }
 
-    .project-intro-card {
-        padding: 1.25rem 1rem;
-    }
+  .hero-overlay-text h1 {
+    font-size: 1.7rem;
+  }
 
-    .hero-overlay-text h1 {
-        font-size: 1.8rem;
-    }
+  .hero-overlay-text h2 {
+    font-size: 0.95rem;
+  }
 
-    .hero-overlay-text h2 {
-        font-size: 1rem;
-    }
-
-    .energy-iframe,
-    section iframe {
-        min-height: 420px;
-    }
+  .energy-iframe,
+  section iframe {
+    min-height: 420px;
+  }
 }
