@@ -11,7 +11,7 @@ body.project-page {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 2;
     color: #1a1a1a;
-    background: #EFEFF6; /* açıq boz fon */
+    background: #ffffff;
     overflow-x: hidden;
     font-size: 23px; /* bir az böyüdülmüş base font */
 }
@@ -241,7 +241,7 @@ body.project-page {
 }
 
 /* ============================================
-   SECTIONS – BASE
+   SECTIONS – GENERAL (Intro, Section 1, Conclusion)
    ============================================ */
 section {
     background: white;
@@ -296,38 +296,7 @@ section h3 {
 }
 
 /* ============================================
-   FLAT STYLE FOR ALL SECTIONS
-   EXCEPT INTRO CARD & CONCLUSION
-   ============================================ */
-
-section:not(.project-intro-card):not(.conclusion-section) {
-    background: #EFEFF6 !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 40px 0 !important;
-    max-width: 1200px !important;
-}
-
-section:not(.project-intro-card):not(.conclusion-section):hover {
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-section:not(.project-intro-card):not(.conclusion-section) h2 {
-    margin-left: 10px;
-}
-
-section:not(.project-intro-card):not(.conclusion-section) h2::after {
-    left: 10px;
-}
-
-section:not(.project-intro-card):not(.conclusion-section) h3 {
-    margin-left: 10px;
-}
-
-/* ============================================
-   CHART FIGURES – DEFAULT
-   (fallback, amma chart-card içində override edilir)
+   CHART FIGURES – BASE
    ============================================ */
 figure[id^="EnergyLocation"] {
     margin: 50px 0;
@@ -374,10 +343,9 @@ section iframe:hover {
     border-left: 7px solid #1a8566;
     padding: 50px 55px;
     border-radius: 16px;
-    margin: 40px auto 70px;
+    margin: 50px 0;
     box-shadow: 0 8px 25px rgba(26, 133, 102, 0.14);
     transition: all 0.3s ease;
-    max-width: 950px;          /* qrafik paneli ilə eyni en */
 }
 
 .insight-box:hover {
@@ -795,38 +763,78 @@ section iframe:hover {
 }
 
 /* ============================================
-   STANDARD CHART PANEL
+   CHART SECTIONS – MARIAM STYLE
+   (Hero, Intro card, Conclusion dəyişmir)
    ============================================ */
 
-/* Qrafik paneli – bütün qrafiklər üçün eyni enli ağ kart */
-.chart-card {
-    max-width: 950px;
-    margin: 24px auto 16px;
-    padding: 16px;
-    background: #ffffff;
-    border-radius: 14px;
-    border: 1px solid #d7efe6;
-    box-shadow: 0 10px 32px rgba(26, 133, 102, 0.16);
+/* 2–8-ci bölmələr: böyük ağ kart yox, sadəcə kontent */
+section.chart-section {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 60px 0 40px;
+    max-width: 1200px;
 }
 
-/* Chart kartın içindəki qrafik elementlər */
-.chart-card figure[id^="EnergyLocation"],
-.chart-card .energy-iframe,
-.chart-card iframe {
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: 100% !important;
-    display: block;
+/* Başlıqlar yenə sənin stilində, sadəcə kart xətti olmur */
+section.chart-section h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
-/* Vega qrafiklərinin container eni */
+section.chart-section h2::after {
+    width: 80px;
+}
+
+section.chart-section h3 {
+    margin-top: 20px;
+}
+
+/* Qrafik paneli – standart en, fon/border yoxdur */
+section.chart-section figure[id^="EnergyLocation"],
+section.chart-section .energy-iframe {
+    max-width: 1200px;
+    width: 100%;
+    margin: 35px auto 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Insight box-lar eyni qalır, sadəcə chart-section içində ortalanır */
+section.chart-section .insight-box {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   VEGA EMBED – qrafik 100% en + 3 nöqtə yuxarı sağda
+   ============================================ */
+
 .vega-embed,
-.vega-embed .vega-view,
-.vega-embed canvas,
-.vega-embed svg {
+.vega-embed > div {
     width: 100% !important;
     max-width: 100% !important;
+}
+
+.vega-embed svg,
+.vega-embed canvas {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.vega-embed {
+    position: relative;
+}
+
+.vega-actions {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 5;
 }
