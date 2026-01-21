@@ -1,4 +1,95 @@
 /* ============================================
+   GLOBAL READABILITY BOOST — TEXT + CHARTS BIGGER
+   ============================================ */
+
+body.project-page {
+    font-size: 24px !important;
+    line-height: 2 !important;
+}
+
+/* SECTION LAYOUT — Daha geniş və premium görünüş */
+section {
+    padding: 110px 140px !important;
+}
+
+/* HEADINGS — Daha böyük və oxunaqlı */
+section h2 {
+    font-size: 62px !important;
+}
+section h3 {
+    font-size: 44px !important;
+}
+
+/* PARAGRAPHS — Oxunaqlılıq artırılıb */
+.section-text {
+    font-size: 28px !important;
+}
+
+/* INTRO CARD — Yazılar böyüdüldü */
+.project-intro-card h2 {
+    font-size: 62px !important;
+}
+.project-intro-card p {
+    font-size: 30px !important;
+}
+
+/* INSIGHT BOX — Böyük və balanslı */
+.insight-box p {
+    font-size: 28px !important;
+}
+.insight-box h4 {
+    font-size: 36px !important;
+}
+
+/* NAVIGATION — Başlıq və menyu böyüdüldü */
+.project-topbar h1 {
+    font-size: 48px !important;
+}
+.project-nav a {
+    font-size: 28px !important;
+}
+
+/* CHARTS — Vega + iframe daha böyük */
+figure[id^="EnergyLocation"] {
+    padding: 70px !important;
+}
+
+section iframe {
+    min-height: 900px !important;
+    padding: 20px !important;
+    background: #fafbfc;
+}
+
+/* STATS — Daha iri və modern */
+.stat-number {
+    font-size: 92px !important;
+}
+.stat-label {
+    font-size: 26px !important;
+}
+
+/* MOBILE OPTIMIZATION — balansı qoruyur */
+@media (max-width: 768px) {
+    body.project-page {
+        font-size: 20px !important;
+    }
+    section {
+        padding: 70px 55px !important;
+    }
+    section iframe {
+        min-height: 650px !important;
+    }
+    section h2 {
+        font-size: 46px !important;
+    }
+    section h3 {
+        font-size: 32px !important;
+    }
+    .section-text {
+        font-size: 22px !important;
+    }
+}
+/* ============================================
    RESET & BASE STYLES
    ============================================ */
 * {
@@ -13,7 +104,7 @@ body.project-page {
     color: #1a1a1a;
     background: #ffffff;
     overflow-x: hidden;
-    font-size: 22px; /* 20px-dən 22px-ə artırıldı */
+    font-size: 22px; /* 20px-dÉ™n 22px-É™ artÄ±rÄ±ldÄ± */
 }
 
 /* ============================================
@@ -57,7 +148,7 @@ body.project-page {
 }
 
 .project-topbar h1 {
-    font-size: 40px; /* 36px-dən 40px-ə */
+    font-size: 40px; /* 36px-dÉ™n 40px-É™ */
     font-weight: 700;
     color: white;
     margin: 0;
@@ -74,7 +165,7 @@ body.project-page {
 .project-nav a {
     color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    font-size: 24px; /* 22px-dən 24px-ə */
+    font-size: 24px; /* 22px-dÉ™n 24px-É™ */
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -160,7 +251,7 @@ body.project-page {
     -webkit-backdrop-filter: blur(12px);
     padding: 16px 36px;
     border-radius: 30px;
-    font-size: 20px; /* 18px-dən 20px-ə */
+    font-size: 20px; /* 18px-dÉ™n 20px-É™ */
     font-weight: 700;
     letter-spacing: 2.5px;
     margin-bottom: 35px;
@@ -170,7 +261,7 @@ body.project-page {
 }
 
 .hero-overlay-text h1 {
-    font-size: 92px; /* 84px-dən 92px-ə */
+    font-size: 92px; /* 84px-dÉ™n 92px-É™ */
     font-weight: 700;
     line-height: 1.2;
     margin: 0 0 30px 0;
@@ -179,7 +270,7 @@ body.project-page {
 }
 
 .hero-overlay-text h2 {
-    font-size: 40px; /* 36px-dən 40px-ə */
+    font-size: 40px; /* 36px-dÉ™n 40px-É™ */
     font-weight: 400;
     opacity: 0.95;
     line-height: 1.6;
@@ -224,7 +315,7 @@ body.project-page {
 }
 
 .project-intro-card h2 {
-    font-size: 56px; /* 50px-dən 56px-ə */
+    font-size: 56px; /* 50px-dÉ™n 56px-É™ */
     font-weight: 700;
     margin: 0 0 30px 0;
     line-height: 1.3;
@@ -233,7 +324,7 @@ body.project-page {
 }
 
 .project-intro-card p {
-    font-size: 27px; /* 24px-dən 27px-ə */
+    font-size: 27px; /* 24px-dÉ™n 27px-É™ */
     line-height: 1.9;
     opacity: 0.95;
     margin: 0;
@@ -259,7 +350,7 @@ section:hover {
 }
 
 section h2 {
-    font-size: 56px; /* 50px-dən 56px-ə */
+    font-size: 56px; /* 50px-dÉ™n 56px-É™ */
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 25px 0;
@@ -280,7 +371,7 @@ section h2::after {
 }
 
 section h3 {
-    font-size: 38px; /* 34px-dən 38px-ə */
+    font-size: 38px; /* 34px-dÉ™n 38px-É™ */
     font-weight: 600;
     color: #2a2a2a;
     margin: 50px 0 30px 0;
@@ -288,7 +379,7 @@ section h3 {
 }
 
 .section-text {
-    font-size: 26px; /* 23px-dən 26px-ə */
+    font-size: 26px; /* 23px-dÉ™n 26px-É™ */
     line-height: 2;
     color: #3a3a3a;
     margin-top: 30px;
@@ -350,7 +441,7 @@ section iframe:hover {
 }
 
 .insight-box h4 {
-    font-size: 32px; /* 28px-dən 32px-ə */
+    font-size: 32px; /* 28px-dÉ™n 32px-É™ */
     font-weight: 700;
     color: #1a1a1a;
     margin: 0 0 20px 0;
@@ -360,13 +451,13 @@ section iframe:hover {
 }
 
 .insight-box h4::before {
-    content: '💡';
+    content: 'ðŸ’¡';
     margin-right: 15px;
     font-size: 34px;
 }
 
 .insight-box p {
-    font-size: 25px; /* 22px-dən 25px-ə */
+    font-size: 25px; /* 22px-dÉ™n 25px-É™ */
     color: #2a2a2a;
     line-height: 1.9;
     margin: 0;
@@ -400,7 +491,7 @@ section iframe:hover {
 }
 
 .stat-number {
-    font-size: 80px; /* 72px-dən 80px-ə */
+    font-size: 80px; /* 72px-dÉ™n 80px-É™ */
     font-weight: 700;
     background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
     -webkit-background-clip: text;
@@ -412,7 +503,7 @@ section iframe:hover {
 }
 
 .stat-label {
-    font-size: 22px; /* 20px-dən 22px-ə */
+    font-size: 22px; /* 20px-dÉ™n 22px-É™ */
     color: #4a4a4a;
     font-weight: 600;
     text-transform: uppercase;
@@ -439,7 +530,7 @@ section iframe:hover {
 
 .conclusion-section .section-text {
     color: rgba(255, 255, 255, 0.93);
-    font-size: 26px; /* 23px-dən 26px-ə */
+    font-size: 26px; /* 23px-dÉ™n 26px-É™ */
 }
 
 /* ============================================
