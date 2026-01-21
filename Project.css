@@ -766,7 +766,8 @@ section iframe:hover {
 
 section.chart-section figure[id^="EnergyLocation"],
 section.chart-section .energy-iframe {
-    padding: 20px;   
+    padding: 10px;   
 }
+
 
 
