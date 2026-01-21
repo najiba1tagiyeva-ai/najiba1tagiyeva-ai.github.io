@@ -52,9 +52,10 @@
         <section>
             <h2>1. Introduction</h2>
             <p class="section-text">
-            Azerbaijan is widely known for its dependence on oil and gas, but in recent years the country has announced ambitious plans to expand renewable energy and reduce emissions. As the global energy system changes, it is important to understand whether Azerbaijan is truly moving toward a sustainable energy transition.
-            This project uses data from 1990–2024 to explore trends in energy production, carbon emissions, renewable investment, and regional comparison. Through a set of visualizations, it evaluates how far the country has progressed and what challenges remain.
-
+                Azerbaijan is widely known for its dependence on oil and gas, but in recent years the country has announced ambitious plans to expand renewable energy and reduce emissions. 
+                As the global energy system changes, it is important to understand whether Azerbaijan is truly moving toward a sustainable energy transition.
+                This project uses data from 1990–2024 to explore trends in energy production, carbon emissions, renewable investment, and regional comparison. 
+                Through a set of visualizations, it evaluates how far the country has progressed and what challenges remain.
             </p>
         </section>
 
@@ -153,9 +154,8 @@
             </div>
         </section>
         
-
         <!-- Section 7: Geographic Distribution -->
-       <section class="chart-section">
+        <section class="chart-section">
             <h2>7. Where are the renewables located?</h2>
             <h3>Chart 6 – Geography of solar, wind and hydro</h3>
 
@@ -170,7 +170,7 @@
         </section>
 
         <!-- Section 8: Regional Comparison -->
-       <section class="chart-section">
+        <section class="chart-section">
             <h2>8. Comparing the region</h2>
             <h3>Chart 7 – Azerbaijan, Georgia and Armenia</h3>
 
@@ -207,7 +207,7 @@
             document.getElementById('progressBar').style.width = scrolled + '%';
         });
 
-        // Vega Charts - with error handling
+        // Vega Charts list
         const charts = [
             { id: '#EnergyLocation2', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_2.json' },
             { id: '#EnergyLocation3', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_3.json' },
@@ -217,16 +217,49 @@
             { id: '#EnergyLocation7', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Region_target_develop.json' },
         ];
 
+        // GLOBAL VEGA CONFIG – bütün qrafiklər üçün eyni font/ölçü
+        const vegaGlobalConfig = {
+            axis: {
+                labelFontSize: 14,
+                titleFontSize: 16,
+                labelColor: '#374151',
+                titleColor: '#111827',
+                gridColor: '#E5E7EB',
+                gridOpacity: 0.6
+            },
+            legend: {
+                labelFontSize: 14,
+                titleFontSize: 16,
+                labelColor: '#374151',
+                titleColor: '#111827'
+            },
+            header: {
+                labelFontSize: 16,
+                titleFontSize: 18
+            },
+            title: {
+                fontSize: 20,
+                subtitleFontSize: 13,
+                color: '#111827',
+                subtitleColor: '#4B5563'
+            }
+        };
+
         charts.forEach(chart => {
             vegaEmbed(chart.id, chart.file, {
-                actions: true,
-                theme: 'latimes'
+                actions: {
+                    export: true,
+                    source: true,
+                    compiled: true,
+                    editor: true
+                },
+                config: vegaGlobalConfig
             }).catch(error => {
                 console.error('Error loading chart:', chart.file, error);
             });
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll for anchor links (hazırda nav-da # yoxdur amma qalmağında problem yoxdur)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
