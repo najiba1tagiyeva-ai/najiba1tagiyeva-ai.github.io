@@ -8,11 +8,11 @@
   },
 
   "config": {
-    "view": { "continuousWidth": 900, "continuousHeight": 500 },
+    "view": { "continuousWidth": 1100, "continuousHeight": 600 },
     "background": "#FFFFFF",
     "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 14,
+      "labelFontSize": 14,
+      "titleFontSize": 16,
       "labelColor": "#5D6D7E",
       "titleColor": "#2C3E50",
       "gridColor": "#E8E8E8",
@@ -22,13 +22,13 @@
       "anchor": "start",
       "color": "#2C3E50",
       "subtitleColor": "#5D6D7E",
-      "fontSize": 20,
-      "subtitleFontSize": 12
+      "fontSize": 22,
+      "subtitleFontSize": 14
     }
   },
 
-  "width": 900,
-  "height": 500,
+  "width": 1100,
+  "height": 600,
 
   "title": {
     "text": "Machine Learning: Predicting Renewable Energy Growth in Azerbaijan",
@@ -37,12 +37,17 @@
 
   "layer": [
     {
-      "data": { "values": [ { "x": 0, "y": 0 }, { "x": 25, "y": 25 } ] },
+      "data": {
+        "values": [
+          { "x": 0, "y": 0 },
+          { "x": 25, "y": 25 }
+        ]
+      },
       "mark": {
         "type": "line",
         "color": "#95A5A6",
         "strokeDash": [6, 4],
-        "strokeWidth": 1.5
+        "strokeWidth": 2
       },
       "encoding": {
         "x": { "field": "x", "type": "quantitative" },
@@ -62,7 +67,7 @@
       "mark": {
         "type": "circle",
         "size": 160,
-        "opacity": 0.8,
+        "opacity": 0.85,
         "stroke": "#FFFFFF",
         "strokeWidth": 1
       },
