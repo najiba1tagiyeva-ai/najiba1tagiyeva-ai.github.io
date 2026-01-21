@@ -3,7 +3,7 @@
   "description": "Additional renewable capacity targeted and in development by technology",
   "data": {
     "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/caucasus_targets_dev_by_technology.csv",
-    "format": {"type": "csv"}
+    "format": { "type": "csv" }
   },
   "transform": [
     {
@@ -14,12 +14,14 @@
   "facet": {
     "field": "Country",
     "type": "nominal",
-    "sort": {"field": "CountryOrder", "order": "ascending"},
+    "sort": { "field": "CountryOrder", "order": "ascending" },
     "title": null,
-    "header": {"labelFontSize": 14, "labelFontWeight": "bold"}
+    "header": { "labelFontSize": 14, "labelFontWeight": "bold" }
   },
   "columns": 2,
   "spec": {
+    "width": 550,
+    "height": 100,
     "mark": "bar",
     "encoding": {
       "x": {
@@ -27,7 +29,7 @@
         "type": "quantitative",
         "stack": "zero",
         "title": "MW",
-        "axis": {"grid": true, "tickCount": 4}
+        "axis": { "grid": true, "tickCount": 4 }
       },
       "y": {
         "field": "Status",
@@ -45,9 +47,9 @@
         }
       },
       "tooltip": [
-        {"field": "Country", "type": "nominal", "title": "Country"},
-        {"field": "Status", "type": "nominal", "title": "Status"},
-        {"field": "Technology", "type": "nominal", "title": "Technology"},
+        { "field": "Country", "type": "nominal", "title": "Country" },
+        { "field": "Status", "type": "nominal", "title": "Status" },
+        { "field": "Technology", "type": "nominal", "title": "Technology" },
         {
           "field": "Capacity_MW",
           "type": "quantitative",
@@ -57,7 +59,7 @@
       ]
     }
   },
-  "resolve": {"scale": {"x": "independent", "y": "shared"}},
+  "resolve": { "scale": { "x": "independent", "y": "shared" } },
   "title": {
     "text": "Additional renewable capacity targeted by 2030–2040 and in development",
     "subtitle": "Hydropower, utility-scale solar and wind; each country on its own scale (MW). Source: Global Energy Monitor (2024).",
@@ -67,7 +69,7 @@
   },
   "config": {
     "background": "white",
-    "view": {"stroke": "#dddddd", "cornerRadius": 6},
+    "view": { "stroke": "#dddddd", "cornerRadius": 6 },
     "axis": {
       "labelFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       "titleFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
