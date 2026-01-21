@@ -4,537 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najiba Taghiyeva's Project | Azerbaijan Energy Transition</title>
+    <link rel="stylesheet" type="text/css" href="Project.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <style>
-        /* ============================================
-           RESET & BASE
-           ============================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background: #ffffff;
-            overflow-x: hidden;
-            font-size: 18px;
-        }
-
-        /* ============================================
-           PROGRESS BAR
-           ============================================ */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 4px;
-            background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
-            z-index: 1001;
-            transition: width 0.1s ease;
-        }
-
-        /* ============================================
-           NAVIGATION
-           ============================================ */
-        .project-topbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 25px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .project-topbar h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: white;
-            margin: 0;
-            text-shadow: 2px 3px 12px rgba(0, 0, 0, 0.6);
-        }
-
-        .project-nav {
-            display: flex;
-            gap: 35px;
-            align-items: center;
-        }
-
-        .project-nav a {
-            color: rgba(255, 255, 255, 0.95);
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            padding-bottom: 5px;
-        }
-
-        .project-nav a:hover {
-            color: #ffffff;
-        }
-
-        .project-nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: white;
-            transition: width 0.3s ease;
-        }
-
-        .project-nav a:hover::after {
-            width: 100%;
-        }
-
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero-banner {
-            position: relative;
-            height: 70vh;
-            min-height: 550px;
-            max-height: 750px;
-            width: 100%;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
-        }
-
-        .hero-banner img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.4;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
-        }
-
-        .hero-overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-align: center;
-            max-width: 1100px;
-            width: 90%;
-            z-index: 2;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(12px);
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .hero-overlay-text h1 {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 20px 0;
-            text-shadow: 3px 5px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-overlay-text h2 {
-            font-size: 28px;
-            font-weight: 400;
-            opacity: 0.95;
-            line-height: 1.5;
-            margin: 0;
-            text-shadow: 2px 3px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        /* ============================================
-           CONTENT WRAPPER
-           ============================================ */
-        .project-wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 70px 50px;
-        }
-
-        /* ============================================
-           INTRO CARD
-           ============================================ */
-        .project-intro-card {
-            background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
-            border-radius: 18px;
-            padding: 50px 70px;
-            margin: 0 auto 70px;
-            color: white;
-            box-shadow: 0 15px 50px rgba(26, 133, 102, 0.25);
-        }
-
-        .project-intro-card h2 {
-            font-size: 38px;
-            font-weight: 700;
-            margin: 0 0 20px 0;
-            line-height: 1.3;
-        }
-
-        .project-intro-card p {
-            font-size: 20px;
-            line-height: 1.8;
-            opacity: 0.95;
-            margin: 0;
-        }
-
-        /* ============================================
-           SECTIONS
-           ============================================ */
-        section {
-            background: white;
-            padding: 50px 60px;
-            border-radius: 18px;
-            margin: 45px auto;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-        }
-
-        section:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            font-size: 38px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 0 0 18px 0;
-            padding-bottom: 22px;
-            position: relative;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 70px;
-            height: 4px;
-            background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
-            border-radius: 2px;
-        }
-
-        section h3 {
-            font-size: 26px;
-            font-weight: 600;
-            color: #2a2a2a;
-            margin: 35px 0 22px 0;
-        }
-
-        .section-text {
-            font-size: 19px;
-            line-height: 1.8;
-            color: #3a3a3a;
-            margin: 20px 0;
-        }
-
-        /* ============================================
-           CHARTS - KEY FIX FOR YOUR PROBLEM!
-           ============================================ */
-        
-        /* Vega Charts Container */
-        figure[id^="EnergyLocation"] {
-            margin: 35px 0;
-            padding: 35px;
-            background: #fafbfc;
-            border-radius: 14px;
-            border: 2px solid #e8eaed;
-            min-height: 550px;
-            transition: all 0.3s ease;
-        }
-
-        figure[id^="EnergyLocation"]:hover {
-            border-color: #1a8566;
-            box-shadow: 0 6px 20px rgba(26, 133, 102, 0.15);
-        }
-
-        /* CRITICAL: Make Vega charts fill container properly */
-        figure[id^="EnergyLocation"] > div {
-            width: 100% !important;
-        }
-
-        figure[id^="EnergyLocation"] .vega-embed {
-            width: 100% !important;
-        }
-
-        figure[id^="EnergyLocation"] .vega-embed summary {
-            display: none !important;
-        }
-
-        /* Iframe Charts */
-        section iframe {
-            margin: 35px 0;
-            padding: 0;
-            background: #fafbfc;
-            border-radius: 14px;
-            border: 2px solid #e8eaed;
-            display: block;
-            width: 100% !important;
-            min-height: 650px;
-            transition: all 0.3s ease;
-        }
-
-        section iframe:hover {
-            border-color: #1a8566;
-            box-shadow: 0 6px 20px rgba(26, 133, 102, 0.15);
-        }
-
-        /* ============================================
-           INSIGHT BOXES
-           ============================================ */
-        .insight-box {
-            background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
-            border-left: 5px solid #1a8566;
-            padding: 30px 40px;
-            border-radius: 12px;
-            margin: 30px 0;
-            box-shadow: 0 5px 18px rgba(26, 133, 102, 0.1);
-        }
-
-        .insight-box h4 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin: 0 0 15px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .insight-box h4::before {
-            content: '💡';
-            margin-right: 10px;
-            font-size: 24px;
-        }
-
-        .insight-box p {
-            font-size: 18px;
-            color: #2a2a2a;
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        /* ============================================
-           STATS GRID
-           ============================================ */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 45px 0;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 18px;
-            padding: 45px 35px;
-            text-align: center;
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 35px rgba(26, 133, 102, 0.2);
-            border-color: #1a8566;
-        }
-
-        .stat-number {
-            font-size: 58px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 12px;
-            line-height: 1.1;
-        }
-
-        .stat-label {
-            font-size: 17px;
-            color: #4a4a4a;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            line-height: 1.5;
-        }
-
-        /* ============================================
-           CONCLUSION
-           ============================================ */
-        .conclusion-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
-            color: white;
-            margin-top: 70px;
-        }
-
-        .conclusion-section h2 {
-            color: white;
-        }
-
-        .conclusion-section h2::after {
-            background: white;
-        }
-
-        .conclusion-section .section-text {
-            color: rgba(255, 255, 255, 0.93);
-        }
-
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .fade-in-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 1024px) {
-            .project-wrapper {
-                padding: 60px 40px;
-            }
-
-            section {
-                padding: 40px 45px;
-            }
-
-            section h2 {
-                font-size: 34px;
-            }
-
-            section h3 {
-                font-size: 24px;
-            }
-
-            section iframe {
-                min-height: 580px;
-            }
-
-            figure[id^="EnergyLocation"] {
-                min-height: 500px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-
-            .project-topbar h1 {
-                font-size: 24px;
-            }
-
-            .project-nav {
-                gap: 20px;
-            }
-
-            .project-nav a {
-                font-size: 15px;
-            }
-
-            .hero-overlay-text h1 {
-                font-size: 42px;
-            }
-
-            .hero-overlay-text h2 {
-                font-size: 22px;
-            }
-
-            .project-wrapper {
-                padding: 45px 25px;
-            }
-
-            section {
-                padding: 35px 30px;
-            }
-
-            section h2 {
-                font-size: 28px;
-            }
-
-            section h3 {
-                font-size: 21px;
-            }
-
-            .section-text {
-                font-size: 17px;
-            }
-
-            section iframe {
-                min-height: 480px;
-            }
-
-            figure[id^="EnergyLocation"] {
-                padding: 25px;
-                min-height: 450px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-number {
-                font-size: 48px;
-            }
-
-            .project-intro-card {
-                padding: 35px 40px;
-            }
-
-            .project-intro-card h2 {
-                font-size: 30px;
-            }
-
-            .project-intro-card p {
-                font-size: 17px;
-            }
-        }
-    </style>
 </head>
 <body class="project-page">
     
@@ -564,43 +37,47 @@
         </div>
     </div>
 
-    <!-- CONTENT -->
     <main class="project-wrapper">
         
-        <!-- Intro -->
+        <!-- Intro card -->
         <section class="project-intro-card">
             <h2>Understanding Azerbaijan's Energy Future</h2>
-            <p>This comprehensive analysis explores Azerbaijan's journey from a hydrocarbon-dependent economy toward a sustainable energy future. Through data visualizations and regional comparisons, we examine the challenges, opportunities, and progress in renewable energy adoption.</p>
+            <p>
+                This comprehensive analysis explores Azerbaijan's journey from a hydrocarbon-dependent economy toward a sustainable energy future. 
+                Through data visualizations and regional comparisons, we examine the challenges, opportunities, and progress in renewable energy adoption.
+            </p>
         </section>
 
-        <!-- Section 1 -->
+        <!-- Section 1: Introduction -->
         <section>
             <h2>1. Introduction</h2>
             <p class="section-text">
-            Azerbaijan is widely known for its dependence on oil and gas, but in recent years the country has announced ambitious plans to expand renewable energy and reduce emissions. As the global energy system changes, it is important to understand whether Azerbaijan is truly moving toward a sustainable energy transition.
-            </p>
-            <p class="section-text">
-            This project uses data from 1990–2024 to explore trends in energy production, carbon emissions, renewable investment, and regional comparison. Through a set of visualizations, it evaluates how far the country has progressed and what challenges remain.
+                Azerbaijan is widely known for its dependence on oil and gas, but in recent years the country has announced ambitious plans to expand renewable energy and reduce emissions. 
+                As the global energy system changes, it is important to understand whether Azerbaijan is truly moving toward a sustainable energy transition.
+                This project uses data from 1990–2024 to explore trends in energy production, carbon emissions, renewable investment, and regional comparison. 
+                Through a set of visualizations, it evaluates how far the country has progressed and what challenges remain.
             </p>
         </section>
 
-        <!-- Section 2 -->
+        <!-- Section 2: Oil Dependency -->
         <section>
             <h2>2. Is Azerbaijan still oil-dependent?</h2>
             <h3>Chart 1 – Energy production mix</h3>
 
-            <iframe src="energy-dashboard.html" 
-                    width="100%" 
-                    height="700" 
+            <iframe src="energy-dashboard.html"
+                    class="energy-iframe"
                     frameborder="0">
             </iframe>
 
             <div class="insight-box">
-                <p>Azerbaijan's energy landscape remains heavily dominated by fossil fuels despite global transition trends. Natural gas has emerged as the primary energy source, while oil production shows signs of long-term decline.</p>
+                <p>
+                    Azerbaijan's energy landscape remains heavily dominated by fossil fuels despite global transition trends. 
+                    Natural gas has emerged as the primary energy source, while oil production shows signs of long-term decline.
+                </p>
             </div>
         </section>
 
-        <!-- Section 3 -->
+        <!-- Section 3: Carbon Cost -->
         <section>
             <h2>3. The carbon cost of growth</h2>
             <h3>Chart 2 – CO₂ emissions vs GDP</h3>
@@ -609,23 +86,26 @@
 
             <div class="insight-box">
                 <p>
-                    Azerbaijan's early post-Soviet years were highly carbon-intensive, with large CO₂ emissions despite low GDP. 
+                    Azerbaijan’s early post-Soviet years were highly carbon-intensive, with large CO₂ emissions despite low GDP. 
                     From the 2000s onward, the country achieved relative decoupling as GDP grew faster than emissions and carbon intensity steadily declined. 
                     However, the upward trend line shows that full decoupling has not yet occurred—economic growth still increases total CO₂ output.
                 </p>
             </div>
         </section>
 
-        <!-- Section 4 -->
+        <!-- Section 4: Renewable Growth -->
         <section>
             <h2>4. Are renewables on the rise?</h2>
             <h3>Chart 3 – Growth in renewable energy</h3>
+
             <figure id="EnergyLocation3"></figure>
 
             <div class="insight-box">
                 <p>
-                    Despite fluctuations in annual output, Azerbaijan's renewable energy generation has grown only modestly, with its share in the national energy mix remaining around <strong>2–3%</strong> from 2007 to 2024. 
-                    Most progress comes from hydropower, while solar and wind — though increasing — still represent only a small portion of the country's renewable portfolio.
+                    Despite fluctuations in annual output, Azerbaijan’s renewable energy generation has grown only modestly, 
+                    with its share in the national energy mix remaining around <strong>2–3%</strong> from 2007 to 2024. 
+                    Most progress comes from hydropower, while solar and wind — though increasing — still represent only a small 
+                    portion of the country’s renewable portfolio.
                 </p>
             </div>
 
@@ -645,51 +125,75 @@
             </div>
         </section>
 
-        <!-- Section 5 -->
+        <!-- Section 5: Drivers of Renewable Growth -->
         <section>
             <h2>5. What drives renewable energy growth?</h2>
             <h3>Chart 4 – Correlation matrix of renewable drivers</h3>
+
             <figure id="EnergyLocation4"></figure>
+
             <div class="insight-box">
-                <p>The balance between maintaining oil export revenues and increasing renewable energy capacity represents a critical economic and policy challenge for Azerbaijan's energy transition.</p>
+                <p>
+                    The balance between maintaining oil export revenues and increasing renewable energy capacity 
+                    represents a critical economic and policy challenge for Azerbaijan's energy transition.
+                </p>
             </div>
         </section>
 
-        <!-- Section 6 -->
+        <!-- Section 6: Predicting the Future -->
         <section>
-            <h2>6. Can we predict Azerbaijan's renewable future?</h2>
+            <h2>6. Can we predict Azerbaijan’s renewable future?</h2>
             <h3>Chart 5 – Machine learning: predicted vs actual renewable share</h3>
+
             <figure id="EnergyLocation5"></figure>
+
             <div class="insight-box">
-                <p>The balance between maintaining oil export revenues and increasing renewable energy capacity represents a critical economic and policy challenge for Azerbaijan's energy transition.</p>
+                <p>
+                    The balance between maintaining oil export revenues and increasing renewable energy capacity 
+                    represents a critical economic and policy challenge for Azerbaijan's energy transition.
+                </p>
             </div>
         </section>
         
-        <!-- Section 7 -->
+
+        <!-- Section 7: Geographic Distribution -->
         <section>
             <h2>7. Where are the renewables located?</h2>
             <h3>Chart 6 – Geography of solar, wind and hydro</h3>
+
             <figure id="EnergyLocation6"></figure>
+
             <div class="insight-box">
-                <p>Geographic distribution of renewable energy infrastructure reveals strategic placement aligned with natural resource availability and grid connectivity requirements.</p>
+                <p>
+                    Geographic distribution of renewable energy infrastructure reveals strategic placement aligned with 
+                    natural resource availability and grid connectivity requirements.
+                </p>
             </div>
         </section>
 
-        <!-- Section 8 -->
+        <!-- Section 8: Regional Comparison -->
         <section>
             <h2>8. Comparing the region</h2>
             <h3>Chart 7 – Azerbaijan, Georgia and Armenia</h3>
+
             <figure id="EnergyLocation7"></figure>
+
             <div class="insight-box">
-                <p>Azerbaijan's 2030 renewable target outpaces current project activity, with most in-development capacity concentrated in solar. Achieving national goals will require faster project deployment.</p>
+                <p>
+                    Azerbaijan’s 2030 renewable target outpaces current project activity, with most in-development capacity 
+                    concentrated in solar. Achieving national goals will require faster project deployment.
+                </p>
             </div>
         </section>
 
-        <!-- Section 9 -->
+        <!-- Section 9: Conclusion -->
         <section class="conclusion-section">
             <h2>9. Conclusion</h2>
             <p class="section-text">
-                Azerbaijan stands at a critical juncture in its energy history. While hydrocarbons continue to dominate the economy, significant opportunities exist for renewable energy development. Success will require sustained policy commitment, strategic investment, and regional cooperation. The transition presents both challenges and opportunities that will shape the country's economic and environmental future for decades to come.
+                Azerbaijan stands at a critical juncture in its energy history. While hydrocarbons continue to dominate the economy, 
+                significant opportunities exist for renewable energy development. Success will require sustained policy commitment, 
+                strategic investment, and regional cooperation. The transition presents both challenges and opportunities that will 
+                shape the country's economic and environmental future for decades to come.
             </p>
         </section>
 
@@ -697,7 +201,7 @@
 
     <!-- Scripts -->
     <script>
-        // Progress Bar
+        // Scroll Progress Bar
         window.addEventListener('scroll', function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -705,7 +209,7 @@
             document.getElementById('progressBar').style.width = scrolled + '%';
         });
 
-        // Vega Charts with proper configuration
+        // Vega Charts - with error handling
         const charts = [
             { id: '#EnergyLocation2', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_2.json' },
             { id: '#EnergyLocation3', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_3.json' },
@@ -715,26 +219,16 @@
             { id: '#EnergyLocation7', file: 'https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Region_target_develop.json' },
         ];
 
-        // Load charts with optimized settings
         charts.forEach(chart => {
             vegaEmbed(chart.id, chart.file, {
                 actions: false,
-                theme: 'latimes',
-                renderer: 'canvas',
-                width: 'container',
-                height: 450
-            }).then(result => {
-                console.log('Chart loaded:', chart.id);
+                theme: 'latimes'
             }).catch(error => {
-                console.error('Chart error:', chart.file, error);
-                const container = document.querySelector(chart.id);
-                if (container) {
-                    container.innerHTML = '<p style="color: #e53e3e; padding: 2em; text-align: center;">Chart could not be loaded. Please refresh the page.</p>';
-                }
+                console.error('Error loading chart:', chart.file, error);
             });
         });
 
-        // Smooth scroll
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -748,10 +242,10 @@
             });
         });
 
-        // Fade-in animation
+        // Add fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -80px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
