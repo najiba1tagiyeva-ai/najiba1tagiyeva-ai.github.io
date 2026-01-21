@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Additional renewable capacity targeted and in development by technology",
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/caucasus_targets_dev_by_technology.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum.Country == 'Azerbaijan' ? 1 : datum.Country == 'Armenia' ? 2 : 3",
+      "as": "CountryOrder"
+    }
+  ],
+  "facet": {
+    "field": "Country",
+    "type": "nominal",
+    "sort": {"field": "CountryOrder", "order": "ascending"},
+    "title": null,
+    "header": {"labelFontSize": 14, "labelFontWeight": "bold"}
+  },
+  "columns": 2,
+  "spec": {
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Capacity_MW",
+        "type": "quantitative",
+        "stack": "zero",
+        "title": "MW",
+        "axis": {"grid": true, "tickCount": 4}
+      },
+      "y": {
+        "field": "Status",
+        "type": "nominal",
+        "sort": ["Targeted", "In development"],
+        "title": null
+      },
+      "color": {
+        "field": "Technology",
+        "type": "nominal",
+        "title": null,
+        "scale": {
+          "domain": ["Hydropower", "Utility-scale solar", "Wind", "Renewable"],
+          "range": ["#C87030", "#F3A32E", "#5B4BA8", "#3E8ED0"]
+        }
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "Status", "type": "nominal", "title": "Status"},
+        {"field": "Technology", "type": "nominal", "title": "Technology"},
+        {
+          "field": "Capacity_MW",
+          "type": "quantitative",
+          "title": "Capacity (MW)",
+          "format": ","
+        }
+      ]
+    }
+  },
+  "resolve": {"scale": {"x": "independent", "y": "shared"}},
+  "title": {
+    "text": "Additional renewable capacity targeted by 2030–2040 and in development",
+    "subtitle": "Hydropower, utility-scale solar and wind; each country on its own scale (MW). Source: Global Energy Monitor (2024).",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "anchor": "start"
+  },
+  "config": {
+    "background": "white",
+    "view": {"stroke": "#dddddd", "cornerRadius": 6},
+    "axis": {
+      "labelFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "titleFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    },
+    "legend": {
+      "labelFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "titleFont": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    }
+  }
+}
