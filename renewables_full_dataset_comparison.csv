@@ -1,0 +1,16 @@
+Country,Category,Capacity_MW
+Azerbaijan,Targeted,2000.0
+Azerbaijan,InDevelopment_Total,1680.0
+Azerbaijan,Construction,0.0
+Azerbaijan,PreConstruction,1240.0
+Azerbaijan,Announced,440.0
+Armenia,Targeted,
+Armenia,InDevelopment_Total,431.0
+Armenia,Construction,55.0
+Armenia,PreConstruction,376.0
+Armenia,Announced,0.0
+Georgia,Targeted,
+Georgia,InDevelopment_Total,2424.0
+Georgia,Construction,0.0
+Georgia,PreConstruction,280.0
+Georgia,Announced,2144.0
