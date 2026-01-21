@@ -1,40 +1,121 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.2.0.json",
-  "description": "Correlation heatmap for Azerbaijan renewable energy drivers",
-  "autosize": {"type": "fit", "contains": "padding"},
+  "description": "Renewable Energy and Socioeconomic Indicators",
+  "autosize": { "type": "fit", "contains": "padding" },
   "config": {
-    "view": {"continuousWidth": 900, "continuousHeight": 600},
     "background": "#FFFFFF",
-    "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 14,
-      "labelColor": "#555555",
-      "titleColor": "#333333"
-    },
     "title": {
       "anchor": "start",
+      "color": "#000000",
+      "font": "Benton Gothic Bold, sans-serif",
+      "fontSize": 20,
+      "fontWeight": "normal",
       "offset": 30,
       "subtitleColor": "#555555",
       "subtitleFontWeight": "lighter",
-      "fontSize": 20,
       "subtitleFontSize": 13
+    },
+    "arc": { "fill": "#82c6df" },
+    "area": { "fill": "#82c6df" },
+    "line": { "stroke": "#82c6df", "strokeWidth": 2 },
+    "path": { "stroke": "#82c6df" },
+    "rect": { "fill": "#82c6df" },
+    "shape": { "stroke": "#82c6df" },
+    "symbol": { "fill": "#82c6df", "size": 30 },
+    "axis": {
+      "labelFont": "Benton Gothic, sans-serif",
+      "labelFontSize": 13,
+      "labelFontWeight": "normal",
+      "titleFont": "Benton Gothic Bold, sans-serif",
+      "titleFontSize": 14,
+      "titleFontWeight": "normal",
+      "labelColor": "#555555",
+      "titleColor": "#333333"
+    },
+    "axisX": { "labelAngle": 0, "labelPadding": 4, "tickSize": 3 },
+    "axisY": {
+      "labelBaseline": "middle",
+      "maxExtent": 45,
+      "minExtent": 45,
+      "tickSize": 2,
+      "titleAlign": "left",
+      "titleAngle": 0,
+      "titleX": -45,
+      "titleY": -11
+    },
+    "legend": {
+      "labelFont": "Benton Gothic, sans-serif",
+      "labelFontSize": 11.5,
+      "symbolType": "square",
+      "titleFont": "Benton Gothic Bold, sans-serif",
+      "titleFontSize": 13,
+      "titleFontWeight": "normal"
+    },
+    "range": {
+      "category": [
+        "#ec8431",
+        "#829eb1",
+        "#c89d29",
+        "#3580b1",
+        "#adc839",
+        "#ab7fb4"
+      ],
+      "diverging": [
+        "#e68a4f",
+        "#f4bb6a",
+        "#f9e39c",
+        "#dadfe2",
+        "#a6b7c6",
+        "#849eae"
+      ],
+      "heatmap": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ],
+      "ordinal": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ],
+      "ramp": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ]
+    },
+    "view": {
+      "continuousWidth": 1100,
+      "continuousHeight": 650
     }
   },
   "title": {
-    "text": "Correlation Matrix: Renewable Energy Drivers in Azerbaijan",
+    "text": "Renewable Energy and Socioeconomic Indicators",
     "subtitle": "GDP, population & electricity use vs renewable share (2000–2023)  |  Sources: World Bank, IRENA, NASA POWER"
   },
   "data": {
     "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Correlation_Data_Azerbaijan.csv",
-    "format": {"type": "csv", "parse": {"Correlation": "number"}}
+    "format": { "type": "csv", "parse": { "Correlation": "number" } }
   },
-  "width": 900,
-  "height": 600,
+  "width": 1100,
+  "height": 650,
   "layer": [
     {
-      "mark": {"type": "rect"},
+      "mark": { "type": "rect" },
       "encoding": {
-        "x": {"field": "Var2", "type": "nominal", "title": null},
+        "x": { "field": "Var2", "type": "nominal", "title": null },
         "y": {
           "field": "Var1",
           "type": "nominal",
@@ -49,15 +130,15 @@
         "color": {
           "field": "Correlation",
           "type": "quantitative",
-          "legend": {"title": "Correlation"},
+          "legend": { "title": "Correlation" },
           "scale": {
             "domain": [-1, 0, 1],
             "range": ["#E8F5E9", "#A5D6A7", "#1B5E20"]
           }
         },
         "tooltip": [
-          {"field": "Var1", "title": "Variable 1", "type": "nominal"},
-          {"field": "Var2", "title": "Variable 2", "type": "nominal"},
+          { "field": "Var1", "title": "Variable 1", "type": "nominal" },
+          { "field": "Var2", "title": "Variable 2", "type": "nominal" },
           {
             "field": "Correlation",
             "title": "Correlation",
@@ -68,9 +149,9 @@
       }
     },
     {
-      "mark": {"type": "text", "baseline": "middle"},
+      "mark": { "type": "text", "baseline": "middle" },
       "encoding": {
-        "x": {"field": "Var2", "type": "nominal"},
+        "x": { "field": "Var2", "type": "nominal" },
         "y": {
           "field": "Var1",
           "type": "nominal",
