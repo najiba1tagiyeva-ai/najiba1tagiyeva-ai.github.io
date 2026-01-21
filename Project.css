@@ -1,525 +1,487 @@
-/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
-/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
-
-/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
-
-/* Navigation Bar */
-
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
-  margin-bottom: 0.5rem;
-  font-family: 'Palatino', 'URW Palladio L', serif;
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-name {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #1f1b5e;
+body.project-page {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 16.7px;              /* nümunə CSS-ə uyğun */
+    line-height: 1.6;
+    color: #333;
+    background-color: #EFEFF6;      /* eyni fon */
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 1100px;              /* mərkəzdə daha dar kolon */
+    padding-top: 25px;
 }
 
-.nav-links a {
-  margin-left: 1.5rem;
-  font-size: 1.5rem;
-  color:#170e8f;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #1f1b5e 0%, #4b468d 100%);
+    z-index: 1001;
+    transition: width 0.1s ease;
+    box-shadow: 0 2px 8px rgba(31, 27, 94, 0.35);
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
-  border-bottom: 2px solid color(#4b468d);
-}
-
-/* Body */
-
-body {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 16.7px;
-  color: #333;
-  line-height: 1.6;
-  background-color: #EFEFF6;
-  margin: 0 auto;
-  max-width: 1100px;
-  padding-top: 25px;
-}
-
-
-/* Headings */
-h1 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: 700;
-  color: #1f1b5e;
-  margin: 1.2rem 0 0.8rem;
-  text-align: left;
-}
-
-.centered-title {
-  text-align: center;
-}
-
-.left-text {
-  text-align: left;
-}
-
-h2{
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 2.1rem;
-  line-height: 1.15;
-  font-weight: 700;
-  color: #333;         
-  margin: 1.6rem 0 0.9rem;
-  text-align: center;
-}
-
-h3 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.55rem;
-  line-height: 1.2;
-  font-weight: 650;
-  color: #2d2a55;
-  margin: 1.2rem 0 0.7rem;
-  text-align: center;
-}
-
-h4, h5, h6 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.44rem;
-  line-height: 1.6;
-  font-weight: 200;
-  color: #525A76;
-  margin: 1.2rem 0 0.7rem;
-  text-align: left;
-}
-
-
-/* We want the headings to be a little bigger than the paragraph text */
-.big {
-  font-size: 2.3em;
-}
-
-.small {
-  font-size: 1.8em;
-}
-
-.bolder {
-  font-weight: 800;
-}
-
-/* Paragraph */
-p {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.28rem;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #525A76;
-  margin: 2rem 0 0.6rem;
-}
-
-.lead {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #2d2a55;
-  text-align: center;
-  max-width: 70ch;
-  margin: 0.6rem auto 0;
-}
-
-section {
-  margin-bottom: 2.5em;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem 2rem;
-  background: #fdfdfd;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
-}
-
-section > h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-/* Links */
-a {
-  color:#170e8f;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  border-bottom: 2px solid color(#4b468d);
-}
-
-  
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Project section (fade into page background) */
-section.project-section {
-  background: #EFEFF6;
-  box-shadow: none;
-  border: none;
-  border-radius: 0;
-  padding: 2rem 0;
-  max-width: 1000px; 
-  margin: 2rem auto; 
-}
-
-/* Chart Blocks */
-.chart-block {
-  width: fit-content;
-  margin: 2.5rem auto;
-  /* border: 2px dashed red; */
-}
-
-.chart-block figure {       
-  width: 100%;
-  margin: 0 auto;
-}
-
-.chart-title {
-  text-align: left;
-  width: 100%;
-  font-size: 1.3rem;
-  font-style: normal;
-  font-weight: 650;
-  margin: 0 0 1rem;
-  color: #1f1b5e;
-  font-family: 'Palatino', 'URW Palladio L', serif;
-}
-
-/* Side-by-side chart layout (description left, chart right) */
-.chart-layout {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-}
-
-.chart-text {
-  flex: 0 0 38%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
-}
-
-.chart-text h2,
-.chart-text h3 {
-  text-align: left;
-  margin-top: 8rem;
-  font-size: 1.8rem;
-}
-
-.chart-text p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #525A76;
-  margin-top: 0.25rem;
-}
-
-.chart-figure {
-  flex: 0 0 100%;
-}
-
-/* Charts and Maps Panels */
-.charts-row {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 1.5rem;
-}
-
-.chart-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.chart-panel figure {
-  margin: 0;
-  width: 100%;
-}
-
-.chart-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 2rem;
-}
-
-.chart-grid .chart {
-  width: 100%;
-}
-
-.maps-row {
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 1.5rem;
-}
-
-.map-panel {
-  flex: 1;
-  max-width: 50%; 
-  align-items: stretch;
-}
-
-.map-panel h3 {
-  margin-bottom: 0.5rem;
-}
-
-.map-panel figure {
-  width: 100%;
-  margin: 0;
-}
-
-/* Academic integrity dropdown */
-.academic-integrity-container {
-  margin: 4rem auto 2rem;
-  max-width: 400px;
-  text-align: center;
-}
-
-.academic-integrity-btn {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-
-  padding: 0.9rem 1.4rem;
-  border-radius: 999px;
-
-  background: #ffffff;
-  color: #1f1b5e;
-  border: 2px solid rgba(31, 27, 94, 0.35);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-/* remove default marker */
-.academic-integrity-btn::-webkit-details-marker {
-  display: none;
-}
-
-.academic-integrity-btn:hover {
-  filter: brightness(0.98);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
-}
-
-.academic-integrity-content {
-  margin-top: 1rem;
-  padding: 1.2rem 1.6rem;
-  border-radius: 14px;
-  background: #fafaff;
-  border: 2px solid rgba(41, 3, 103, 0.35);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  text-align: center;
-}
-.academic-integrity-content p {
-  margin: 0;
-  font-size: 0.8rem;
-}
-
-
-/* ===================================
-   Extra additions (fade + tasks + responsive)
-   =================================== */
-
-/* Fade-in effect for sections (apply class="fade-in-section" to a section) */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .fade-in-section {
-    transition: none;
-    transform: none;
-  }
-}
-
-/* Collapsible task brief (matches <details class="task-brief"> ... ) */
-.task-brief {
-  margin: 1rem auto 0;
-  max-width: 900px;
-}
-
-/* Clickable "button" */
-.task-summary {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-
-  padding: 1rem 1.4rem;
-  border-radius: 12px;
-
-  background: #ffffff;
-  color: #1f1b5e;
-  border: 2px solid rgba(31, 27, 94, 0.35);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.3rem;
-  font-weight: 600;
-
-  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-}
-
-.task-summary::-webkit-details-marker {
-  display: none;
-}
-
-.task-summary:hover {
-  filter: brightness(0.98);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
-}
-
-.task-summary:active {
-  transform: translateY(1px);
-}
-
-/* Chevron on the right */
-.task-chevron {
-  font-size: 0.95rem;
-  opacity: 0.7;
-  transition: transform 0.2s ease;
-}
-
-/* Rotate chevron when open */
-.task-brief[open] .task-chevron {
-  transform: rotate(180deg);
-}
-
-/* Revealed task content panel */
-.task-content {
-  margin-top: 1rem;
-  padding: 1.6rem 2rem;
-  border-radius: 14px;
-  background: #fafaff;
-  border: 2px solid rgba(41, 3, 103, 0.35);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  text-align: center;
-}
-
-.task-content p {
-  margin: 0;
-}
-
-/* Ensure Vega/Vega-Lite embeds shrink to fit on smaller screens */
-.vega-embed,
-.vega-embed > div {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.vega-embed svg,
-.vega-embed canvas {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Vega-Embed actions (3 dots): keep it inside the chart corner, no weird spacing */
-.vega-embed {
-  position: relative;
-}
-
-
-.vega-actions {
-  position: absolute !important;
-  top: 10px !important;
-  right: 10px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  z-index: 5;
-}
-
-/* Responsive layout: stack when the page is narrow */
-@media (max-width: 900px) {
-  section {
-    padding: 1.5rem 1.5rem;
-  }
-
-  .charts-row,
-  .maps-row {
-    flex-direction: column;
-    gap: 24px;
-    align-items: stretch;
-  }
-
-  .map-panel {
-    max-width: 100%;
-  }
-
-  .chart-layout {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .chart-text {
+/* ============================================
+   NAVIGATION – nümunə stili
+   ============================================ */
+.project-topbar {
+    position: relative;
     width: 100%;
-  }
+    background: transparent;
+    margin-bottom: 0.5rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-family: 'Palatino', 'URW Palladio L', serif;
+}
+
+.project-topbar h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1f1b5e;
+    margin: 0;
+}
+
+.project-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.project-nav a {
+    margin-left: 0;
+    font-size: 1.5rem;
+    color: #170e8f;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+}
+
+.project-nav a:hover {
+    text-decoration: underline;
+    border-bottom: 2px solid #4b468d;
+}
+
+/* ============================================
+   HERO SECTION – stil yumşaldılıb
+   ============================================ */
+.hero-banner {
+    margin-top: 1rem;
+    position: relative;
+    height: 55vh;
+    min-height: 380px;
+    max-height: 520px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2d2a55 0%, #4b468d 50%, #1f1b5e 100%);
+    border-radius: 12px;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+}
+
+.hero-banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.35;
+    filter: brightness(70%);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+}
+
+.hero-overlay-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    z-index: 2;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-overlay-text h1 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 2.3rem;        /* nümunə big class-a bənzər */
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+}
+
+.hero-overlay-text h2 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.96;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ============================================
+   CONTENT WRAPPER
+   ============================================ */
+.project-wrapper {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0;
+    width: 100%;
+}
+
+/* ============================================
+   INTRO CARD – section stilinə yaxınlaşdırılıb
+   ============================================ */
+.project-intro-card {
+    background: #fdfdfd;
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    color: #525A76;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
+    position: relative;
+}
+
+.project-intro-card::before {
+    content: none; /* artıq radial glow lazım deyil */
+}
+
+.project-intro-card h2 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #333;
+    margin: 0 0 0.9rem 0;
+    text-align: center;
+}
+
+.project-intro-card p {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.28rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #525A76;
+    margin: 0.6rem 0 0.6rem;
+    text-align: center;
+}
+
+/* ============================================
+   SECTIONS – NÜMUNƏ CSS-LƏ EYNİ STİL
+   ============================================ */
+section {
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 2rem;
+    background: #fdfdfd;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+section h2 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.9rem;
+    text-align: center;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+section h3 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 650;
+    color: #2d2a55;
+    margin: 1.2rem 0 0.7rem;
+    text-align: center;
+}
+
+.section-text {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.28rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #525A76;
+    margin: 2rem 0 0.6rem;
+}
+
+/* ============================================
+   CHART FIGURES – ÜMUMİ
+   ============================================ */
+figure[id^="EnergyLocation"] {
+    margin: 2.5rem auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* IFRAME CHARTS */
+.energy-iframe,
+section iframe {
+    display: block;
+    width: 100% !important;
+    min-height: 650px;
+    margin: 2.5rem auto;
+    padding: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(31, 27, 94, 0.25);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* ============================================
+   INSIGHT BOXES – Nümunə palitrasına uyğun
+   ============================================ */
+.insight-box {
+    background: #fafaff;
+    border-left: 6px solid #1f1b5e;
+    padding: 1.8rem 1.9rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+.insight-box h4 {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.44rem;
+    line-height: 1.6;
+    font-weight: 650;
+    color: #1f1b5e;
+    margin: 0 0 0.8rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.insight-box h4::before {
+    content: '💡';
+    margin-right: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.insight-box p {
+    font-family: 'Palatino', 'URW Palladio L', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #525A76;
+    margin: 0;
+}
+
+/* ============================================
+   STATS GRID
+   ============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin: 2.5rem 0;
+}
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2.2rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    border: 1px solid rgba(31, 27, 94, 0.18);
+}
+
+.stat-number {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #1f1b5e;
+    margin-bottom: 0.7rem;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CONCLUSION SECTION
+   ============================================ */
+.conclusion-section {
+    background: #EFEFF6;
+    color: #1f1b5e;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.conclusion-section h2 {
+    color: #1f1b5e;
+}
+
+.conclusion-section .section-text {
+    color: #2d2a55;
+    font-size: 1.15rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   QRAFİK LAYOUTU – Myriam stilinə bənzər
+   ============================================ */
+section.chart-section {
+    max-width: 1000px;
+    padding: 2rem 2rem;
+    background: #EFEFF6;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+section.chart-section figure[id^="EnergyLocation"],
+section.chart-section .energy-iframe {
+    margin: 2rem auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Vega embed tam en */
+section.chart-section .vega-embed,
+section.chart-section .vega-embed > div,
+section.chart-section .vega-embed svg,
+section.chart-section .vega-embed canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN – nümunəyə uyğunlaşdırılmış
+   ============================================ */
+@media (max-width: 900px) {
+    body.project-page {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .hero-banner {
+        border-radius: 10px;
+        height: 50vh;
+        min-height: 320px;
+    }
+
+    section {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .project-intro-card {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .energy-iframe,
+    section iframe {
+        min-height: 520px;
+    }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
+    body.project-page {
+        font-size: 15.5px;
+        padding: 12px;
+    }
 
-  section {
-    padding: 1.25rem 1rem;
-  }
+    section {
+        padding: 1.25rem 1rem;
+    }
 
-  .task-summary {
-    padding: 0.95rem 1.1rem;
-    font-size: 1rem;
-  }
+    .project-intro-card {
+        padding: 1.25rem 1rem;
+    }
 
-  .task-content {
-    padding: 1rem 1rem;
-  }
+    .hero-overlay-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-overlay-text h2 {
+        font-size: 1rem;
+    }
+
+    .energy-iframe,
+    section iframe {
+        min-height: 420px;
+    }
 }
-
-@media (max-width: 900px) {
-  .chart-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .chart-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* End of CSS file */
