@@ -1,794 +1,525 @@
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
+/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
+
+/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
+
+/* Navigation Bar */
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-family: 'Palatino', 'URW Palladio L', serif;
 }
 
-body.project-page {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 2;
-    color: #1a1a1a;
-    background: #ffffff;
-    overflow-x: hidden;
-    font-size: 23px; /* bir az böyüdülmüş base font */
+.nav-name {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #1f1b5e;
 }
 
-/* ============================================
-   PROGRESS BAR
-   ============================================ */
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
-    z-index: 1001;
-    transition: width 0.1s ease;
-    box-shadow: 0 2px 8px rgba(26, 133, 102, 0.4);
+.nav-links a {
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  color:#170e8f;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
-.project-topbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    z-index: 1000;
-    padding: 0;
-    margin-top: 0;
+.nav-links a:hover {
+  text-decoration: underline;
+  border-bottom: 2px solid color(#4b468d);
 }
 
-.nav-container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 35px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Body */
+
+body {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 16.7px;
+  color: #333;
+  line-height: 1.6;
+  background-color: #EFEFF6;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-top: 25px;
 }
 
-.project-topbar h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-    text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.6);
-    letter-spacing: 0.8px;
+
+/* Headings */
+h1 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #1f1b5e;
+  margin: 1.2rem 0 0.8rem;
+  text-align: left;
 }
 
-.project-nav {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+.centered-title {
+  text-align: center;
 }
 
-.project-nav a {
-    color: rgba(255, 255, 255, 0.95);
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    padding-bottom: 5px;
-    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.3px;
+.left-text {
+  text-align: left;
 }
 
-.project-nav a:hover {
-    color: #ffffff;
-    transform: translateY(-2px);
-    text-shadow: 1px 2px 12px rgba(0, 0, 0, 0.7);
+h2{
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #333;         
+  margin: 1.6rem 0 0.9rem;
+  text-align: center;
 }
 
-.project-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: white;
-    transition: width 0.3s ease;
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+h3 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 650;
+  color: #2d2a55;
+  margin: 1.2rem 0 0.7rem;
+  text-align: center;
 }
 
-.project-nav a:hover::after {
-    width: 100%;
+h4, h5, h6 {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.44rem;
+  line-height: 1.6;
+  font-weight: 200;
+  color: #525A76;
+  margin: 1.2rem 0 0.7rem;
+  text-align: left;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
-.hero-banner {
-    margin-top: 0;
-    position: relative;
-    height: 80vh;
-    min-height: 700px;
-    max-height: 850px;
-    width: 100%;
-    overflow: hidden;
-    background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
+
+/* We want the headings to be a little bigger than the paragraph text */
+.big {
+  font-size: 2.3em;
 }
 
-.hero-banner img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    opacity: 0.45;
-    filter: brightness(65%);
+.small {
+  font-size: 1.8em;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+.bolder {
+  font-weight: 800;
 }
 
-.hero-overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    max-width: 1200px;
-    width: 90%;
-    z-index: 2;
+/* Paragraph */
+p {
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.28rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #525A76;
+  margin: 2rem 0 0.6rem;
 }
 
-.hero-tag {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 16px 36px;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    margin-bottom: 35px;
-    text-transform: uppercase;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2d2a55;
+  text-align: center;
+  max-width: 70ch;
+  margin: 0.6rem auto 0;
 }
 
-.hero-overlay-text h1 {
-    font-size: 92px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 30px 0;
-    text-shadow: 3px 5px 25px rgba(0, 0, 0, 0.5);
-    letter-spacing: -0.5px;
-}
-
-.hero-overlay-text h2 {
-    font-size: 40px;
-    font-weight: 400;
-    opacity: 0.95;
-    line-height: 1.6;
-    margin: 0;
-    text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* ============================================
-   CONTENT WRAPPER
-   ============================================ */
-.project-wrapper {
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 100px 140px;
-    width: 95%;
-}
-
-/* ============================================
-   INTRO CARD
-   ============================================ */
-.project-intro-card {
-    background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
-    border-radius: 24px;
-    padding: 90px 130px;
-    margin: 0 auto 100px;
-    max-width: 1800px;
-    color: white;
-    box-shadow: 0 25px 70px rgba(26, 133, 102, 0.35);
-    position: relative;
-    overflow: hidden;
-}
-
-.project-intro-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.project-intro-card h2 {
-    font-size: 56px;
-    font-weight: 700;
-    margin: 0 0 30px 0;
-    line-height: 1.3;
-    position: relative;
-    letter-spacing: -0.5px;
-}
-
-.project-intro-card p {
-    font-size: 28px;
-    line-height: 1.9;
-    opacity: 0.95;
-    margin: 0;
-    position: relative;
-}
-
-/* ============================================
-   SECTIONS
-   ============================================ */
 section {
-    background: white;
-    padding: 90px 130px;
-    border-radius: 24px;
-    margin: 70px auto;
-    max-width: 1800px;
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
+  background: #fdfdfd;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
+}
+
+section > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color:#170e8f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  border-bottom: 2px solid color(#4b468d);
+}
+
+  
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Project section (fade into page background) */
+section.project-section {
+  background: #EFEFF6;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 2rem 0;
+  max-width: 1000px; 
+  margin: 2rem auto; 
+}
+
+/* Chart Blocks */
+.chart-block {
+  width: fit-content;
+  margin: 2.5rem auto;
+  /* border: 2px dashed red; */
+}
+
+.chart-block figure {       
+  width: 100%;
+  margin: 0 auto;
+}
+
+.chart-title {
+  text-align: left;
+  width: 100%;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 650;
+  margin: 0 0 1rem;
+  color: #1f1b5e;
+  font-family: 'Palatino', 'URW Palladio L', serif;
+}
+
+/* Side-by-side chart layout (description left, chart right) */
+.chart-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.chart-text {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+.chart-text h2,
+.chart-text h3 {
+  text-align: left;
+  margin-top: 8rem;
+  font-size: 1.8rem;
+}
+
+.chart-text p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #525A76;
+  margin-top: 0.25rem;
+}
+
+.chart-figure {
+  flex: 0 0 100%;
+}
+
+/* Charts and Maps Panels */
+.charts-row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.chart-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.chart-panel figure {
+  margin: 0;
+  width: 100%;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 2rem;
+}
+
+.chart-grid .chart {
+  width: 100%;
+}
+
+.maps-row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.map-panel {
+  flex: 1;
+  max-width: 50%; 
+  align-items: stretch;
+}
+
+.map-panel h3 {
+  margin-bottom: 0.5rem;
+}
+
+.map-panel figure {
+  width: 100%;
+  margin: 0;
+}
+
+/* Academic integrity dropdown */
+.academic-integrity-container {
+  margin: 4rem auto 2rem;
+  max-width: 400px;
+  text-align: center;
+}
+
+.academic-integrity-btn {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #1f1b5e;
+  border: 2px solid rgba(31, 27, 94, 0.35);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* remove default marker */
+.academic-integrity-btn::-webkit-details-marker {
+  display: none;
+}
+
+.academic-integrity-btn:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+}
+
+.academic-integrity-content {
+  margin-top: 1rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 14px;
+  background: #fafaff;
+  border: 2px solid rgba(41, 3, 103, 0.35);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+  text-align: center;
+}
+.academic-integrity-content p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+
+/* ===================================
+   Extra additions (fade + tasks + responsive)
+   =================================== */
+
+/* Fade-in effect for sections (apply class="fade-in-section" to a section) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-section {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Collapsible task brief (matches <details class="task-brief"> ... ) */
+.task-brief {
+  margin: 1rem auto 0;
+  max-width: 900px;
+}
+
+/* Clickable "button" */
+.task-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 1rem 1.4rem;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #1f1b5e;
+  border: 2px solid rgba(31, 27, 94, 0.35);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+
+  font-family: 'Palatino', 'URW Palladio L', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.task-summary::-webkit-details-marker {
+  display: none;
+}
+
+.task-summary:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+}
+
+.task-summary:active {
+  transform: translateY(1px);
+}
+
+/* Chevron on the right */
+.task-chevron {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate chevron when open */
+.task-brief[open] .task-chevron {
+  transform: rotate(180deg);
+}
+
+/* Revealed task content panel */
+.task-content {
+  margin-top: 1rem;
+  padding: 1.6rem 2rem;
+  border-radius: 14px;
+  background: #fafaff;
+  border: 2px solid rgba(41, 3, 103, 0.35);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+  text-align: center;
+}
+
+.task-content p {
+  margin: 0;
+}
+
+/* Ensure Vega/Vega-Lite embeds shrink to fit on smaller screens */
+.vega-embed,
+.vega-embed > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.vega-embed svg,
+.vega-embed canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Vega-Embed actions (3 dots): keep it inside the chart corner, no weird spacing */
+.vega-embed {
+  position: relative;
+}
+
+
+.vega-actions {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 5;
+}
+
+/* Responsive layout: stack when the page is narrow */
+@media (max-width: 900px) {
+  section {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .charts-row,
+  .maps-row {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .map-panel {
+    max-width: 100%;
+  }
+
+  .chart-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .chart-text {
     width: 100%;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
-}
-
-section h2 {
-    font-size: 58px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 25px 0;
-    position: relative;
-    padding-bottom: 30px;
-    letter-spacing: -0.8px;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90px;
-    height: 6px;
-    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
-    border-radius: 3px;
-}
-
-section h3 {
-    font-size: 40px;
-    font-weight: 600;
-    color: #2a2a2a;
-    margin: 50px 0 30px 0;
-    letter-spacing: -0.5px;
-}
-
-.section-text {
-    font-size: 27px;
-    line-height: 2;
-    color: #3a3a3a;
-    margin-top: 30px;
-}
-
-/* ============================================
-   CHART FIGURES – ÜMUMİ (default)
-   ============================================ */
-figure[id^="EnergyLocation"] {
-    margin: 50px 0;
-    padding: 60px;
-    background: #fafbfc;
-    border-radius: 18px;
-    border: 2px solid #e8eaed;
-    transition: all 0.3s ease;
-}
-
-figure[id^="EnergyLocation"]:hover {
-    border-color: #1a8566;
-    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
-    transform: translateY(-4px);
-}
-
-/* IFRAME CHARTS (Chart 1) */
-.energy-iframe,
-section iframe {
-    margin: 50px 0;
-    padding: 0;
-    background: #fafbfc;
-    border-radius: 18px;
-    border: 2px solid #e8eaed;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100% !important;
-    min-height: 900px;
-    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
-}
-
-.energy-iframe:hover,
-section iframe:hover {
-    border-color: #1a8566;
-    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
-    transform: translateY(-4px);
-}
-
-/* ============================================
-   INSIGHT BOXES
-   ============================================ */
-.insight-box {
-    background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
-    border-left: 7px solid #1a8566;
-    padding: 50px 55px;
-    border-radius: 16px;
-    margin: 50px 0;
-    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.14);
-    transition: all 0.3s ease;
-}
-
-.insight-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(26, 133, 102, 0.20);
-}
-
-.insight-box h4 {
-    font-size: 34px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin: 0 0 20px 0;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.5px;
-}
-
-.insight-box h4::before {
-    content: '💡';
-    margin-right: 15px;
-    font-size: 34px;
-}
-
-.insight-box p {
-    font-size: 26px;
-    color: #2a2a2a;
-    line-height: 1.9;
-    margin: 0;
-    font-weight: 400;
-}
-
-/* ============================================
-   STATS GRID
-   ============================================ */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 45px;
-    margin: 70px 0;
-}
-
-.stat-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 26px;
-    padding: 70px 55px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
-    transition: all 0.3s ease;
-    border: 3px solid transparent;
-}
-
-.stat-card:hover {
-    transform: translateY(-14px);
-    box-shadow: 0 20px 55px rgba(26, 133, 102, 0.32);
-    border-color: #1a8566;
-}
-
-.stat-number {
-    font-size: 86px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #1a8566 0%, #3bc490 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    line-height: 1.1;
-    letter-spacing: -2px;
-}
-
-.stat-label {
-    font-size: 23px;
-    color: #4a4a4a;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    line-height: 1.6;
-}
-
-/* ============================================
-   CONCLUSION SECTION
-   ============================================ */
-.conclusion-section {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
-    color: white;
-    margin-top: 100px;
-}
-
-.conclusion-section h2 {
-    color: white;
-}
-
-.conclusion-section h2::after {
-    background: white;
-}
-
-.conclusion-section .section-text {
-    color: rgba(255, 255, 255, 0.93);
-    font-size: 27px;
-}
-
-/* ============================================
-   ANIMATIONS
-   ============================================ */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-@media (max-width: 1200px) {
-    body.project-page {
-        font-size: 20px;
-    }
-
-    .project-wrapper {
-        padding: 90px 90px;
-        width: 92%;
-    }
-    
-    section {
-        padding: 70px 90px;
-    }
-    
-    section h2 {
-        font-size: 50px;
-    }
-    
-    section h3 {
-        font-size: 34px;
-    }
-    
-    .section-text {
-        font-size: 24px;
-    }
-    
-    .energy-iframe,
-    section iframe {
-        min-height: 720px;
-    }
-    
-    .insight-box h4 {
-        font-size: 30px;
-    }
-    
-    .insight-box p {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 1024px) {
-    body.project-page {
-        font-size: 19px;
-    }
-
-    .nav-container {
-        padding: 30px 50px;
-    }
-
-    .project-topbar h1 {
-        font-size: 34px;
-    }
-
-    .project-nav a {
-        font-size: 22px;
-    }
-
-    .project-wrapper {
-        padding: 80px 60px;
-        width: 92%;
-    }
-
-    .hero-overlay-text h1 {
-        font-size: 72px;
-    }
-
-    .hero-overlay-text h2 {
-        font-size: 34px;
-    }
-
-    section {
-        padding: 70px 70px;
-    }
-
-    section h2 {
-        font-size: 48px;
-    }
-    
-    section h3 {
-        font-size: 32px;
-    }
-    
-    .section-text {
-        font-size: 22px;
-    }
-
-    .project-intro-card {
-        padding: 80px 90px;
-    }
-
-    .project-intro-card h2 {
-        font-size: 48px;
-    }
-    
-    .project-intro-card p {
-        font-size: 24px;
-    }
-    
-    .energy-iframe,
-    section iframe {
-        min-height: 660px;
-    }
-    
-    .insight-box {
-        padding: 45px 50px;
-    }
-    
-    .insight-box h4 {
-        font-size: 29px;
-    }
-    
-    .insight-box p {
-        font-size: 23px;
-    }
-    
-    .stat-card {
-        padding: 60px 45px;
-    }
-    
-    .stat-number {
-        font-size: 74px;
-    }
-    
-    .stat-label {
-        font-size: 21px;
-    }
-}
-
-@media (max-width: 768px) {
-    body.project-page {
-        font-size: 18px;
-    }
-
-    .nav-container {
-        flex-direction: row;
-        gap: 0;
-        padding: 25px 35px;
-    }
-
-    .project-topbar h1 {
-        font-size: 26px;
-    }
-
-    .project-nav {
-        gap: 30px;
-    }
-
-    .project-nav a {
-        font-size: 19px;
-    }
-
-    .hero-banner {
-        height: 65vh;
-        min-height: 550px;
-    }
-
-    .hero-overlay-text h1 {
-        font-size: 52px;
-    }
-
-    .hero-overlay-text h2 {
-        font-size: 26px;
-    }
-
-    .hero-tag {
-        font-size: 15px;
-        padding: 12px 24px;
-    }
-
-    .project-wrapper {
-        padding: 60px 40px;
-    }
-
-    .project-intro-card {
-        padding: 60px 50px;
-    }
-
-    .project-intro-card h2 {
-        font-size: 38px;
-    }
-
-    .project-intro-card p {
-        font-size: 21px;
-    }
-
-    section {
-        padding: 60px 45px;
-    }
-
-    section h2 {
-        font-size: 38px;
-    }
-
-    section h3 {
-        font-size: 28px;
-    }
-
-    .section-text {
-        font-size: 20px;
-    }
-
-    figure[id^="EnergyLocation"] {
-        padding: 38px;
-    }
-    
-    .energy-iframe,
-    section iframe {
-        min-height: 570px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .stat-card {
-        padding: 50px 40px;
-    }
-
-    .stat-number {
-        font-size: 62px;
-    }
-
-    .stat-label {
-        font-size: 19px;
-    }
-
-    .insight-box {
-        padding: 40px 40px;
-    }
-
-    .insight-box h4 {
-        font-size: 27px;
-    }
-
-    .insight-box p {
-        font-size: 21px;
-    }
+  }
 }
 
 @media (max-width: 480px) {
-    body.project-page {
-        font-size: 17px;
-    }
+  body {
+    font-size: 16px;
+  }
 
-    .project-topbar h1 {
-        font-size: 22px;
-    }
+  section {
+    padding: 1.25rem 1rem;
+  }
 
-    .project-nav a {
-        font-size: 17px;
-    }
+  .task-summary {
+    padding: 0.95rem 1.1rem;
+    font-size: 1rem;
+  }
 
-    .hero-overlay-text h1 {
-        font-size: 42px;
-    }
-
-    .hero-overlay-text h2 {
-        font-size: 22px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-    
-    section h3 {
-        font-size: 24px;
-    }
-
-    .section-text {
-        font-size: 19px;
-    }
-
-    .stat-number {
-        font-size: 54px;
-    }
-
-    .project-intro-card h2 {
-        font-size: 32px;
-    }
-
-    .project-intro-card p {
-        font-size: 19px;
-    }
-    
-    .energy-iframe,
-    section iframe {
-        min-height: 500px;
-    }
-    
-    .insight-box h4 {
-        font-size: 25px;
-    }
-    
-    .insight-box p {
-        font-size: 20px;
-    }
+  .task-content {
+    padding: 1rem 1rem;
+  }
 }
 
-/* ============================================
-   QRAFİK LAYOUTU – Myriam stilinə bənzər
-   ============================================ */
-
-/* 2–8-ci bölmələr: kartı bir az daraldırıq */
-section.chart-section {
-    max-width: 1200px;      /* daha slim kart */
-    padding: 70px 80px;
+@media (max-width: 900px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* Chart section-da əlavə ağ box / yaşıl çərçivə YOXDUR – təkcə qrafik kalsın */
-section.chart-section figure[id^="EnergyLocation"],
-section.chart-section .energy-iframe {
-    margin: 40px auto 30px;
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
+@media (max-width: 500px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Vega embed tam kart eninə yayılsın */
-section.chart-section .vega-embed,
-section.chart-section .vega-embed > div,
-section.chart-section .vega-embed svg,
-section.chart-section .vega-embed canvas {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-}
+/* End of CSS file */
