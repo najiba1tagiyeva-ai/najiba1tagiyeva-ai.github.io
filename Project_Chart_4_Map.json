@@ -4,10 +4,11 @@
   "height": 600,
   "background": "#ffffff",
   "padding": 20,
-  
   "title": {
     "text": "Renewable Energy Projects in Azerbaijan",
-    "subtitle": [ "Source: Azerbaijan Renewable Energy Agency under the Ministry of Energy"],
+    "subtitle": [
+      "Source: Azerbaijan Renewable Energy Agency under the Ministry of Energy"
+    ],
     "fontSize": 22,
     "subtitleFontSize": 13,
     "anchor": "start",
@@ -15,20 +16,13 @@
     "subtitleColor": "#64748b",
     "offset": 20
   },
-
-  "projection": {
-    "type": "mercator",
-    "center": [47.5, 40.4],
-    "scale": 5500
-  },
-
+  "projection": {"type": "mercator", "center": [47.5, 40.4], "scale": 5500},
   "data": {
-    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/Project_Chart_4_Renewables_Location%20.csv"
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_map_renewables_with_coords-for_map_new.csv"
   },
-
   "transform": [
     {"calculate": "trim(datum.Region)", "as": "Region_clean"},
-    {"calculate": "toNumber(datum.Capacity_MW)", "as": "Capacity_numeric"},
+    {"calculate": "toNumber(datum.CapacityMW)", "as": "Capacity_numeric"},
     {"filter": "isValid(datum.Capacity_numeric) && datum.Capacity_numeric > 0"},
     {
       "aggregate": [
@@ -37,16 +31,13 @@
       ],
       "groupby": ["Region_clean"]
     },
-    {
-      "calculate": "datum.total_capacity + ' MW'",
-      "as": "capacity_formatted"
-    },
+    {"calculate": "datum.total_capacity + ' MW'", "as": "capacity_formatted"},
     {
       "calculate": "datum.project_count + (datum.project_count === 1 ? ' project' : ' projects')",
       "as": "projects_formatted"
     },
     {
-      "calculate": "{'Baku': 'Bakı', 'Jabrayil': 'Cəbrayıl', 'Bilasuvar': 'Biləsuvar', 'Neftchala': 'Neftçala', 'Absheron': 'Abşeron', 'Gobustan': 'Qobustan', 'Garadagh': 'Qaradağ', 'Fuzuli': 'Füzuli', 'Mingachevir': 'Mingəçevir', 'Shamkir': 'Şəmkir', 'Tartar': 'Tərtər', 'Nakhchivan': 'Naxçıvan', 'Yevlakh': 'Yevlax', 'Lachin': 'Laçın', 'Imishli': 'İmişli', 'Goychay': 'Göyçay', 'Goygol': 'Göygöl', 'Ismayilli': 'İsmayıllı', 'Balakan': 'Balakən', 'Oghuz': 'Oğuz', 'Shaki': 'Şəki', 'Gusar': 'Qusar', 'Khizi': 'Xızı', 'Shabran': 'Şabran', 'Sumgayit': 'Sumqayıt', 'Karabakh': 'Qarabağ', 'Lachin/Kalbajar': 'Laçın/Kəlbəcər'}[datum.Region_clean] || datum.Region_clean",
+      "calculate": "{'Baku': 'Bakı', 'Jabrayil': 'Cəbrayıl', 'Bilasuvar': 'Biləsuvar', 'Neftchala': 'Neftçala', 'Absheron': 'Abşeron', 'Gobustan': 'Qobustan', 'Garadagh': 'Qaradağ', 'Fuzuli': 'Füzuli', 'Mingachevir': 'Mingəçevir', 'Shamkir': 'Şəmkir', 'Tartar': 'Tərtər', 'Nakhchivan': 'Naxçıvan', 'Yevlakh': 'Yevlax', 'Lachin': 'Laçın', 'Imishli': 'İmişli', 'Goychay': 'Göyçay', 'Goygol': 'Göygöl', 'Ismayilli': 'İsmayıllı', 'Balakan': 'Balakən', 'Oghuz': 'Oğuz', 'Shaki': 'Şəki', 'Gusar': 'Qusar', 'Khizi': 'Xızı', 'Shabran': 'Şabran', 'Sumgayit': 'Sumqayıt', 'Karabakh': 'Qarabağ', 'Lachin/Kalbajar': 'Laçın/Kəlbəcər', 'Zangilan': 'Zəngilan', 'Kalbajar': 'Kəlbəcər', 'Aghdara': 'Ağdərə'}[datum.Region_clean] || datum.Region_clean",
       "as": "Region_map"
     },
     {
@@ -61,7 +52,6 @@
       "as": "geo"
     }
   ],
-
   "layer": [
     {
       "data": {
@@ -75,24 +65,15 @@
         "strokeWidth": 1.5
       }
     },
-    
     {
-      "mark": {
-        "type": "geoshape",
-        "stroke": "white",
-        "strokeWidth": 1.5
-      },
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "total_capacity",
           "type": "quantitative",
           "title": "Total Capacity (MW)",
-          "scale": {
-            "scheme": "teals",
-            "domain": [0, 600],
-            "type": "sqrt"
-          },
+          "scale": {"scheme": "teals", "domain": [0, 600], "type": "sqrt"},
           "legend": {
             "orient": "bottom-right",
             "titleFontSize": 13,
@@ -104,14 +85,19 @@
         },
         "tooltip": [
           {"field": "Region_clean", "type": "nominal", "title": "Region"},
-          {"field": "capacity_formatted", "type": "nominal", "title": "Capacity"},
-          {"field": "projects_formatted", "type": "nominal", "title": "Projects"}
+          {
+            "field": "capacity_formatted",
+            "type": "nominal",
+            "title": "Capacity"
+          },
+          {
+            "field": "projects_formatted",
+            "type": "nominal",
+            "title": "Projects"
+          }
         ]
       }
     }
   ],
-  
-  "config": {
-    "view": {"stroke": null}
-  }
+  "config": {"view": {"stroke": null}}
 }
