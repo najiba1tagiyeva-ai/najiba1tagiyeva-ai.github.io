@@ -240,7 +240,7 @@
         ]; 
 
         charts.forEach(chart => {
-            vegaEmbed(chart.id, chart.file, {
+            vegaEmbed(chart.id, chart.file, { 
                 actions: true,
                 theme: 'latimes'
             }).catch(error => {
