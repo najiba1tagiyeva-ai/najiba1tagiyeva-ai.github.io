@@ -762,12 +762,29 @@ section iframe:hover {
     }
 }
 
+/* ============================================
+   QRAFİK KONTENTİNİN STANDART ÖLÇÜSÜ
+   ============================================ */
 
-
-section.chart-section figure[id^="EnergyLocation"],
-section.chart-section .energy-iframe {
-    padding: 10px;   
+/* Qrafik box-larının eni intro section ilə balanslı olsun */
+figure[id^="EnergyLocation"],
+.energy-iframe {
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
 }
 
+/* Chart section-larda qrafik ətrafındakı padding-i azaldırıq */
+section.chart-section figure[id^="EnergyLocation"],
+section.chart-section .energy-iframe {
+    padding: 10px;
+}
 
-
+/* Vega qrafiklərinin daxilindəki elementlərin hamısı container-in eninə yayılsın */
+.vega-embed,
+.vega-embed .vega-view,
+.vega-embed canvas,
+.vega-embed svg {
+    width: 100% !important;
+    max-width: 100% !important;
+}
