@@ -763,9 +763,10 @@ section iframe:hover {
 }
 
 
-section {
-    max-width: 1800px;
-    padding: 90px 130px;
-    ...
+
+section.chart-section figure[id^="EnergyLocation"],
+section.chart-section .energy-iframe {
+    padding: 20px;   
 }
+
 
