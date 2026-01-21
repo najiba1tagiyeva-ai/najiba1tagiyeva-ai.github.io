@@ -8,377 +8,235 @@
 }
 
 /* ============================================
-   BASE – Maria stilinə uyğun
+   BASE – ölçülər düzəldilib, rənglər saxlanılıb
    ============================================ */
 
 body.project-page {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 16.7px;
-  color: #333;
-  line-height: 1.6;
-  background-color: #EFEFF6;
-  margin: 0 auto;
-  max-width: 1100px;
-  padding-top: 25px;
-  overflow-x: hidden;
-}
-
-/* Global mətn stilləri */
-body.project-page h1 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: 700;
-  color: #1f1b5e;
-  margin: 1.2rem 0 0.8rem;
-  text-align: left;
-}
-
-body.project-page h2 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 2.1rem;
-  line-height: 1.15;
-  font-weight: 700;
-  color: #333;
-  margin: 1.6rem 0 0.9rem;
-  text-align: center;
-}
-
-body.project-page h3 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.55rem;
-  line-height: 1.2;
-  font-weight: 650;
-  color: #2d2a55;
-  margin: 1.2rem 0 0.7rem;
-  text-align: center;
-}
-
-body.project-page h4,
-body.project-page h5,
-body.project-page h6 {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.44rem;
-  line-height: 1.6;
-  font-weight: 200;
-  color: #525A76;
-  margin: 1.2rem 0 0.7rem;
-  text-align: left;
-}
-
-body.project-page p {
-  font-family: 'Palatino', 'URW Palladio L', serif;
-  font-size: 1.28rem;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #525A76;
-  margin: 2rem 0 0.6rem;
-}
-
-/* Links */
-body.project-page a {
-  color: #170e8f;
-  text-decoration: none;
-}
-
-body.project-page a:hover {
-  text-decoration: underline;
-  border-bottom: 2px solid #4b468d;
-}
-
-/* Images */
-body.project-page img {
-  max-width: 100%;
-  height: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16.7px;     /* Maria-nın base ölçüsü */
+    line-height: 1.6;      /* 2 → çox geniş idi, oxunuş çətinləşirdi */
+    color: #1a1a1a;
+    background: #ffffff;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
 /* ============================================
-   PROGRESS BAR
-   ============================================ */
-
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 4px;
-  background: linear-gradient(90deg, #1f1b5e 0%, #4b468d 100%);
-  z-index: 1001;
-  transition: width 0.1s ease;
-  box-shadow: 0 2px 8px rgba(31, 27, 94, 0.35);
-}
-
-/* ============================================
-   NAVIGATION – Maria stilinə bənzər
+   TOP NAV – sənin rənglərin eynidir
    ============================================ */
 
 .project-topbar {
-  width: 100%;
-  margin-bottom: 0.5rem;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0;
+    margin-top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0;
+    max-width: 1100px;   
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .project-topbar h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #1f1b5e;
-  margin: 0;
+    font-size: 2.4rem;    /* 40px → balanslı rem ölçü */
+    font-weight: 700;
+    color: white;
 }
 
 .project-nav {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
+    display: flex;
+    gap: 30px;
 }
 
 .project-nav a {
-  margin-left: 0;
-  font-size: 1.5rem;
-  color: #170e8f;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-}
-
-.project-nav a:hover {
-  text-decoration: underline;
-  border-bottom: 2px solid #4b468d;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 /* ============================================
-   HERO SECTION
+   HERO – rənglər və yaşıl palitra eynidir
    ============================================ */
 
 .hero-banner {
-  margin-top: 1rem;
-  position: relative;
-  height: 55vh;
-  min-height: 380px;
-  max-height: 520px;
-  width: 100%;
-  overflow: hidden;
-  background: linear-gradient(135deg, #2d2a55 0%, #4b468d 50%, #1f1b5e 100%);
-  border-radius: 12px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+    position: relative;
+    height: 55vh;
+    min-height: 380px;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a4d3c 0%, #1a6b54 50%, #2d8a6e 100%);
 }
 
 .hero-banner img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  filter: brightness(70%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.45;
+    filter: brightness(65%);
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 100%);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65));
 }
 
 .hero-overlay-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  z-index: 2;
+    position: absolute;
+    inset: 0;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
 }
 
 .hero-tag {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.18);
-  padding: 0.7rem 1.6rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  margin-bottom: 1.3rem;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 24px;
 }
 
 .hero-overlay-text h1 {
-  font-size: 2.4rem;     /* böyük, amma oxunaqlı */
-  line-height: 1.3;
-  font-weight: 700;
-  margin: 0 0 0.75rem 0;
-  text-align: center;
+    font-size: 2.4rem;   /* 92px → 2.4rem */
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
 }
 
 .hero-overlay-text h2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  opacity: 0.96;
-  line-height: 1.7;
-  margin: 0;
-  text-align: center;
+    font-size: 1.25rem;  /* 40px → 1.25rem */
+    font-weight: 400;
+    opacity: 0.95;
+    line-height: 1.6;
 }
 
 /* ============================================
-   WRAPPER
+   WRAPPER – genişlik Maria kimi 1100px
    ============================================ */
 
 .project-wrapper {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0;
-  width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 100%;
 }
 
 /* ============================================
-   INTRO CARD
+   INTRO CARD – rəng eyni, ölçü düzəldildi
    ============================================ */
 
 .project-intro-card {
-  background: #fdfdfd;
-  border-radius: 12px;
-  padding: 2rem 2rem;
-  margin: 2rem auto;
-  max-width: 1000px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
+    background: linear-gradient(135deg, #1a8566, #3bc490);
+    border-radius: 24px;
+    padding: 2rem 2rem;
+    margin: 2rem auto;
+    color: white;
+    box-shadow: 0 20px 50px rgba(26, 133, 102, 0.25);
 }
 
 .project-intro-card h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .project-intro-card p {
-  text-align: center;
-  margin-top: 0.6rem;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 /* ============================================
-   SECTIONS – əsas layout
+   SECTION – ölçülər Maria kimi daraldıldı
    ============================================ */
 
-body.project-page section {
-  margin-bottom: 2.5em;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem 2rem;
-  background: #fdfdfd;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
+section {
+    background: white;
+    padding: 2rem 2rem;
+    border-radius: 24px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
 }
 
-body.project-page section > h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
+section h2 {
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    font-size: 1.55rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .section-text {
-  font-size: 1.18rem;
-  line-height: 1.6;
-  color: #525A76;
-  margin-top: 1.2rem;
-}
-
-/* Chart-sections fonu bir az fade olsun */
-section.chart-section {
-  background: #EFEFF6;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 2rem 0;
-}
-
-/* chart-section içindəki başlıqlar yenə mərkəzdə olsun */
-section.chart-section h2 {
-  margin-bottom: 0.6rem;
-}
-
-section.chart-section h3 {
-  margin-top: 0;
-  margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* ============================================
-   CHART CONTAINERS
+   CHART SECTION – daraldılmış
    ============================================ */
 
-figure[id^="EnergyLocation"] {
-  margin: 2.5rem auto;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
+section.chart-section {
+    background: white;
+    padding: 2rem 0;
+    max-width: 1000px;
+    box-shadow: none;
 }
 
-/* IFRAME CHARTS */
+/* qrafik konteyneri */
+figure[id^="EnergyLocation"] {
+    margin: 2rem auto;
+}
+
 .energy-iframe,
 section iframe {
-  display: block;
-  width: 100% !important;
-  min-height: 650px;
-  margin: 2.5rem auto 0;
-  padding: 0;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid rgba(31, 27, 94, 0.25);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-/* Vega embed responsive */
-.vega-embed,
-.vega-embed > div {
-  width: 100% !important;
-  max-width: 100% !important;
-}
-
-.vega-embed svg,
-.vega-embed canvas {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* Vega actions küncdə olsun */
-.vega-embed {
-  position: relative;
-}
-
-.vega-actions {
-  position: absolute !important;
-  top: 10px !important;
-  right: 10px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  z-index: 5;
+    display: block;
+    width: 100% !important;
+    min-height: 650px;
+    background: #fafbfc;
+    border-radius: 18px;
+    border: 2px solid #e8eaed;
+    box-shadow: 0 8px 25px rgba(26, 133, 102, 0.20);
 }
 
 /* ============================================
-   INSIGHT BOXES
+   INSIGHT BOX
    ============================================ */
 
 .insight-box {
-  background: #fafaff;
-  border-left: 6px solid #1f1b5e;
-  padding: 1.8rem 1.9rem;
-  border-radius: 12px;
-  margin: 2.5rem 0 0;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    background: linear-gradient(135deg, #e8f5f1, #d4ebe5);
+    border-left: 7px solid #1a8566;
+    padding: 1.6rem 1.8rem;
+    border-radius: 16px;
+    margin-top: 2rem;
 }
 
 .insight-box p {
-  margin: 0;
+    font-size: 1.15rem;
 }
 
 /* ============================================
@@ -386,36 +244,32 @@ section iframe {
    ============================================ */
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.8rem;
-  margin: 2.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
 }
 
 .stat-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 2.2rem 1.8rem;
-  text-align: center;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-  border: 1px solid rgba(31, 27, 94, 0.18);
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    border: 2px solid #e8eaed;
+    text-align: center;
 }
 
 .stat-number {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #1f1b5e;
-  margin-bottom: 0.7rem;
-  line-height: 1.1;
+    font-size: 2.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1a8566, #3bc490);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .stat-label {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  line-height: 1.6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a4a4a;
 }
 
 /* ============================================
@@ -423,32 +277,29 @@ section iframe {
    ============================================ */
 
 .conclusion-section {
-  background: #fdfdfd;
-  border-radius: 12px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.10), inset 0 4px 0 rgba(31, 27, 94, 0.18);
-}
-
-.conclusion-section h2 {
-  margin-top: 0;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: white;
+    margin-top: 100px;
+    padding: 2rem 2rem;
 }
 
 .conclusion-section .section-text {
-  text-align: left;
+    color: rgba(255, 255, 255, 0.93);
 }
 
 /* ============================================
-   ANIMATIONS (sənin JS üçündür)
+   FADE ANIMATION – sənin kodunla uyğundur
    ============================================ */
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .fade-in-visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ============================================
@@ -456,79 +307,34 @@ section iframe {
    ============================================ */
 
 @media (max-width: 900px) {
-  body.project-page {
-    font-size: 16px;
-    max-width: 100%;
-    padding: 16px;
-  }
+    .project-wrapper,
+    section {
+        padding: 1.5rem 1rem;
+    }
 
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
+    .hero-overlay-text h1 {
+        font-size: 2rem;
+    }
 
-  .project-topbar h1 {
-    font-size: 2.2rem;
-  }
+    .hero-overlay-text h2 {
+        font-size: 1.05rem;
+    }
 
-  .project-nav a {
-    font-size: 1.2rem;
-  }
-
-  body.project-page section,
-  .project-intro-card {
-    padding: 1.5rem 1.5rem;
-  }
-
-  section.chart-section {
-    padding: 1.5rem 0;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .energy-iframe,
-  section iframe {
-    min-height: 520px;
-  }
-
-  .hero-banner {
-    height: 50vh;
-    min-height: 320px;
-  }
-
-  .hero-overlay-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-overlay-text h2 {
-    font-size: 1.05rem;
-  }
+    .energy-iframe {
+        min-height: 520px;
+    }
 }
 
 @media (max-width: 480px) {
-  body.project-page {
-    font-size: 15.5px;
-    padding: 12px;
-  }
+    .hero-overlay-text h1 {
+        font-size: 1.7rem;
+    }
 
-  body.project-page section,
-  .project-intro-card {
-    padding: 1.25rem 1rem;
-  }
+    .hero-overlay-text h2 {
+        font-size: 0.95rem;
+    }
 
-  .hero-overlay-text h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero-overlay-text h2 {
-    font-size: 0.95rem;
-  }
-
-  .energy-iframe,
-  section iframe {
-    min-height: 420px;
-  }
+    .energy-iframe {
+        min-height: 420px;
+    }
 }
