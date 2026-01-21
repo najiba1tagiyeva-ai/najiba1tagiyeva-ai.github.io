@@ -1,0 +1,182 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Regional Renewable Capacity by Energy Type",
+    "subtitle": "Select an energy type to compare regional capacity (MW)",
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 430,
+  "data": {
+    "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_map_renewables_with_coords-for_map_new.csv"
+  },
+  "params": [
+    {
+      "name": "energyType",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Solar", "Hydro", "Wind", "Small Hydro"],
+        "labels": ["All Types", "Solar", "Hydro", "Wind", "Small Hydro"],
+        "name": "Energy type: "
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "trim(datum.Region)", "as": "Region_clean"},
+    {"calculate": "trim(datum.Type)", "as": "Type_clean"},
+    {"calculate": "toNumber(datum.CapacityMW)", "as": "Capacity_numeric"},
+    {"filter": "isValid(datum.Capacity_numeric) && datum.Capacity_numeric > 0"},
+    {"filter": "datum.Status !== 'Technical Potential'"},
+    {
+      "filter": "datum.Region_clean !== 'Various' && datum.Region_clean !== 'Karabakh' && datum.Region_clean !== 'Lachin/Kalbajar'"
+    },
+    {"filter": "energyType === 'All' || datum.Type_clean === energyType"},
+    {
+      "aggregate": [
+        {"op": "sum", "field": "Capacity_numeric", "as": "total_capacity"},
+        {"op": "count", "field": "Capacity_numeric", "as": "project_count"}
+      ],
+      "groupby": ["Region_clean"]
+    },
+    {"filter": "datum.total_capacity > 0"}
+  ],
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 4, "cornerRadiusTopRight": 4},
+  "encoding": {
+    "x": {
+      "field": "Region_clean",
+      "type": "nominal",
+      "sort": "-y",
+      "title": "Region",
+      "axis": {
+        "labelAngle": -40,
+        "labelFontSize": 11,
+        "labelLimit": 120,
+        "titleFontSize": 12
+      }
+    },
+    "y": {
+      "field": "total_capacity",
+      "type": "quantitative",
+      "title": "Total Capacity (MW)",
+      "axis": {
+        "titleFontSize": 12,
+        "labelFontSize": 11,
+        "format": "~s",
+        "grid": true
+      }
+    },
+    "color": {
+      "field": "total_capacity",
+      "type": "quantitative",
+      "title": "Total Capacity (MW)",
+      "scale": {"scheme": "greens"}
+    },
+    "tooltip": [
+      {"field": "Region_clean", "type": "nominal", "title": "Region"},
+      {
+        "field": "total_capacity",
+        "type": "quantitative",
+        "title": "Total Capacity (MW)",
+        "format": ".1f"
+      },
+      {
+        "field": "project_count",
+        "type": "quantitative",
+        "title": "Number of Projects"
+      }
+    ]
+  },
+  "config": {
+    "background": "white",
+    "title": {
+      "anchor": "start",
+      "color": "#111827",
+      "font": "sans-serif",
+      "fontSize": 18,
+      "fontWeight": "normal",
+      "subtitleFont": "sans-serif",
+      "subtitleFontSize": 12
+    },
+    "arc": {"fill": "#82c6df"},
+    "area": {"fill": "#82c6df"},
+    "line": {"stroke": "#82c6df", "strokeWidth": 2},
+    "path": {"stroke": "#82c6df"},
+    "rect": {"fill": "#82c6df"},
+    "shape": {"stroke": "#82c6df"},
+    "symbol": {"fill": "#82c6df", "size": 30},
+    "axis": {
+      "labelFont": "sans-serif",
+      "labelFontSize": 11.5,
+      "labelFontWeight": "normal",
+      "titleFont": "sans-serif",
+      "titleFontSize": 13,
+      "titleFontWeight": "normal"
+    },
+    "axisX": {"labelAngle": 0, "labelPadding": 4, "tickSize": 3},
+    "axisY": {
+      "labelBaseline": "middle",
+      "maxExtent": 45,
+      "minExtent": 45,
+      "tickSize": 2,
+      "titleAlign": "left",
+      "titleAngle": 0,
+      "titleX": -45,
+      "titleY": -11
+    },
+    "legend": {
+      "labelFont": "sans-serif",
+      "labelFontSize": 11.5,
+      "symbolType": "square",
+      "titleFont": "sans-serif",
+      "titleFontSize": 13,
+      "titleFontWeight": "normal"
+    },
+    "range": {
+      "category": [
+        "#ec8431",
+        "#829eb1",
+        "#c89d29",
+        "#3580b1",
+        "#adc839",
+        "#ab7fb4"
+      ],
+      "diverging": [
+        "#e68a4f",
+        "#f4bb6a",
+        "#f9e39c",
+        "#dadfe2",
+        "#a6b7c6",
+        "#849eae"
+      ],
+      "heatmap": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ],
+      "ordinal": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ],
+      "ramp": [
+        "#fbf2c7",
+        "#f9e39c",
+        "#f8d36e",
+        "#f4bb6a",
+        "#e68a4f",
+        "#d15a40",
+        "#ab4232"
+      ]
+    },
+    "view": {"stroke": null}
+  }
+}
