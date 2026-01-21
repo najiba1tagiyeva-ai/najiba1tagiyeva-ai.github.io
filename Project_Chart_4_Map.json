@@ -14,7 +14,11 @@
     "subtitleColor": "#64748b",
     "offset": 20
   },
-  "projection": { "type": "mercator", "center": [47.5, 40.4], "scale": 5500 },
+  "projection": { 
+    "type": "mercator", 
+    "center": [47.5, 40.4], 
+    "scale": 8000          
+  },
   "layer": [
     {
       "data": {
