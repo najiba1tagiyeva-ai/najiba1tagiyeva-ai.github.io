@@ -761,3 +761,15 @@ section iframe:hover {
         font-size: 20px;
     }
 }
+
+section.chart-section {
+    max-width: 2000px;      
+    padding: 70px 80px;     
+}
+
+
+section.chart-section figure[id^="EnergyLocation"] {
+    padding: 30px;         
+}
+
+
