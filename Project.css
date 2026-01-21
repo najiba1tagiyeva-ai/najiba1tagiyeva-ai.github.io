@@ -763,12 +763,9 @@ section iframe:hover {
 }
 
 
-section.chart-section {
-    max-width: 1350px;      /* 1800/2000 yox, daha dar kart */
-    padding: 55px 60px;     /* yan boşluqlar bir az azaldıldı */
+section {
+    max-width: 1800px;
+    padding: 90px 130px;
+    ...
 }
 
-
-section.chart-section figure[id^="EnergyLocation"] {
-    padding: 18px;         
-}
