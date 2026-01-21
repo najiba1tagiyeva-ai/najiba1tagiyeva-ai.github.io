@@ -220,7 +220,7 @@
 
         charts.forEach(chart => {
             vegaEmbed(chart.id, chart.file, {
-                actions: false,
+                actions: true,
                 theme: 'latimes'
             }).catch(error => {
                 console.error('Error loading chart:', chart.file, error);
