@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.2.0.json",
-  "description": "Feature Correlation Matrix for Renewable Energy Prediction"",
+  "description": "Feature Correlation Matrix for Renewable Energy Prediction",
 
   "autosize": {
     "type": "fit",
