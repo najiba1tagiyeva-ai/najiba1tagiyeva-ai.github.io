@@ -241,7 +241,7 @@ body.project-page {
 }
 
 /* ============================================
-   SECTIONS – GENERAL (Intro, Section 1, Conclusion)
+   SECTIONS
    ============================================ */
 section {
     background: white;
@@ -296,7 +296,7 @@ section h3 {
 }
 
 /* ============================================
-   CHART FIGURES – BASE
+   CHART FIGURES – ÜMUMİ (default)
    ============================================ */
 figure[id^="EnergyLocation"] {
     margin: 50px 0;
@@ -763,39 +763,19 @@ section iframe:hover {
 }
 
 /* ============================================
-   CHART SECTIONS – MARIAM STYLE
-   (Hero, Intro card, Conclusion dəyişmir)
+   QRAFİK LAYOUTU – Myriam stilinə bənzər
    ============================================ */
 
-/* 2–8-ci bölmələr: böyük ağ kart yox, sadəcə kontent */
+/* 2–8-ci bölmələr: kartı bir az daraldırıq */
 section.chart-section {
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 60px 0 40px;
-    max-width: 1200px;
+    max-width: 1200px;      /* daha slim kart */
+    padding: 70px 80px;
 }
 
-/* Başlıqlar yenə sənin stilində, sadəcə kart xətti olmur */
-section.chart-section h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-section.chart-section h2::after {
-    width: 80px;
-}
-
-section.chart-section h3 {
-    margin-top: 20px;
-}
-
-/* Qrafik paneli – standart en, fon/border yoxdur */
+/* Chart section-da əlavə ağ box / yaşıl çərçivə YOXDUR – təkcə qrafik kalsın */
 section.chart-section figure[id^="EnergyLocation"],
 section.chart-section .energy-iframe {
-    max-width: 1200px;
-    width: 100%;
-    margin: 35px auto 0;
+    margin: 40px auto 30px;
     padding: 0;
     background: transparent;
     border-radius: 0;
@@ -803,38 +783,12 @@ section.chart-section .energy-iframe {
     box-shadow: none;
 }
 
-/* Insight box-lar eyni qalır, sadəcə chart-section içində ortalanır */
-section.chart-section .insight-box {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ============================================
-   VEGA EMBED – qrafik 100% en + 3 nöqtə yuxarı sağda
-   ============================================ */
-
-.vega-embed,
-.vega-embed > div {
+/* Vega embed tam kart eninə yayılsın */
+section.chart-section .vega-embed,
+section.chart-section .vega-embed > div,
+section.chart-section .vega-embed svg,
+section.chart-section .vega-embed canvas {
     width: 100% !important;
     max-width: 100% !important;
-}
-
-.vega-embed svg,
-.vega-embed canvas {
-    max-width: 100% !important;
     height: auto !important;
-}
-
-.vega-embed {
-    position: relative;
-}
-
-.vega-actions {
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    z-index: 5;
 }
