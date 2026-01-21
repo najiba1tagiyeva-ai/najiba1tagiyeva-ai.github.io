@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "width": 900,
-  "height": 600,
+  "width": 750,
+  "height": 380,
   "background": "#ffffff",
   "padding": 20,
   "title": {
@@ -14,16 +14,12 @@
     "subtitleColor": "#64748b",
     "offset": 20
   },
-  "projection": {
-    "type": "mercator",
-    "center": [47.5, 40.4],
-    "scale": 5500
-  },
+  "projection": { "type": "mercator", "center": [47.5, 40.4], "scale": 4800 },
   "layer": [
     {
       "data": {
         "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/az.topojson",
-        "format": {"type": "topojson", "feature": "az"}
+        "format": { "type": "topojson", "feature": "az" }
       },
       "mark": {
         "type": "geoshape",
@@ -37,19 +33,27 @@
         "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_map_renewables_with_coords-for_map_new.csv"
       },
       "transform": [
-        {"calculate": "trim(datum.Region)", "as": "Region_clean"},
-        {"calculate": "toNumber(datum.CapacityMW)", "as": "Capacity_numeric"},
-        {"filter": "isValid(datum.Capacity_numeric) && datum.Capacity_numeric > 0"},
-        {"filter": "datum.Status !== 'Technical Potential'"},
+        { "calculate": "trim(datum.Region)", "as": "Region_clean" },
+        { "calculate": "toNumber(datum.CapacityMW)", "as": "Capacity_numeric" },
+        {
+          "filter": "isValid(datum.Capacity_numeric) && datum.Capacity_numeric > 0"
+        },
+        { "filter": "datum.Status !== 'Technical Potential'" },
         {
           "aggregate": [
-            {"op": "sum", "field": "Capacity_numeric", "as": "total_capacity"},
-            {"op": "count", "as": "project_count"}
+            { "op": "sum", "field": "Capacity_numeric", "as": "total_capacity" },
+            { "op": "count", "as": "project_count" }
           ],
           "groupby": ["Region_clean"]
         },
-        {"calculate": "round(datum.total_capacity * 10) / 10 + ' MW'", "as": "capacity_formatted"},
-        {"calculate": "datum.project_count + (datum.project_count === 1 ? ' project' : ' projects')", "as": "projects_formatted"},
+        {
+          "calculate": "round(datum.total_capacity * 10) / 10 + ' MW'",
+          "as": "capacity_formatted"
+        },
+        {
+          "calculate": "datum.project_count + (datum.project_count === 1 ? ' project' : ' projects')",
+          "as": "projects_formatted"
+        },
         {
           "calculate": "datum.Region_clean === 'Baku' ? 'Bakı' : datum.Region_clean === 'Jabrayil' ? 'Cəbrayıl' : datum.Region_clean === 'Bilasuvar' ? 'Biləsuvar' : datum.Region_clean === 'Neftchala' ? 'Neftçala' : datum.Region_clean === 'Absheron' ? 'Abşeron' : datum.Region_clean === 'Gobustan' ? 'Qobustan' : datum.Region_clean === 'Garadagh' ? 'Qaradağ' : datum.Region_clean === 'Fuzuli' ? 'Füzuli' : datum.Region_clean === 'Mingachevir' ? 'Mingəçevir' : datum.Region_clean === 'Shamkir' ? 'Şəmkir' : datum.Region_clean === 'Tartar' ? 'Tərtər' : datum.Region_clean === 'Nakhchivan' ? 'Naxçıvan' : datum.Region_clean === 'Yevlakh' ? 'Yevlakh' : datum.Region_clean === 'Lachin' ? 'Lachin' : datum.Region_clean === 'Imishli' ? 'İmişli' : datum.Region_clean === 'Goychay' ? 'Göyçay' : datum.Region_clean === 'Goygol' ? 'Xanlar' : datum.Region_clean === 'Ismayilli' ? 'İsmayıllı' : datum.Region_clean === 'Balakan' ? 'Balakən' : datum.Region_clean === 'Oghuz' ? 'Oğuz' : datum.Region_clean === 'Shaki' ? 'Şəki' : datum.Region_clean === 'Gusar' ? 'Qusar' : datum.Region_clean === 'Khizi' ? 'Xizı' : datum.Region_clean === 'Shabran' ? 'Şabran' : datum.Region_clean === 'Sumgayit' ? 'Sumqayıt' : datum.Region_clean === 'Zangilan' ? 'Zəngilan' : datum.Region_clean === 'Kalbajar' ? 'Kəlbəcər' : datum.Region_clean === 'Aghdara' ? 'Stepanakert' : datum.Region_clean",
           "as": "Region_map"
@@ -59,21 +63,21 @@
           "from": {
             "data": {
               "url": "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/az.topojson",
-              "format": {"type": "topojson", "feature": "az"}
+              "format": { "type": "topojson", "feature": "az" }
             },
             "key": "properties.name"
           },
           "as": "geo"
         }
       ],
-      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
+      "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 1.5 },
       "encoding": {
-        "shape": {"field": "geo", "type": "geojson"},
+        "shape": { "field": "geo", "type": "geojson" },
         "color": {
           "field": "total_capacity",
           "type": "quantitative",
           "title": "Total Capacity (MW)",
-          "scale": {"scheme": "teals", "domain": [0, 600], "type": "sqrt"},
+          "scale": { "scheme": "teals", "domain": [0, 600], "type": "sqrt" },
           "legend": {
             "orient": "bottom-right",
             "titleFontSize": 13,
@@ -84,12 +88,12 @@
           }
         },
         "tooltip": [
-          {"field": "Region_clean", "type": "nominal", "title": "Region"},
-          {"field": "capacity_formatted", "type": "nominal", "title": "Capacity"},
-          {"field": "projects_formatted", "type": "nominal", "title": "Projects"}
+          { "field": "Region_clean", "type": "nominal", "title": "Region" },
+          { "field": "capacity_formatted", "type": "nominal", "title": "Capacity" },
+          { "field": "projects_formatted", "type": "nominal", "title": "Projects" }
         ]
       }
     }
   ],
-  "config": {"view": {"stroke": null}}
+  "config": { "view": { "stroke": null } }
 }
