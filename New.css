@@ -1,49 +1,87 @@
 /* ============================
-   PORTFOLIO – GENİŞ, QRAFİKƏ UYĞUN DİZAYN
+   PORTFOLIO – GENİŞ & TƏMİZ LAYOUT
    ============================ */
 
-/* BƏZƏ STİLLƏR */
+/* Ümumi body */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     color: #1a1a1a;
     line-height: 1.6;
     background-color: #f3f7f5;
-
-    /* ❗ Artıq body məhdud deyil – tam genişlikdən istifadə edir */
     margin: 0;
     padding-top: 60px;
 }
 
-/* MƏTN BLOKU – səhifədəki bütün content üçün geniş konteyner (opsiyonaldır, body-dən daha genişdir) */
+/* Məzmun konteyneri – ortada, geniş */
 .main-wrapper {
-    max-width: 1400px;      /* kartlar üçün maksimum eni təyin edirik */
-    margin: 0 auto;         /* ekranın ortasında */
-    padding: 0 24px 40px;   /* yanlardan 24px boşluq */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px 40px;   /* yan boşluq 24px */
+    box-sizing: border-box;
 }
-
-/* Əgər HTML-də .main-wrapper yoxdursa, body əvəzinə section-larda max-width istifadə edə bilərsən.
-   Amma tövsiyəm: body içindəki hər şeyi <div class="main-wrapper"> ... </div> ilə bük. */
 
 /* ============================
-   BAŞLIQLAR
+   GÖZƏL HEADER (ADIN YAZILAN HİSSƏ)
    ============================ */
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    color: #0a4d3c;
+.portfolio-header {
+    background: linear-gradient(135deg, #e3f4ee 0%, #f9fdfc 100%);
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    border: 1px solid #d4ece2;
+    box-shadow: 0 10px 30px rgba(26,133,102,0.10);
 }
 
-h1 {
+.portfolio-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 6px;
+}
+
+.portfolio-header h1 {
+    margin: 0;
     font-size: 2.1rem;
+    color: #0a4d3c;
+    letter-spacing: -0.5px;
+}
+
+.header-links {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+.header-links a {
+    margin-left: 6px;
+    color: #1a8566;
+}
+
+.portfolio-header p {
+    margin: 4px 0 0 0;
+    color: #335;
+    font-size: 0.98rem;
+}
+
+/* ============================
+   BAŞLIQLAR & MƏTN
+   ============================ */
+
+h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #0a4d3c;
+    margin-top: 14px;
+    margin-bottom: 8px;
 }
 
 h2 {
     font-size: 1.5rem;
     position: relative;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.35rem;
 }
 
 h2::after {
@@ -58,9 +96,9 @@ h2::after {
 }
 
 p {
-    font-size: 1rem;
     margin-bottom: 0.7em;
     color: #333;
+    font-size: 1rem;
 }
 
 /* ============================
@@ -69,12 +107,9 @@ p {
 
 section {
     background: #ffffff;
-
-    /* Kartlar geniş və ortaya yaxın olsun */
     max-width: 1400px;
-    margin: 18px auto;          /* yuxarı-aşağı 18px, solda-sağda auto (ortada) */
-
-    padding: 22px 26px;         /* iç boşluq – nə çox, nə az */
+    margin: 18px auto;
+    padding: 22px 26px;
     border-radius: 16px;
     border-left: 4px solid #1a8566;
     box-shadow: 0 8px 24px rgba(26,133,102,0.08);
@@ -82,15 +117,15 @@ section {
 }
 
 /* ============================
-   ÇART SƏTRLƏRİ
+   CHART SƏTRLƏRİ
    ============================ */
 
 .chart-row {
     display: flex;
-    gap: 24px;                  /* chartlar arası boşluq */
+    gap: 24px;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .chart-row figure {
@@ -98,14 +133,20 @@ section {
     margin: 0;
 }
 
-.chart-row figure > div {
-    width: 100% !important;
+/* 🔥 BURADA “YASTI” PROBLEMİNİ DÜZƏLDİRİK */
+/* Şəkil və iframe-lər heç vaxt sıxılıb deformasiyaya düşməsin */
+section img,
+section iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;           /* aspect ratio saxlanılsın */
+    margin: 0 auto;
 }
 
-/* Bəzi chartlar iframe-disə, tam eni tutsun */
-section iframe {
+/* Bəzi chart container-lərində padding olmasın deyə */
+.chart-row figure > div {
     width: 100% !important;
-    border: none;
 }
 
 /* ============================
@@ -153,7 +194,7 @@ a:hover {
 }
 
 /* ============================
-   SCROLL PROGRESS BAR
+   SCROLL PROGRESS
    ============================ */
 
 #scroll-progress {
@@ -218,8 +259,20 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.25rem; }
+    .portfolio-header {
+        padding: 16px 16px;
+    }
+    .portfolio-header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .portfolio-header h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
     section {
         padding: 16px 16px;
         margin: 14px auto;
