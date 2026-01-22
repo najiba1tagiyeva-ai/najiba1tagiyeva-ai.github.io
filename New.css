@@ -1,34 +1,71 @@
 /* ============================
-   PORTFOLIO – KOMPAKT DİZAYN
+   PORTFOLIO – GENİŞ + BALANSLI DİZAYN
    ============================ */
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 15px;                   /* 16 → 15 (bir qədər daha kompakt) */
+    font-size: 16px;
     color: #1a1a1a;
-    line-height: 1.55;                 /* 1.7 → 1.55 */
+    line-height: 1.55;
     background-color: #f1f6f4;
+
+    /* 🔥 Əsas düzəliş – səhifə daha geniş olsun */
+    max-width: 1380px;  
     margin: 0 auto;
-    max-width: 1000px;                 /* 1150 → 1000 */
-    padding-top: 55px;                 /* 70 → 55 */
+    padding-top: 55px;
 }
+
+
+/* ============================
+   SECTIONS (kartlar)
+   ============================ */
+
+section {
+    background: #fff;
+
+    /* 🔥 Kartlar arasında boşluq azaldıldı */
+    margin: 16px 0;                     /* 12 → 16 (yuxarı-aşağı) */
+
+    /* 🔥 Kart içi daha balanslı */
+    padding: 22px 26px;                 /* 16–18 → 22–26 */
+
+    border-radius: 14px;                /* biraz daha künclər görünsün */
+    border-left: 4px solid #1a8566;
+    box-shadow: 0 6px 18px rgba(26,133,102,0.05);
+}
+
+
+/* ============================
+   CHART ROW
+   ============================ */
+
+.chart-row {
+    display: flex;
+
+    /* 🔥 Chart-lar arasında boşluq azaldıldı */
+    gap: 20px;                          /* 16 → 20 */
+    margin-top: 20px;
+}
+
+.chart-row figure {
+    flex: 1 1 50%;
+}
+
 
 /* ============================
    HEADINGS
    ============================ */
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    margin-top: 16px;                  /* 24 → 16 */
-    margin-bottom: 12px;               /* 16 → 12 */
-    color: #0a4d3c;
+h1 {
+    font-size: 2.15rem;
+    margin-bottom: 10px;
 }
 
-h1 { font-size: 1.9rem; }              /* 2.2rem → 1.9rem */
 h2 {
-    font-size: 1.4rem;                 /* 1.6rem → 1.4rem */
-    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
     padding-bottom: 0.35rem;
+    position: relative;
 }
 
 h2::after {
@@ -36,56 +73,19 @@ h2::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 55px;                       /* 70 → 55 */
-    height: 3px;                       /* 4 → 3 */
+    width: 65px;
+    height: 3px;
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 999px;
 }
 
 
 /* ============================
-   PARAGRAPH
+   PARAGRAPHS
    ============================ */
 
 p {
-    font-size: 0.97rem;
-    margin-bottom: 0.55em;             /* 1em → 0.55 */
-    color: #333;
-}
-
-
-/* ============================
-   SECTIONS / KARTLAR
-   ============================ */
-
-section {
-    background: #fff;
-    margin: 12px 0;                    /* 20 → 12 */
-    padding: 16px 18px;                /* 30–32 → 16–18 */
-    border-radius: 12px;               /* 18 → 12 */
-    border-left: 4px solid #1a8566;    /* accent daha incə */
-    box-shadow: 0 4px 12px rgba(26,133,102,0.05);  /* 10px 28px → daha yüngül */
-}
-
-
-/* ============================
-   CHART ROWS
-   ============================ */
-
-.chart-row {
-    display: flex;
-    gap: 16px;                         /* 30 → 16 */
-    justify-content: space-between;
-    margin-top: 18px;                  /* 25 → 18 */
-}
-
-.chart-row figure {
-    flex: 1 1 50%;
-    margin: 0;
-}
-
-.chart-row figure > div {
-    width: 100% !important;
+    margin-bottom: 0.6em;
 }
 
 
@@ -95,98 +95,20 @@ section {
 
 a {
     color: #1a8566;
-    font-weight: 500;
-    text-decoration: none;
+    font-weight: 600;
 }
 
 a:hover {
     color: #0a4d3c;
-    text-decoration: underline;
 }
 
 
 /* ============================
-   LOADER
+   RESPONSIVE FIXES
    ============================ */
 
-.loader-container {
-    position: fixed;
-    inset: 0;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.loader {
-    width: 32px;                       /* 40 → 32 */
-    aspect-ratio: 1;
-    background:
-        radial-gradient(farthest-side, #fff 90%, #0000) 50% / 7px 7px no-repeat,
-        conic-gradient(from -90deg at 12px 12px, #0000 90deg, #1a8566 0) 0 0 / 22px 22px;
-    animation: l7 0.9s infinite;
-}
-
-
-/* ============================
-   PROGRESS BAR
-   ============================ */
-
-#scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 5px;                       /* 6 → 5 */
-    width: 0%;
-    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
-    z-index: 10000;
-}
-
-
-/* ============================
-   BACK TO TOP BUTTON
-   ============================ */
-
-#backToTop {
-    position: fixed;
-    bottom: 16px;                      /* 20 → 16 */
-    right: 16px;                       /* 20 → 16 */
-    padding: 8px 12px;                 /* 10–15 → daha kiçik */
-    font-size: 14px;                   /* 16 → 14 */
-    background: #1a8566;
-    color: #fff;
-    border: none;
-    border-radius: 999px;
-    box-shadow: 0 5px 16px rgba(26,133,102,0.4);
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s, transform .2s, background .3s;
-}
-
-#backToTop:hover {
-    background: #145f4d;
-    transform: translateY(-2px);
-}
-
-#backToTop.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/* ============================
-   RESPONSIVE
-   ============================ */
-
-@media screen and (max-width: 900px) {
-    body { max-width: 94%; }
-    .chart-row { flex-direction: column; }
-}
-
-@media screen and (max-width: 480px) {
-    h1 { font-size: 1.35rem; }
-    h2 { font-size: 1.1rem; }
-    section { padding: 14px; }
+@media (max-width: 1100px) {
+    body {
+        max-width: 95%;
+    }
 }
