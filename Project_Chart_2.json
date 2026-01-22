@@ -20,7 +20,7 @@
     "color": "#1f2937",
     "subtitleColor": "#6b7280"
   },
-  "width": 700,
+  "width": 900,
   "height": 450,
   "transform": [
     { "calculate": "toNumber(datum['Year'])", "as": "year" },
