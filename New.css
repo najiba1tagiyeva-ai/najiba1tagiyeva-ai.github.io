@@ -278,3 +278,20 @@ a:hover {
         margin: 14px auto;
     }
 }
+
+.cc4-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 8px;
+}
+
+
+.cc4-charts img,
+.cc4-charts iframe,
+.cc4-charts .vega-embed {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
