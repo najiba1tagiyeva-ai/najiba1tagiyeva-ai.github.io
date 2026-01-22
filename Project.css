@@ -1,6 +1,4 @@
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +14,7 @@ body.project-page {
     font-size: 23px; /* bir az böyüdülmüş base font */
 }
 
-/* ============================================
-   PROGRESS BAR
-   ============================================ */
+
 .progress-bar {
     position: fixed;
     top: 0;
@@ -31,9 +27,7 @@ body.project-page {
     box-shadow: 0 2px 8px rgba(26, 133, 102, 0.4);
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
+
 .project-topbar {
     position: absolute;
     top: 0;
@@ -105,9 +99,7 @@ body.project-page {
     width: 100%;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+
 .hero-banner {
     margin-top: 0;
     position: relative;
@@ -187,9 +179,7 @@ body.project-page {
     text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================
-   CONTENT WRAPPER
-   ============================================ */
+
 .project-wrapper {
     max-width: 1800px;
     margin: 0 auto;
@@ -197,9 +187,7 @@ body.project-page {
     width: 95%;
 }
 
-/* ============================================
-   INTRO CARD
-   ============================================ */
+
 .project-intro-card {
     background: linear-gradient(135deg, #1a8566 0%, #2ea67c 50%, #3bc490 100%);
     border-radius: 24px;
@@ -240,9 +228,7 @@ body.project-page {
     position: relative;
 }
 
-/* ============================================
-   SECTIONS
-   ============================================ */
+
 section {
     background: white;
     padding: 90px 130px;
@@ -295,9 +281,7 @@ section h3 {
     margin-top: 30px;
 }
 
-/* ============================================
-   CHART FIGURES
-   ============================================ */
+
 figure[id^="EnergyLocation"] {
     margin: 50px 0;
     padding: 60px;
@@ -335,9 +319,7 @@ section iframe:hover {
     transform: translateY(-4px);
 }
 
-/* ============================================
-   INSIGHT BOXES
-   ============================================ */
+
 .insight-box {
     background: linear-gradient(135deg, #e8f5f1 0%, #d4ebe5 100%);
     border-left: 7px solid #1a8566;
@@ -377,9 +359,7 @@ section iframe:hover {
     font-weight: 400;
 }
 
-/* ============================================
-   STATS GRID
-   ============================================ */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -424,9 +404,7 @@ section iframe:hover {
     line-height: 1.6;
 }
 
-/* ============================================
-   CONCLUSION SECTION
-   ============================================ */
+
 .conclusion-section {
     background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
     color: white;
@@ -446,9 +424,7 @@ section iframe:hover {
     font-size: 27px;
 }
 
-/* ============================================
-   ANIMATIONS
-   ============================================ */
+
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
@@ -460,9 +436,7 @@ section iframe:hover {
     transform: translateY(0);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+
 @media (max-width: 1200px) {
     body.project-page {
         font-size: 20px;
@@ -769,7 +743,7 @@ section.chart-section .energy-iframe {
     padding: 10px;   
 }
 
-/* Academic Integrity Section */
+
 .academic-integrity-section {
     margin: 4rem auto 3rem;
     max-width: 800px;
@@ -819,5 +793,6 @@ section.chart-section .energy-iframe {
 .integrity-content a:hover {
     border-bottom-color: #667eea;
 }
+
 
 
