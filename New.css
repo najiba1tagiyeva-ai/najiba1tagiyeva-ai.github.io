@@ -133,7 +133,6 @@ section {
     margin: 0;
 }
 
-/* 🔥 BURADA “YASTI” PROBLEMİNİ DÜZƏLDİRİK */
 /* Şəkil və iframe-lər heç vaxt sıxılıb deformasiyaya düşməsin */
 section img,
 section iframe {
@@ -147,6 +146,31 @@ section iframe {
 /* Bəzi chart container-lərində padding olmasın deyə */
 .chart-row figure > div {
     width: 100% !important;
+}
+
+/* ============================
+   CC4 – 3 CHARTI ORTALAMAQ
+   ============================ */
+
+.cc4-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 8px;
+}
+
+/* CC4-dəki şəkil + Vega chartlar eyni enlə, ortada olsun */
+.cc4-charts img,
+.cc4-charts iframe,
+.cc4-charts .vega-embed {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Vega-Lite chartların görünməsi üçün minimum hündürlük */
+.vega-embed {
+    min-height: 380px !important;
 }
 
 /* ============================
@@ -278,20 +302,3 @@ a:hover {
         margin: 14px auto;
     }
 }
-
-.cc4-charts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    gap: 8px;
-}
-
-
-.cc4-charts img,
-.cc4-charts iframe,
-.cc4-charts .vega-embed {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
