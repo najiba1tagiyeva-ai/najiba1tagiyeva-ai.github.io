@@ -1,8 +1,8 @@
 /* ============================
-   PORTFOLIO – GENİŞ & TƏMİZ LAYOUT
+   PORTFOLIO 
    ============================ */
 
-/* Ümumi body */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
@@ -13,7 +13,7 @@ body {
     padding-top: 60px;
 }
 
-/* Məzmun konteyneri – ortada, geniş */
+
 .main-wrapper {
     max-width: 1400px;
     margin: 0 auto;
@@ -22,7 +22,7 @@ body {
 }
 
 /* ============================
-   GÖZƏL HEADER (ADIN YAZILAN HİSSƏ)
+   HEADER 
    ============================ */
 
 .portfolio-header {
@@ -68,7 +68,7 @@ body {
 }
 
 /* ============================
-   BAŞLIQLAR & MƏTN
+   Headings
    ============================ */
 
 h2, h3, h4, h5, h6 {
@@ -102,7 +102,7 @@ p {
 }
 
 /* ============================
-   KARTLAR (SECTION)
+   SECTION
    ============================ */
 
 section {
@@ -117,7 +117,7 @@ section {
 }
 
 /* ============================
-   CHART SƏTRLƏRİ
+   CHART 
    ============================ */
 
 .chart-row {
@@ -148,33 +148,33 @@ section iframe {
     width: 100% !important;
 }
 
-/* ============================
-   CC4 – 3 CHARTI ORTALAMAQ
-   ============================ */
-
+/* CC4  */
 .cc4-charts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    gap: 8px;
+    text-align: left !important;
 }
 
-/* CC4-dəki şəkil + Vega chartlar eyni enlə, ortada olsun */
-.cc4-charts img,
-.cc4-charts iframe,
-.cc4-charts .vega-embed {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
+/* Vega-Lite  */
+.vega-embed {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
 }
 
-/* Vega-Lite chartların görünməsi üçün minimum hündürlük */
+/* CC4  */
+.cc4-charts img {
+    display: block;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+
+/* Vega-Lite charts
 .vega-embed {
     min-height: 380px !important;
 }
 
 /* ============================
-   LİNKLƏR
+   LİNKs
    ============================ */
 
 a {
