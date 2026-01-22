@@ -13,8 +13,6 @@
 </head>
 
 <body>
-
-  
     <div class="main-wrapper">
 
         <!-- Header -->
@@ -81,26 +79,23 @@
             </p>
         </section>
 
-       <!-- CC4 -->
-<section id="cc4">
-    <h2>CC4. Replication. Re-create, then improve someone else's chart.</h2>
+        <!-- CC4 -->
+        <section id="cc4">
+            <h2>CC4. Replication. Re-create, then improve someone else's chart.</h2>
 
-    <div class="cc4-charts">
+            <div class="cc4-charts">
+                <p><strong>The original chart</strong></p>
+                <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
+                     alt="Original chart"
+                     style="width: 100%; max-width: 850px; border: 1px solid #ccc; margin: 0 auto 40px auto; display: block;">
 
-        <p><strong>The original chart</strong></p>
-        <img src="https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/main/wk4.Original_Voting.png"
-             alt="Original chart"
-             style="width: 100%; max-width: 850px; border: 1px solid #ccc; margin: 0 auto 40px auto; display: block;">
+                <p><strong>Chart 1. Replication using Vega-Lite</strong></p>
+                <div id="CC4_chart1"></div>
 
-        <p><strong>Chart 1. Replication using Vega-Lite</strong></p>
-        <div id="CC4_chart1"></div>
-
-        <p><strong>Chart 2. Improved version</strong></p>
-        <div id="CC4_chart2"></div>
-
-    </div>
-</section>
-
+                <p><strong>Chart 2. Improved version</strong></p>
+                <div id="CC4_chart2"></div>
+            </div>
+        </section>
 
         <!-- CC5 -->
         <section>
@@ -152,7 +147,6 @@
             </div>
         </section>
 
-      
         <!-- CC9 -->
         <section>
             <h2>CC9. Two Interactive Charts.</h2>
@@ -185,11 +179,8 @@
 
     </div> <!-- /main-wrapper -->
 
-
-  
     <div id="scroll-progress"></div>
     <button id="backToTop">↑ Top</button>
-
 
     <!-- JAVASCRIPT -->
     <script>
@@ -220,7 +211,7 @@
     vegaEmbed('#Location5',  figure_5_spec);
     vegaEmbed('#Location6',  figure_6_spec);
 
-    // CC4 
+    // CC4 charts
     vegaEmbed('#CC4_chart1', figure_7_spec);
     vegaEmbed('#CC4_chart2', figure_8_spec);
 
@@ -231,17 +222,13 @@
     vegaEmbed('#Location13', figure_13_spec);
     vegaEmbed('#Location14', figure_14_spec);
 
-    // CC8  URL 
-    if (figure_15_spec) vegaEmbed('#Location15', figure_15_spec);
-    if (figure_16_spec) vegaEmbed('#Location16', figure_16_spec);
-
+    // CC9 & CC10
     vegaEmbed('#Location17', figure_17_spec);
     vegaEmbed('#Location18', figure_18_spec);
     vegaEmbed('#Location19', figure_19_spec);
     vegaEmbed('#Location20', figure_20_spec);
 
-
-    // CC6 — 6 CPI 
+    // CC6 — CPI dashboard (6 charts)
     let cpiCharts = [
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_Consumer%20Price%20Index%20_All%20Items_CPIAUCSL.json",
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6.CPI_Food_CPIUFDSL.json",
