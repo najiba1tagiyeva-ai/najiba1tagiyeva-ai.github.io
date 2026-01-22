@@ -1,7 +1,3 @@
-/* ============================
-   PORTFOLIO 
-   ============================ */
-
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -12,19 +8,12 @@ body {
     margin: 0;
     padding-top: 60px;
 }
-
-
 .main-wrapper {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px 40px;   /* yan boşluq 24px */
     box-sizing: border-box;
 }
-
-/* ============================
-   HEADER 
-   ============================ */
-
 .portfolio-header {
     background: linear-gradient(135deg, #e3f4ee 0%, #f9fdfc 100%);
     border-radius: 20px;
@@ -67,9 +56,7 @@ body {
     font-size: 0.98rem;
 }
 
-/* ============================
-   Headings
-   ============================ */
+
 
 h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -101,9 +88,6 @@ p {
     font-size: 1rem;
 }
 
-/* ============================
-   SECTION
-   ============================ */
 
 section {
     background: #ffffff;
@@ -115,10 +99,6 @@ section {
     box-shadow: 0 8px 24px rgba(26,133,102,0.08);
     box-sizing: border-box;
 }
-
-/* ============================
-   CHART 
-   ============================ */
 
 .chart-row {
     display: flex;
@@ -133,7 +113,6 @@ section {
     margin: 0;
 }
 
-/* Şəkil və iframe-lər heç vaxt sıxılıb deformasiyaya düşməsin */
 section img,
 section iframe {
     display: block;
@@ -143,12 +122,11 @@ section iframe {
     margin: 0 auto;
 }
 
-/* Bəzi chart container-lərində padding olmasın deyə */
+
 .chart-row figure > div {
     width: 100% !important;
 }
 
-/* CC4  */
 .cc4-charts {
     text-align: left !important;
 }
@@ -160,7 +138,6 @@ section iframe {
     margin-right: auto !important;
 }
 
-/* CC4  */
 .cc4-charts img {
     display: block;
     margin-left: 0 !important;
@@ -173,9 +150,6 @@ section iframe {
     min-height: 380px !important;
 }
 
-/* ============================
-   LİNKs
-   ============================ */
 
 a {
     color: #1a8566;
@@ -188,9 +162,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ============================
-   LOADER
-   ============================ */
 
 .loader-container {
     position: fixed;
@@ -217,10 +188,6 @@ a:hover {
     100% { background-position: 50%, 26px 26px; }
 }
 
-/* ============================
-   SCROLL PROGRESS
-   ============================ */
-
 #scroll-progress {
     position: fixed;
     top: 0;
@@ -231,10 +198,6 @@ a:hover {
     box-shadow: 0 2px 6px rgba(26,133,102,0.4);
     z-index: 10000;
 }
-
-/* ============================
-   BACK TO TOP BUTTON
-   ============================ */
 
 #backToTop {
     position: fixed;
@@ -263,10 +226,6 @@ a:hover {
     opacity: 1;
     visibility: visible;
 }
-
-/* ============================
-   RESPONSIVE
-   ============================ */
 
 @media (max-width: 1100px) {
     .main-wrapper {
