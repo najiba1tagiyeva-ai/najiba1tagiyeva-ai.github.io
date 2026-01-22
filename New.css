@@ -1,44 +1,75 @@
+/* ============================
+   PORTFOLIO PAGE STYLING
+   Project üslubuna uyğun, amma daha sadə
+   ============================ */
+
 body {
-    font-family: "Inter", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
-    color: #1c1c1c;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    color: #1a1a1a;
+    line-height: 1.7;
+    background-color: #f3f7f5; /* az yaşıl tonlu açıq fond */
     margin: 0 auto;
-    max-width: 1150px; 
-    padding-top: 60px;
+    max-width: 1150px;
+    padding-top: 70px;
 }
+
+/* Başlıqlar – rəng və kiçik yaşıl underline */
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-top: 24px;
     margin-bottom: 16px;
-    color: #2c3e50;
+    color: #0a4d3c; /* project-dəki tünd yaşıl tonlara yaxın */
 }
 
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.6rem; }
+h1 { 
+    font-size: 2.2rem; 
+}
+
+h2 { 
+    font-size: 1.6rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Project səhifəsindəki kimi yaşıl xətt, amma daha incə */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
+    border-radius: 999px;
+}
 
 p {
     font-size: 1rem;
     margin-bottom: 1em;
-    color: #4d4d4d;
+    color: #3a3a3a;
 }
 
+/* ============================
+   SECTIONS – sadə kartlar, yaşıl accent
+   ============================ */
 
 section {
     background-color: #ffffff;
     margin: 20px 0;
-    padding: 35px;               
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 30px 32px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(26, 133, 102, 0.06);
     box-sizing: border-box;
+    border-left: 6px solid #1a8566; /* project-dəki yaşıl accent, amma sadə variant */
 }
 
+/* Chart row-lar eyni qalsın – sadəcə dizayn ilə uyğun */
 
 .chart-row {
     display: flex;
-    gap: 35px;
+    gap: 30px;
     justify-content: space-between;
     align-items: stretch;
     margin-top: 25px;
@@ -49,21 +80,28 @@ section {
     margin: 0;
 }
 
-
 .chart-row figure > div {
     width: 100% !important;
 }
 
+/* ============================
+   LINKS – mavi yox, yaşıl
+   ============================ */
 
 a {
-    color: #3498db;
+    color: #1a8566;
     text-decoration: none;
+    font-weight: 500;
 }
+
 a:hover {
-    color: #2c3e50;
+    color: #0a4d3c;
     text-decoration: underline;
 }
 
+/* ============================
+   RESPONSIVE – əvvəlki kimi
+   ============================ */
 
 @media screen and (max-width: 900px) {
     body {
@@ -82,6 +120,9 @@ a:hover {
     h2 { font-size: 1.2rem; }
 }
 
+/* ============================
+   LOADER – rəngi yaşıl edirik
+   ============================ */
 
 .loader-container {
     position: fixed;
@@ -101,7 +142,7 @@ a:hover {
     aspect-ratio: 1;
     background:
         radial-gradient(farthest-side, #fff 90%, #0000) 50% / 8px 8px no-repeat,
-        conic-gradient(from -90deg at 15px 15px, #0000 90deg, #3498db 0) 0 0 / 25px 25px;
+        conic-gradient(from -90deg at 15px 15px, #0000 90deg, #1a8566 0) 0 0 / 25px 25px;
     animation: l7 1s infinite;
 }
 
@@ -111,6 +152,10 @@ a:hover {
     100% { background-position: 50%, 25px 25px; }
 }
 
+/* ============================
+   SCROLL PROGRESS – project progress bar rəngləri
+   ============================ */
+
 #scroll-progress {
     position: fixed;
     top: 0;
@@ -118,10 +163,14 @@ a:hover {
     width: 0%;
     height: 6px;
     z-index: 10000;
-    background: #3498db;
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     transition: width 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26, 133, 102, 0.35);
 }
 
+/* ============================
+   BACK TO TOP BUTTON – yaşıl
+   ============================ */
 
 #backToTop {
     position: fixed;
@@ -129,19 +178,22 @@ a:hover {
     right: 20px;
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color: #1a8566;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 999px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(26,133,102,0.4);
     z-index: 1000;
-    transition: opacity 0.3s, background 0.3s;
+    transition: opacity 0.3s, background 0.3s, transform 0.2s;
     opacity: 0;
     visibility: hidden;
 }
 
-#backToTop:hover { background-color: #2c3e50; }
+#backToTop:hover { 
+    background-color: #145f4d; 
+    transform: translateY(-2px);
+}
 
 #backToTop.show {
     opacity: 1;
