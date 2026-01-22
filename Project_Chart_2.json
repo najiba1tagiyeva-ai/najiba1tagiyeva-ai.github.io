@@ -130,7 +130,7 @@
         "color": {
           "field": "intensityCategory",
           "type": "nominal",
-          "title": "Carbon intensity (tonnes CO₂ per million USD)",
+          "title": "Carbon intensity (tonnes CO₂ per mln USD)",
           "scale": {
             "domain": ["High (≥2.0)", "Medium (1.0–2.0)", "Low (<1.0)"],
             "range": ["#d73027", "#f59e0b", "#1a9850"]
