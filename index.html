@@ -14,7 +14,7 @@
 
 <body>
 
-    <!-- Səhifə məzmunu üçün geniş konteyner -->
+  
     <div class="main-wrapper">
 
         <!-- Header -->
@@ -152,23 +152,7 @@
             </div>
         </section>
 
-        <!-- CC8 -->
-        <section>
-            <h2>CC8. Big Data: Extracting a Story from Millions of Prices</h2>
-            
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 400px;">
-                    <h3>Map 1: Base Map</h3>
-                    <div id="Location15" style="height: 500px;"></div>
-                </div>
-                
-                <div style="flex: 1; min-width: 400px;">
-                    <h3>Map 2: Choropleth</h3>
-                    <div id="Location16" style="height: 500px;"></div>
-                </div>
-            </div>
-        </section>
-
+      
         <!-- CC9 -->
         <section>
             <h2>CC9. Two Interactive Charts.</h2>
@@ -202,7 +186,7 @@
     </div> <!-- /main-wrapper -->
 
 
-    <!-- (istəsən buraya scroll-progress div və back-to-top button da əlavə edə bilərsən) -->
+  
     <div id="scroll-progress"></div>
     <button id="backToTop">↑ Top</button>
 
@@ -224,8 +208,6 @@
     let figure_12_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk5.Map2.json";
     let figure_13_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.Wales_independent_schools.json";
     let figure_14_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk7.Scotland.json";
-    let figure_15_spec = "";  // CC8 Map 1 – sonra əlavə edə bilərsən
-    let figure_16_spec = "";  // CC8 Map 2 – sonra əlavə edə bilərsən
     let figure_17_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Project_Chart_2.json"; 
     let figure_18_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Interactive_Energy_type.json";
     let figure_19_spec = "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/Matrix.json";
@@ -238,7 +220,7 @@
     vegaEmbed('#Location5',  figure_5_spec);
     vegaEmbed('#Location6',  figure_6_spec);
 
-    // CC4 chartları – yeni id-lərlə
+    // CC4 
     vegaEmbed('#CC4_chart1', figure_7_spec);
     vegaEmbed('#CC4_chart2', figure_8_spec);
 
@@ -249,7 +231,7 @@
     vegaEmbed('#Location13', figure_13_spec);
     vegaEmbed('#Location14', figure_14_spec);
 
-    // CC8 üçün yalnız URL əlavə etsən işləsin deyə şərti çağırış
+    // CC8  URL 
     if (figure_15_spec) vegaEmbed('#Location15', figure_15_spec);
     if (figure_16_spec) vegaEmbed('#Location16', figure_16_spec);
 
@@ -259,7 +241,7 @@
     vegaEmbed('#Location20', figure_20_spec);
 
 
-    // CC6 — 6 CPI chartını loop ilə əlavə etmək
+    // CC6 — 6 CPI 
     let cpiCharts = [
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6_Consumer%20Price%20Index%20_All%20Items_CPIAUCSL.json",
         "https://raw.githubusercontent.com/najiba1tagiyeva-ai/najiba1tagiyeva-ai.github.io/refs/heads/main/wk6.CPI_Food_CPIUFDSL.json",
