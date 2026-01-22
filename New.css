@@ -1,71 +1,49 @@
 /* ============================
-   PORTFOLIO – GENİŞ + BALANSLI DİZAYN
+   PORTFOLIO – GENİŞ, QRAFİKƏ UYĞUN DİZAYN
    ============================ */
 
+/* BƏZƏ STİLLƏR */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     color: #1a1a1a;
-    line-height: 1.55;
-    background-color: #f1f6f4;
+    line-height: 1.6;
+    background-color: #f3f7f5;
 
-    /* 🔥 Əsas düzəliş – səhifə daha geniş olsun */
-    max-width: 1380px;  
-    margin: 0 auto;
-    padding-top: 55px;
+    /* ❗ Artıq body məhdud deyil – tam genişlikdən istifadə edir */
+    margin: 0;
+    padding-top: 60px;
 }
 
+/* MƏTN BLOKU – səhifədəki bütün content üçün geniş konteyner (opsiyonaldır, body-dən daha genişdir) */
+.main-wrapper {
+    max-width: 1400px;      /* kartlar üçün maksimum eni təyin edirik */
+    margin: 0 auto;         /* ekranın ortasında */
+    padding: 0 24px 40px;   /* yanlardan 24px boşluq */
+}
+
+/* Əgər HTML-də .main-wrapper yoxdursa, body əvəzinə section-larda max-width istifadə edə bilərsən.
+   Amma tövsiyəm: body içindəki hər şeyi <div class="main-wrapper"> ... </div> ilə bük. */
 
 /* ============================
-   SECTIONS (kartlar)
+   BAŞLIQLAR
    ============================ */
 
-section {
-    background: #fff;
-
-    /* 🔥 Kartlar arasında boşluq azaldıldı */
-    margin: 16px 0;                     /* 12 → 16 (yuxarı-aşağı) */
-
-    /* 🔥 Kart içi daha balanslı */
-    padding: 22px 26px;                 /* 16–18 → 22–26 */
-
-    border-radius: 14px;                /* biraz daha künclər görünsün */
-    border-left: 4px solid #1a8566;
-    box-shadow: 0 6px 18px rgba(26,133,102,0.05);
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    color: #0a4d3c;
 }
-
-
-/* ============================
-   CHART ROW
-   ============================ */
-
-.chart-row {
-    display: flex;
-
-    /* 🔥 Chart-lar arasında boşluq azaldıldı */
-    gap: 20px;                          /* 16 → 20 */
-    margin-top: 20px;
-}
-
-.chart-row figure {
-    flex: 1 1 50%;
-}
-
-
-/* ============================
-   HEADINGS
-   ============================ */
 
 h1 {
-    font-size: 2.15rem;
-    margin-bottom: 10px;
+    font-size: 2.1rem;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin-bottom: 8px;
-    padding-bottom: 0.35rem;
     position: relative;
+    padding-bottom: 0.4rem;
 }
 
 h2::after {
@@ -73,42 +51,177 @@ h2::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 65px;
+    width: 70px;
     height: 3px;
     background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
     border-radius: 999px;
 }
 
-
-/* ============================
-   PARAGRAPHS
-   ============================ */
-
 p {
-    margin-bottom: 0.6em;
+    font-size: 1rem;
+    margin-bottom: 0.7em;
+    color: #333;
 }
 
+/* ============================
+   KARTLAR (SECTION)
+   ============================ */
+
+section {
+    background: #ffffff;
+
+    /* Kartlar geniş və ortaya yaxın olsun */
+    max-width: 1400px;
+    margin: 18px auto;          /* yuxarı-aşağı 18px, solda-sağda auto (ortada) */
+
+    padding: 22px 26px;         /* iç boşluq – nə çox, nə az */
+    border-radius: 16px;
+    border-left: 4px solid #1a8566;
+    box-shadow: 0 8px 24px rgba(26,133,102,0.08);
+    box-sizing: border-box;
+}
 
 /* ============================
-   LINKS
+   ÇART SƏTRLƏRİ
+   ============================ */
+
+.chart-row {
+    display: flex;
+    gap: 24px;                  /* chartlar arası boşluq */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.chart-row figure {
+    flex: 1 1 50%;
+    margin: 0;
+}
+
+.chart-row figure > div {
+    width: 100% !important;
+}
+
+/* Bəzi chartlar iframe-disə, tam eni tutsun */
+section iframe {
+    width: 100% !important;
+    border: none;
+}
+
+/* ============================
+   LİNKLƏR
    ============================ */
 
 a {
     color: #1a8566;
+    text-decoration: none;
     font-weight: 600;
 }
 
 a:hover {
     color: #0a4d3c;
+    text-decoration: underline;
 }
 
+/* ============================
+   LOADER
+   ============================ */
+
+.loader-container {
+    position: fixed;
+    inset: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 36px;
+    aspect-ratio: 1;
+    background:
+        radial-gradient(farthest-side, #fff 90%, #0000) 50% / 8px 8px no-repeat,
+        conic-gradient(from -90deg at 14px 14px, #0000 90deg, #1a8566 0) 0 0 / 26px 26px;
+    animation: l7 0.9s infinite;
+}
+
+@keyframes l7 {
+    0% { background-position: 50%, 0 0; }
+    50% { background-position: 50%, 26px 0; }
+    100% { background-position: 50%, 26px 26px; }
+}
 
 /* ============================
-   RESPONSIVE FIXES
+   SCROLL PROGRESS BAR
+   ============================ */
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #1a8566 0%, #3bc490 100%);
+    box-shadow: 0 2px 6px rgba(26,133,102,0.4);
+    z-index: 10000;
+}
+
+/* ============================
+   BACK TO TOP BUTTON
+   ============================ */
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 9px 14px;
+    font-size: 14px;
+    background-color: #1a8566;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(26,133,102,0.45);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.2s, background 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #145f4d;
+    transform: translateY(-2px);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================
+   RESPONSIVE
    ============================ */
 
 @media (max-width: 1100px) {
-    body {
-        max-width: 95%;
+    .main-wrapper {
+        max-width: 100%;
+        padding: 0 16px 32px;
+    }
+}
+
+@media (max-width: 900px) {
+    .chart-row {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.25rem; }
+    section {
+        padding: 16px 16px;
+        margin: 14px auto;
     }
 }
