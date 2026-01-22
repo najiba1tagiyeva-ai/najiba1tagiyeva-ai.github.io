@@ -21,7 +21,7 @@
     "subtitleColor": "#6b7280"
   },
   "width": 900,
-  "height": 450,
+  "height": 550,
   "transform": [
     { "calculate": "toNumber(datum['Year'])", "as": "year" },
     { "calculate": "toNumber(datum['GDP (constant 2015 US$)'])", "as": "gdp" },
