@@ -32,10 +32,6 @@
     {
       "calculate": "datum.carbonIntensity >= 2 ? 'High (≥2.0)' : datum.carbonIntensity <= 1 ? 'Low (<1.0)' : 'Medium (1.0–2.0)'",
       "as": "intensityCategory"
-    },
-    {
-      "calculate": "datum.year + ': $' + format(datum.gdpB, '.1f') + 'B GDP, ' + format(datum.co2M, '.1f') + 'M tonnes CO₂'",
-      "as": "summary"
     }
   ],
   "layer": [
@@ -91,10 +87,7 @@
         },
         {
           "name": "select",
-          "select": {
-            "type": "point",
-            "fields": ["intensityCategory"]
-          },
+          "select": { "type": "point", "fields": ["intensityCategory"] },
           "bind": "legend"
         }
       ],
@@ -108,8 +101,8 @@
         "x": {
           "field": "gdpB",
           "type": "quantitative",
-          "axis": { 
-            "grid": true, 
+          "axis": {
+            "grid": true,
             "gridOpacity": 0.15,
             "tickCount": 7,
             "labelFontSize": 12,
@@ -119,8 +112,8 @@
         "y": {
           "field": "co2M",
           "type": "quantitative",
-          "axis": { 
-            "grid": true, 
+          "axis": {
+            "grid": true,
             "gridOpacity": 0.15,
             "tickCount": 7,
             "labelFontSize": 12,
@@ -167,11 +160,27 @@
           "value": 1.5
         },
         "tooltip": [
-          { "field": "summary", "type": "nominal", "title": "Summary" },
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Year"
+          },
+          {
+            "field": "gdpB",
+            "type": "quantitative",
+            "title": "GDP (bn, 2015 USD)",
+            "format": ",.1f"
+          },
+          {
+            "field": "co2M",
+            "type": "quantitative",
+            "title": "CO₂ emissions (M tonnes)",
+            "format": ",.1f"
+          },
           {
             "field": "carbonIntensity",
             "type": "quantitative",
-            "title": "Carbon intensity (t CO₂/M$)",
+            "title": "Carbon intensity (t CO₂ / M$)",
             "format": ".2f"
           },
           {
@@ -184,11 +193,7 @@
     }
   ],
   "config": {
-    "view": { 
-      "strokeWidth": 0,
-      "continuousWidth": 700,
-      "continuousHeight": 450
-    },
+    "view": { "strokeWidth": 0, "continuousWidth": 700, "continuousHeight": 450 },
     "axis": {
       "labelFontSize": 12,
       "titleFontSize": 13,
@@ -205,10 +210,7 @@
       "titleColor": "#1f2937",
       "labelColor": "#4b5563"
     },
-    "title": {
-      "font": "sans-serif",
-      "fontWeight": "normal"
-    },
+    "title": { "font": "sans-serif", "fontWeight": "normal" },
     "background": "#ffffff"
   }
 }
